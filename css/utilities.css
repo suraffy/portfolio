@@ -36,7 +36,7 @@ button,
   font: inherit;
   color: inherit;
   background-color: #fff;
-  border: 1px solid var(--lightgray);
+  border: 1px solid #ddd;
   border-radius: 2px;
   outline: none;
 }
@@ -61,12 +61,6 @@ button:hover,
 .btn:hover {
   background-color: #e4e4e4;
   text-decoration: none;
-}
-
-input[type='search'] {
-  border-radius: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 textarea {
@@ -105,6 +99,7 @@ p {
 
 .navbar-toggler {
   padding: 0.5rem 0.625rem;
+  background-color: #f8f8f8;
   border: 1px solid var(--lightgray);
   border-radius: 0.25rem;
   cursor: pointer;

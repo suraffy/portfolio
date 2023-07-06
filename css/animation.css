@@ -1,10 +1,8 @@
 @keyframes fade-in {
   from {
-    /* transform: scale(0, 0); */
-    transform: matrix(0.1, 0, 0, 0.1, -40, 40);
+    transform: matrix(0.1, 0, 0, 0.1, -60, 40);
   }
   to {
-    /* transform: scale(1, 1); */
     transform: matrix(1, 0, 0, 1, 0, 0);
   }
 }

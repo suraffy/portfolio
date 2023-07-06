@@ -41,6 +41,10 @@
     margin-top: 348px;
   }
 
+  .banner-img {
+    margin-top: 20px;
+  }
+
   .banner-text h2 {
     margin-bottom: 20px;
     animation: slide-right 0.8s ease-in-out;
