@@ -35,11 +35,7 @@
   }
   /* End - Desktop Navbar */
 
-  .banner.flex-column {
-    /* flex-direction: row; */
-    /* align-items: flex-start; */
-    /* margin-top: 348px; */
-  }
+
 
   .banner-img {
     margin-top: 20px;
@@ -48,42 +44,27 @@
 
   .banner-text h2 {
     /* margin-bottom: 20px; */
-    animation: slide-right 0.8s ease-in-out;
+    animation: slide-left 0.8s ease-in-out;
   }
 
   .banner-text p {
     margin-left: 20px;
-    animation: slide-down 0.6s ease-in-out forwards;
-    animation-delay: 0.8s;
   }
 
-  .banner-text::before {
-    /* display: none; */
-  }
-
-  /* .banner-text::after {
-    content: '';
-    display: table;
-    width: 4px;
-    height: 40px;
-    transform: translateY(-90px);
-    transform: translateY(-80px);
-    background-color: var(--lightgray);
-    animation: expand-height 0.8s ease-in-out forwards;
-    animation-delay: 0.6s;
-  } */
 
   .skills-grid-container {
     grid-template-columns: 1fr 1fr;
   }
 
   .footer-profile {
-    border: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 
-  .view-resume {
-    color: tomato;
-    background-color: #fff;
+  .footer-about-me {
+    flex-wrap: nowrap;
   }
 
   footer .web-developer-name {
@@ -91,11 +72,6 @@
   }
 }
 
-@media (max-width: 335px) {
-  .footer-profile-details p {
-    align-self: center;
-  }
-}
 
 @media (max-width: 300px) {
   .skills-box img:not(.long-width) {

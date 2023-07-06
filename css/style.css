@@ -104,7 +104,7 @@ nav {
 
 .banner-img img {
   height: 100px;
-  animation: fade-in 0.8s ease-in-out;
+  animation: slide-right 0.8s ease-in-out;
 }
 
 .banner-text {
@@ -119,7 +119,7 @@ nav {
   width: 0px;
   height: 4px;
   background-color: var(--lightgray);
-  animation: mobile-expand-width 0.8s forwards ease-in-out;
+  animation: expand-width 0.8s forwards ease-in-out;
   animation-delay: 0.6s;
 }
 
@@ -128,7 +128,7 @@ nav {
   font-size: 1.6rem;
   font-weight: 600;
   text-align: center;
-  animation: mobile-slide-down 0.8s ease-in-out;
+  animation: slide-left 0.8s ease-in-out;
 }
 
 .banner-text p {
@@ -141,8 +141,8 @@ nav {
   /* letter-spacing: 0.2rem; */
   text-align: center;
   opacity: 0;
-  animation: mobile-slide-down 0.8s ease-in-out forwards;
-  animation-delay: 0.6s;
+  animation: slide-down 0.8s ease-in-out forwards;
+  animation-delay: 0.8s;
 }
 
 /* About-me Section */
@@ -392,150 +392,129 @@ nav {
 
 /* Footer */
 footer {
-  padding: 60px 0 10px;
+  padding: 60px 0 0;
   color: var(--darkgray);
   background-color: #f4f4f4;
   background: linear-gradient(to right bottom, #f4f4f4, #fff);
 }
 
-footer > .container > .flex-column {
-  align-items: stretch;
-}
-
 .footer-profile {
+  margin-bottom: 80px;
+}
+
+.footer-profile > div {
+  padding: 15px;
+  margin: 0 15px 40px;
+}
+
+.footer-profile h4 {
+  margin: 0 0 10px;
+}
+
+.footer-about-me {
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  border: 1px solid #d4d4d4;
+  max-width: 460px;
+  text-align: center;
+  border: 1px solid var(--lightgray);
   border-radius: 4px;
-  padding-top: 15px;
 }
 
-.footer-profile-overview {
-  flex-wrap: wrap;
-}
-
-.footer-profile-overview,
-.footer-profile-accounts {
-  margin-bottom: 30px;
-}
-
-.footer-profile-overview img {
+.footer-about-me-img {
   display: block;
-  height: 90px;
+  height: 100px;
   padding: 2px;
+  /* margin-right: 1rem; */
   border: 2px solid var(--lightblue);
   border-radius: 100%;
 }
 
-.footer-profile-details p {
-  padding: 2px 10px 0;
-  margin: 0;
-  align-self: flex-start;
-  text-align: center;
+.footer-profile i {
+  font-size: 1.2rem;
 }
 
-.footer-profile-details p:first-child {
-  font-size: 1.13rem;
-  font-weight: 500;
-}
-
-.footer-profile-accounts {
+div.footer-courses-codes {
   flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.footer-profile-accounts li {
+
+.footer-courses-codes > div {
+  padding: 0 15px;
+  margin: 0 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-courses-list a,
+.footer-codes-list a,
+.footer-active-on-list a {
+  color: #808080;
+  line-height: 28px;
+  transition: color 0.2s;
+}
+
+.footer-courses-list a:hover,
+.footer-codes-list a:hover,
+.footer-active-on-list a:hover {
+  color: #444;
+  /* text-decoration: none; */
+}
+
+.footer-profile a i {
   padding-right: 8px;
 }
 
-.footer-accounts a {
-  font-size: 1.3rem;
+
+.footer-profile .fa-youtube {
+  color: rgb(173, 21, 21);
 }
 
-.footer-accounts a i {
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  color: #f8f8f8;
-  text-align: center;
-  background-color: #b2b2b2;
-  border-radius: 100%;
-  transition: background-color 0.1s;
+.footer-profile .fa-codepen {
+  color: #333;
 }
 
-.footer-blog-youtube a {
-  color: #808080;
-  font-size: 1.0625rem;
-  line-height: 32px;
+.footer-profile .fa-twitter {
+  color: #1dcbea;
 }
 
-.footer-blog-youtube a:hover {
-  color: #444;
+.footer-profile .fa-linkedin {
+  color: #1182c9;
 }
 
-.footer-blog-youtube::before {
-  content: '';
-  display: block;
-  width: 2px;
-  background-color: var(--lightgray);
-  align-self: stretch;
-  margin: 0 12px 0 4px;
-}
-
-.footer-accounts .fa-twitter {
-  background-color: #1dcbea;
-}
-
-.footer-accounts .fa-linkedin {
-  background-color: #1182c9;
-}
-
-.footer-accounts .fa-github {
-  background-color: #333;
-}
-
-.view-resume-cont {
-  margin-top: 30px;
-  align-self: center;
-  border: 2px solid tomato;
-  border-radius: 4px;
-}
-
-.view-resume {
-  font-size: 1.093rem;
-  color: #fff;
-  border-color: #fff;
-  background-color: rgb(255, 114, 89);
-  transition: color 0.2s, background-color 0.2;
-}
-
-.view-resume:hover {
-  background-color: tomato;
-  color: #fff;
+.footer-profile .fa-github {
+  color: #333;
 }
 
 footer .web-developer-name {
-  margin-top: 120px;
+  margin: 1rem;
   text-align: center;
 }
 
-.about-me-accounts i,
-.footer-accounts a,
-.footer-blog-youtube a {
+
+
+
+.about-me-accounts i {
   transition: transform 0.2s;
 }
 
-.about-me-accounts li:hover i,
-.footer-accounts li:hover a,
-.footer-blog-youtube li:hover a {
+.about-me-accounts li:hover i {
   transform: translateY(-4px);
 }
 
-.web-developer-name {
-  font-size: 14px;
+
+.footer-profile i {
+  transition: transform 0.2s;
 }
 
-.side-work-list-item {
-  border: 1px solid #eee;
-  padding: 40px;
-  flex: 1;
+.footer-profile li:hover i {
+  transform: translateX(4px);
+}
+
+
+
+.web-developer-name {
+  font-size: 14px;
 }

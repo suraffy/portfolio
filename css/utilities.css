@@ -94,6 +94,8 @@ h2 {
   height: 4px;
   margin: 0 auto;
   background-color: var(--lightgray);
+  transition: width 0.4s;
+  transition-delay: 0.6s;
 }
 
 p {
@@ -119,4 +121,10 @@ p {
 
 .toggler-bar + .toggler-bar {
   margin-top: 0.25rem;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--lightgray);
 }
