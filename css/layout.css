@@ -34,9 +34,11 @@
   }
 }
 
-.row {
+.flex-row,
+.flex-column {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .flex-row {
@@ -45,11 +47,4 @@
 
 .flex-column {
   flex-direction: column;
-}
-
-.flex-row,
-.flex-column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

@@ -47,11 +47,18 @@ nav {
   transition: padding 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
 
-.logo-container img {
+.navbar {
+  margin: 0 -15px;
+}
+
+.navbar-brand {
   height: 40px;
+  padding: 0 15px;
+  cursor: pointer;
 }
 
 .navbar-toggler {
+  margin-right: 15px;
   margin-left: auto;
 }
 
@@ -102,13 +109,13 @@ nav {
 
 .banner-text {
   padding: 0 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .banner-text::before {
   content: '';
   display: table;
-  margin: 20px auto 10px;
+  margin: 0px auto 10px;
   width: 0px;
   height: 4px;
   background-color: var(--lightgray);
@@ -128,7 +135,10 @@ nav {
   margin-bottom: 0;
   margin-left: 0;
   font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
+  font-weight: 400;
+  /* letter-spacing: 0.2rem; */
   text-align: center;
   opacity: 0;
   animation: mobile-slide-down 0.8s ease-in-out forwards;
@@ -160,6 +170,7 @@ nav {
   font-size: 0.8rem;
   color: var(--darkgray);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .about-me-accounts i {
@@ -394,6 +405,9 @@ footer > .container > .flex-column {
 .footer-profile {
   flex-wrap: wrap;
   justify-content: space-evenly;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  padding-top: 15px;
 }
 
 .footer-profile-overview {
@@ -467,11 +481,6 @@ footer > .container > .flex-column {
   margin: 0 12px 0 4px;
 }
 
-footer .web-developer-name {
-  margin-top: 120px;
-  text-align: center;
-}
-
 .footer-accounts .fa-twitter {
   background-color: #1dcbea;
 }
@@ -484,6 +493,49 @@ footer .web-developer-name {
   background-color: #333;
 }
 
-/* .footer-accounts a:hover .fa-twitter {
-  background-color: #1dcbea;
-} */
+.view-resume-cont {
+  margin-top: 30px;
+  align-self: center;
+  border: 2px solid tomato;
+  border-radius: 4px;
+}
+
+.view-resume {
+  font-size: 1.093rem;
+  color: #fff;
+  border-color: #fff;
+  background-color: rgb(255, 114, 89);
+  transition: color 0.2s, background-color 0.2;
+}
+
+.view-resume:hover {
+  background-color: tomato;
+  color: #fff;
+}
+
+footer .web-developer-name {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.about-me-accounts i,
+.footer-accounts a,
+.footer-blog-youtube a {
+  transition: transform 0.2s;
+}
+
+.about-me-accounts li:hover i,
+.footer-accounts li:hover a,
+.footer-blog-youtube li:hover a {
+  transform: translateY(-4px);
+}
+
+.web-developer-name {
+  font-size: 14px;
+}
+
+.side-work-list-item {
+  border: 1px solid #eee;
+  padding: 40px;
+  flex: 1;
+}

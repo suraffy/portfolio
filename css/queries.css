@@ -36,17 +36,18 @@
   /* End - Desktop Navbar */
 
   .banner.flex-column {
-    flex-direction: row;
-    align-items: flex-start;
-    margin-top: 348px;
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    /* margin-top: 348px; */
   }
 
   .banner-img {
     margin-top: 20px;
+    margin-top: 10px;
   }
 
   .banner-text h2 {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     animation: slide-right 0.8s ease-in-out;
   }
 
@@ -57,22 +58,32 @@
   }
 
   .banner-text::before {
-    display: none;
+    /* display: none; */
   }
 
-  .banner-text::after {
+  /* .banner-text::after {
     content: '';
     display: table;
     width: 4px;
     height: 40px;
     transform: translateY(-90px);
+    transform: translateY(-80px);
     background-color: var(--lightgray);
     animation: expand-height 0.8s ease-in-out forwards;
     animation-delay: 0.6s;
-  }
+  } */
 
   .skills-grid-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-profile {
+    border: none;
+  }
+
+  .view-resume {
+    color: tomato;
+    background-color: #fff;
   }
 
   footer .web-developer-name {
