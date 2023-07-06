@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/queries.css">
+  <title>Full-Stack Web Dev</title>
+  <link rel="icon" href="img/web-dev-logo-colored.svg">
+</head>
+
+<body>
+  <!--
+    html - scroll-behavior: smooth;
+    blog - target="_blank"
+  -->
+
+  <div class="header" id="main-header">
+    <header>
+      <nav>
+        <div class="container row">
+          <div class="logo-container">
+            <a href="#main-header"><img src="img/web-dev-logo-colored.svg" id="logo-img" alt="web development"></a>
+          </div>
+
+          <!-- <i class="fa fa-bars menu-opener-btn"></i> -->
+          <i class="ion-android-menu menu-opener-btn"></i>
+
+          <ul class="main-nav row">
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#my-skills">My Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="" target="_blank">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="banner container">
+      <div class="row">
+        <div class="banner-img">
+          <img src="img/start-fire.png" alt="">
+        </div>
+
+        <div class="banner-text">
+          <h2>Surafel Araya</h2>
+          <p>Full-Stack Web Developer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about-me">
+    <div class="container row">
+      <div class="about-me-overview">
+        <img src="img/surafel.jpg" alt="Surafel">
+        <h2 class="h2-underline">Surafel Araya</h2>
+      </div>
+
+      <div class="about-me-detail">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, excepturi consequatur. Doloribus illum.
+        </p>
+        <p>
+          adipisci reiciendis nisi. Fugiat cum praesentium quidem
+          officiis mollitia similique, aliquid maiores a! Rerum quod possimus, explicabo ex autem sunt veritatis,
+          consequatur et fugiat a asperiores consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio facilis odit, labore adipisci
+          accusantium
+          Voluptates alias quos eaque quis inventore qui, possimus maiores quidem necessitatibus delectus facere
+          accusamus, unde hic voluptatem eos id animi. Quis, ab!</p>
+      </div>
+
+      <ul class="about-me-accounts row">
+        <li class="row">
+          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="#">GitHub</a>
+        </li>
+        <li class="row">
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#">LinkedIn</a>
+        </li>
+        <li class="row">
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#">Twitter</a>
+        </li>
+        <li class="row">
+          <a href="#"><i class="fa fa-codepen"></i></a>
+          <a href="#">CodePen</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="my-skills">
+    <div class="container row">
+      <h2 class="h2-underline">My Skills</h2>
+
+      <div class="skills-grid-container">
+        <div class="skills-box row">
+          <img src="img/Skills img/html5 logo.png" class="long-width" alt="">
+        </div>
+
+        <div class="skills-box row">
+          <img src="img/skills img/img_css.jpg" alt="">
+          <ul class="skills-details">
+            <li>Flexbox, CSS Grid</li>
+            <li>Media Queries</li>
+            <li>CSS Animation</li>
+          </ul>
+        </div>
+
+        <div class="skills-box row">
+          <img src="img/skills img/img_js.png" alt="">
+          <ul class="skills-details">
+            <li>ES6</li>
+            <li>DOM Manipulation</li>
+            <li>Asynchronous JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skills-box row">
+          <img src="img/Skills img/vue-logo.png" alt="">
+          <ul class="skills-details">
+            <li>Vue Rout</li>
+            <li>Vuex</li>
+          </ul>
+        </div>
+
+        <div class="skills-box row">
+          <img src="img/Skills img/320px-Node.js_logo.svg.png" alt="">
+          <ul class="skills-details">
+            <li>Express</li>
+            <li>REST API</li>
+            <li>Authentication</li>
+          </ul>
+        </div>
+
+        <div class="skills-box row">
+          <img src="img/Skills img/mongodb-logo.png" class="long-width" alt="">
+        </div>
+
+        <div class="skills-box row">
+          <img src="img/Skills img/Adobe-Xd.png">
+          <ul class="skills-details">
+            <li>Web Page Design</li>
+            <li>Designing SVG Shapes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="h2-underline">Let's See My Work</h2>
+
+      <div class="project-grid-container">
+        <div class="project-box row">
+          <div class="project-profile-img row">
+            <img src="img/project img/bbc.png" alt="">
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+
+          <div class="project-details row">
+            <h2 class="project-title">Volunter Web App</h2>
+            <span class="project-type">front-end project</span>
+            <p class="project-description">A Web App that allows the users to search, research and book a socially
+              conscious travel adventure.</p>
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-box row">
+          <div class="project-profile-img row">
+            <img src="img/project img/chemical.jpg" alt="">
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+
+          <div class="project-details row">
+            <h2 class="project-title">Chemical Analysis</h2>
+            <span class="project-type">front-end project</span>
+            <p class="project-description">A Web App that allows the users to search, research and book a socially
+              conscious travel adventure.</p>
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-box row span-2-cols">
+          <div class="project-profile-img row">
+            <img src="img/project img/Electronic Records Management Systems.jpg" alt="">
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+
+          <div class="project-details row">
+            <h2 class="project-title">Electronic Records</h2>
+            <span class="project-type">front-end project</span>
+            <p class="project-description">A Web App that allows the users to search, research and book a socially
+              conscious travel adventure.</p>
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-box row">
+          <div class="project-profile-img row">
+            <img src="img/project img/machine learning.jpg" alt="">
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+
+          <div class="project-details row">
+            <h2 class="project-title">Machine Learning System</h2>
+            <span class="project-type">front-end project</span>
+            <p class="project-description">A Web App that allows the users to search, research and book a socially
+              conscious travel adventure.</p>
+            <div class="transparent-cover">
+              <span><a href="#">Surafel</a></span>
+              <span><a href="#">Github&nbsp;LivePreview</a></span>
+            </div>
+          </div>
+        </div>
+
+        <a href="projects.html">More Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="h2-underline">Want to Contact Me?</h2>
+      <p>Please contact me by this email address <a href="mailto:surafelay@gmail.com"
+          target="_blank">surafelay@gmail.com</a> or through the contact form below.
+      </p>
+      <form action="" class="row">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea rows="4" name="message" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container row">
+      <P>Designed and developed by <a href="#about-me">Surafel Araya Gebremedhin</a></P>
+      <ul class="social-media row">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-github"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
