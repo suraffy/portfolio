@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Surafel Araya Gebremedhin is a Full-Stack web developer and a web designer.">
+
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <link rel="stylesheet" href="">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/queries.css">
-  <title>Full-Stack Web Dev</title>
-  <link rel="icon" href="img/web-dev-logo-colored.svg">
+
+  <title>Surafel Araya, Full-Stack Web Developer</title>
+  <link rel="shortcut icon" href="img/web-dev-logo-colored.svg" type="image/svg">
+
 </head>
 
 <body>
-  <!--
-    html - scroll-behavior: smooth;
-    blog - target="_blank"
-  -->
-
-  <div class="header" id="main-header">
-    <header>
-      <nav>
-        <div class="container row">
+  <header id="main-header">
+    <nav>
+      <div class="container">
+        <div class="flex-row">
           <div class="logo-container">
-            <a href="#main-header"><img src="img/web-dev-logo-colored.svg" id="logo-img" alt="web development"></a>
+            <img src="img/web-dev-logo-colored.svg" id="logo-img" alt="web development" />
           </div>
 
-          <!-- <i class="fa fa-bars menu-opener-btn"></i> -->
-          <i class="ion-android-menu menu-opener-btn"></i>
+          <div class="navbar-toggler">
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+          </div>
 
-          <ul class="main-nav row">
+          <ul class="main-nav flex-row">
             <li><a href="#about-me">About Me</a></li>
             <li><a href="#my-skills">My Skills</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -37,13 +39,13 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
-    <div class="banner container">
-      <div class="row">
+    <div class="container">
+      <div class="banner flex-column">
         <div class="banner-img">
-          <img src="img/start-fire.png" alt="">
+          <img src="img/start-fire.png" alt="" />
         </div>
 
         <div class="banner-text">
@@ -52,236 +54,367 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <section id="about-me">
-    <div class="container row">
-      <div class="about-me-overview">
-        <img src="img/surafel.jpg" alt="Surafel">
-        <h2 class="h2-underline">Surafel Araya</h2>
-      </div>
+    <div class="container">
+      <div class="flex-column">
+        <div class="about-me-overview">
+          <img src="img/surafel.jpg" alt="Surafel Araya" />
+          <h2 class="h2-underline">Surafel Araya</h2>
+        </div>
 
-      <div class="about-me-detail">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, excepturi consequatur. Doloribus illum.
-        </p>
-        <p>
-          adipisci reiciendis nisi. Fugiat cum praesentium quidem
-          officiis mollitia similique, aliquid maiores a! Rerum quod possimus, explicabo ex autem sunt veritatis,
-          consequatur et fugiat a asperiores consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio facilis odit, labore adipisci
-          accusantium
-          Voluptates alias quos eaque quis inventore qui, possimus maiores quidem necessitatibus delectus facere
-          accusamus, unde hic voluptatem eos id animi. Quis, ab!</p>
-      </div>
+        <div class="about-me-detail">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
+            excepturi consequatur. Doloribus illum.
+          </p>
+          <p>
+            adipisci reiciendis nisi. Fugiat cum praesentium quidem officiis
+            mollitia similique, aliquid maiores a! Rerum quod possimus,
+            explicabo ex autem sunt veritatis, consequatur et fugiat a
+            asperiores consequuntur! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Distinctio facilis odit, labore adipisci accusantium Voluptates
+            alias quos eaque quis inventore qui, possimus maiores quidem
+            necessitatibus delectus facere accusamus, unde hic voluptatem eos
+            id animi. Quis, ab!
+          </p>
+        </div>
 
-      <ul class="about-me-accounts row">
-        <li class="row">
-          <a href="#"><i class="fa fa-github"></i></a>
-          <a href="#">GitHub</a>
-        </li>
-        <li class="row">
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#">LinkedIn</a>
-        </li>
-        <li class="row">
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#">Twitter</a>
-        </li>
-        <li class="row">
-          <a href="#"><i class="fa fa-codepen"></i></a>
-          <a href="#">CodePen</a>
-        </li>
-      </ul>
+        <ul class="about-me-accounts flex-row">
+          <li>
+            <a href="" target="_blank" class="flex-column">
+              <i class="fa fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="" target="_blank" class="flex-column">
+              <i class="fa fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="" target="_blank" class="flex-column">
+              <i class="fa fa-twitter"></i>
+              <span>Twitter</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="" target="_blank" class="flex-column">
+              <i class="fa fa-codepen"></i>
+              <span>CodePen</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
-
 
   <section id="my-skills">
-    <div class="container row">
-      <h2 class="h2-underline">My Skills</h2>
+    <div class="container">
+      <div class="flex-column">
+        <h2 class="h2-underline">My Skills</h2>
 
-      <div class="skills-grid-container">
-        <div class="skills-box row">
-          <img src="img/Skills img/html5 logo.png" class="long-width" alt="">
-        </div>
+        <div class="skills-grid-container">
+          <div class="skills-box flex-row">
+            <img src="img/Skills img/html5 logo.png" class="long-width" alt="HTML5" />
+          </div>
 
-        <div class="skills-box row">
-          <img src="img/skills img/img_css.jpg" alt="">
-          <ul class="skills-details">
-            <li>Flexbox, CSS Grid</li>
-            <li>Media Queries</li>
-            <li>CSS Animation</li>
-          </ul>
-        </div>
+          <div class="skills-box flex-row">
+            <img src="img/skills img/img_css.jpg" alt="CSS3" />
+            <ul class="skills-details">
+              <li>Flexbox, CSS Grid</li>
+              <li>Media Queries</li>
+              <li>CSS Animation</li>
+            </ul>
+          </div>
 
-        <div class="skills-box row">
-          <img src="img/skills img/img_js.png" alt="">
-          <ul class="skills-details">
-            <li>ES6</li>
-            <li>DOM Manipulation</li>
-            <li>Asynchronous JavaScript</li>
-          </ul>
-        </div>
+          <div class="skills-box flex-row">
+            <img src="img/skills img/JavaScript logo official.png" alt="JavaScript" />
+            <ul class="skills-details">
+              <li>ES6+</li>
+              <li>Object-Oriented Programming</li>
+              <li>DOM Manipulation</li>
+            </ul>
+          </div>
 
-        <div class="skills-box row">
-          <img src="img/Skills img/vue-logo.png" alt="">
-          <ul class="skills-details">
-            <li>Vue Rout</li>
-            <li>Vuex</li>
-          </ul>
-        </div>
+          <div class="skills-box flex-row">
+            <img src="img/Skills img/vue-logo.png" alt="Vue.js" />
+            <ul class="skills-details">
+              <li>Vue Rout</li>
+              <li>Vuex</li>
+            </ul>
+          </div>
 
-        <div class="skills-box row">
-          <img src="img/Skills img/320px-Node.js_logo.svg.png" alt="">
-          <ul class="skills-details">
-            <li>Express</li>
-            <li>REST API</li>
-            <li>Authentication</li>
-          </ul>
-        </div>
+          <div class="skills-box flex-row">
+            <img src="img/Skills img/320px-Node.js_logo.svg.png" alt="Node.js" />
+            <ul class="skills-details">
+              <li>Express</li>
+              <li>REST API</li>
+              <li>Security</li>
+            </ul>
+          </div>
 
-        <div class="skills-box row">
-          <img src="img/Skills img/mongodb-logo.png" class="long-width" alt="">
-        </div>
+          <div class="skills-box flex-row">
+            <img src="img/Skills img/mongodb-logo.png" class="long-width" alt="Mongodb" />
+          </div>
 
-        <div class="skills-box row">
-          <img src="img/Skills img/Adobe-Xd.png">
-          <ul class="skills-details">
-            <li>Web Page Design</li>
-            <li>Designing SVG Shapes</li>
-          </ul>
+          <div class="skills-box flex-row">
+            <img src="img/Skills img/Adobe-Xd.png" alt="Adobe Xd" />
+            <ul class="skills-details">
+              <li>Web Page Design</li>
+              <li>Designing SVG Shapes</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <section id="projects">
     <div class="container">
-      <h2 class="h2-underline">Let's See My Work</h2>
+      <div class="flex-column">
+        <h2 class="h2-underline">Let's See My Work</h2>
 
-      <div class="project-grid-container">
-        <div class="project-box row">
-          <div class="project-profile-img row">
-            <img src="img/project img/bbc.png" alt="">
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
-            </div>
+        <div class="project-header flex-column">
+          <div class="filter-project flex-row">
+            <h4>Filter</h4>
+            <ul class="filter-list flex-row">
+              <li class="filter-item" data-filter-item="all">All</li>
+              <li class="filter-item" data-filter-item="full-stack">
+                Full-Stack
+              </li>
+              <li class="filter-item" data-filter-item="front-end">
+                Front-End
+              </li>
+              <li class="filter-item" data-filter-item="plain-javascript">
+                Plain JavaScript
+              </li>
+              <li class="filter-item" data-filter-item="css-animation">
+                CSS Animation
+              </li>
+            </ul>
           </div>
 
-          <div class="project-details row">
-            <h2 class="project-title">Volunter Web App</h2>
-            <span class="project-type">front-end project</span>
-            <p class="project-description">A Web App that allows the users to search, research and book a socially
-              conscious travel adventure.</p>
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-box row">
-          <div class="project-profile-img row">
-            <img src="img/project img/chemical.jpg" alt="">
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
-            </div>
-          </div>
-
-          <div class="project-details row">
-            <h2 class="project-title">Chemical Analysis</h2>
-            <span class="project-type">front-end project</span>
-            <p class="project-description">A Web App that allows the users to search, research and book a socially
-              conscious travel adventure.</p>
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
-            </div>
+          <div class="search-project flex-row">
+            <input type="search" id="search-project" placeholder="Search Project" />
+            <i class="fa fa-search"></i>
           </div>
         </div>
 
-        <div class="project-box row span-2-cols">
-          <div class="project-profile-img row">
-            <img src="img/project img/Electronic Records Management Systems.jpg" alt="">
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
+        <div class="projects-container flex-column">
+          <p class="filtered-projects-info">All projects, 7 results</p>
+          <div class="project-box flex-row" data-project-name="Volunter Web App" data-project-type="full-stack">
+            <div class="project-profile-img row">
+              <img src="img/project img/bbc.png" alt="" />
+            </div>
+
+            <div class="project-details flex-column">
+              <h2 class="project-title">Volunter Web App</h2>
+              <span class="project-type">full-stack project</span>
+              <p class="project-description">
+                A Web App that allows the users to search, research and book a
+                socially conscious travel adventure.
+              </p>
+              <div class="project-links flex-row">
+                <a href="" target="_blank" class="btn">Live Preview</a>
+                <a href="" target="_blank">Source Code</a>
+              </div>
             </div>
           </div>
 
-          <div class="project-details row">
-            <h2 class="project-title">Electronic Records</h2>
-            <span class="project-type">front-end project</span>
-            <p class="project-description">A Web App that allows the users to search, research and book a socially
-              conscious travel adventure.</p>
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
+          <div class="project-box flex-row" data-project-name="Chemical Analysis" data-project-type="front-end">
+            <div class="project-profile-img row">
+              <img src="img/project img/chemical.jpg" alt="" />
+            </div>
+
+            <div class="project-details flex-column">
+              <h2 class="project-title">Chemical Analysis</h2>
+              <span class="project-type">front-end project</span>
+              <p class="project-description">
+                A Web App that allows the users to search, research and book a
+                socially conscious travel adventure.
+              </p>
+              <div class="project-links flex-row">
+                <a href="" target="_blank" class="btn">Live Preview</a>
+                <a href="" target="_blank">Source Code</a>
+              </div>
             </div>
           </div>
+
+          <div class="project-box flex-row" data-project-name="Electronic Record" data-project-type="full-stack">
+            <div class="project-profile-img row">
+              <img src="img/project img/Electronic Records Management Systems.jpg" alt="" />
+            </div>
+
+            <div class="project-details flex-column">
+              <h2 class="project-title">Electronic Records</h2>
+              <span class="project-type">full-stack project</span>
+              <p class="project-description">
+                A Web App that allows the users to search, research and book a
+                socially conscious travel adventure.
+              </p>
+              <div class="project-links flex-row">
+                <a href="" target="_blank" class="btn">Live Preview</a>
+                <a href="" target="_blank">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box flex-row" data-project-name="Machine Learning System" data-project-type="full-stack">
+            <div class="project-profile-img row">
+              <img src="img/project img/machine learning.jpg" alt="" />
+            </div>
+
+            <div class="project-details flex-column">
+              <h2 class="project-title">Machine Learning System</h2>
+              <span class="project-type">full-stack project</span>
+              <p class="project-description">
+                A Web App that allows the users to search, research and book a
+                socially conscious travel adventure.
+              </p>
+              <div class="project-links flex-row">
+                <a href="" target="_blank" class="btn">Live Preview</a>
+                <a href="" target="_blank">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box flex-row" data-project-name="Test Project One" data-project-type="front-end">
+            <div class="project-profile-img row">
+              <img src="img/project img/img_github_logo.png" alt="" />
+            </div>
+
+            <div class="project-details flex-column">
+              <h2 class="project-title">Test Project One</h2>
+              <span class="project-type">front-end project</span>
+              <p class="project-description">
+                A Web App that allows the users to search, research and book a
+                socially conscious travel adventure.
+              </p>
+              <div class="project-links flex-row">
+                <a href="" target="_blank" class="btn">Live Preview</a>
+                <a href="" target="_blank">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box flex-row" data-project-name="Test Project Two" data-project-type="plain-javascript">
+            <div class="project-profile-img row">
+              <img src="img/project img/img_github_logo.png" alt="" />
+            </div>
+
+            <div class="project-details flex-column">
+              <h2 class="project-title">Test Project Two</h2>
+              <span class="project-type">plain-javascript project</span>
+              <p class="project-description">
+                A Web App that allows the users to search, research and book a
+                socially conscious travel adventure.
+              </p>
+              <div class="project-links flex-row">
+                <a href="" target="_blank" class="btn">Live Preview</a>
+                <a href="" target="_blank">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box flex-row" data-project-name="Test Project Three" data-project-type="full-stack">
+            <div class="project-profile-img row">
+              <img src="img/project img/img_github_logo.png" alt="" />
+            </div>
+
+            <div class="project-details flex-column">
+              <h2 class="project-title">Test Project Three</h2>
+              <span class="project-type">full-stack project</span>
+              <p class="project-description">
+                A Web App that allows the users to search, research and book a
+                socially conscious travel adventure.
+              </p>
+              <div class="project-links flex-row">
+                <a href="" target="_blank" class="btn">Live Preview</a>
+                <a href="" target="_blank">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <ul class="pagination flex-row">
+            <!-- <li class="page-item">Prev</li>
+            <li class="page-item">1</li>
+            <li class="page-item">2</li>
+            <li class="page-item">Next</li> -->
+          </ul>
         </div>
-
-        <div class="project-box row">
-          <div class="project-profile-img row">
-            <img src="img/project img/machine learning.jpg" alt="">
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
-            </div>
-          </div>
-
-          <div class="project-details row">
-            <h2 class="project-title">Machine Learning System</h2>
-            <span class="project-type">front-end project</span>
-            <p class="project-description">A Web App that allows the users to search, research and book a socially
-              conscious travel adventure.</p>
-            <div class="transparent-cover">
-              <span><a href="#">Surafel</a></span>
-              <span><a href="#">Github&nbsp;LivePreview</a></span>
-            </div>
-          </div>
-        </div>
-
-        <a href="projects.html">More Projects</a>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="container">
-      <h2 class="h2-underline">Want to Contact Me?</h2>
-      <p>Please contact me by this email address <a href="mailto:surafelay@gmail.com"
-          target="_blank">surafelay@gmail.com</a> or through the contact form below.
-      </p>
-      <form action="" class="row">
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="email" name="email" placeholder="Your Email">
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea rows="4" name="message" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message">
-      </form>
+      <div class="flex-column">
+        <h2 class="h2-underline">Want to Contact Me?</h2>
+        <p>
+          Please contact me by this email address
+          <a href="mailto:surafelay@gmail.com" target="_blank">surafelay@gmail.com</a>
+          or through the contact form below.
+        </p>
+        <form action="" class="flex-column">
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea rows="4" name="message" placeholder="Your Message" required></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+      </div>
     </div>
   </section>
 
-
   <footer>
-    <div class="container row">
-      <P>Designed and developed by <a href="#about-me">Surafel Araya Gebremedhin</a></P>
-      <ul class="social-media row">
-        <li><a href="#">Blog</a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-github"></i></a></li>
-        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-      </ul>
+    <div class="container">
+      <div class="flex-column">
+        <div class="footer-profile flex-row">
+          <div class="footer-profile-overview flex-row">
+            <img src="img/surafel.jpg" alt="Surafel Araya" />
+            <div class="footer-profile-details flex-column">
+              <p>Surafel Araya</p>
+              <p>Full-Stack Web Developer</p>
+            </div>
+          </div>
+
+          <div class="footer-profile-accounts flex-row">
+            <ul class="footer-accounts flex-row">
+              <li>
+                <a href="" target="_blank"><i class="fa fa-github"></i></a>
+              </li>
+              <li>
+                <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+              </li>
+            </ul>
+
+            <ul class="footer-blog-youtube flex-row">
+              <li><a href="" target="_blank">Blog</a></li>
+              <li><a href="" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="web-developer-name flex-column">
+          Designed and Developed by&nbsp;<a href="#about-me">Surafel Araya</a>
+        </p>
+      </div>
     </div>
   </footer>
 
-  <script src="js/jquery-1.7.2.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

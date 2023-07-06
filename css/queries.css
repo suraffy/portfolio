@@ -1,184 +1,99 @@
-@media (min-width: 480px) {
-  .container {
-    width: 90%;
+@media (min-width: 576px) {
+  .project-profile-img {
+    display: flex;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-opener-btn {
-    display: block;
+  /* Desktop Navbar */
+  .navbar-toggler {
+    display: none;
   }
 
-  .show-main-nav {
-    display: flex !important;
-    height: 255px !important;
-    padding: 10px 0;
-    border-top: 1px solid #ccc !important;
-  }
-
-  /* Mobile Navbar */
   .main-nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    background-color: #f8f8f8;
-    box-shadow: 0px 1px 2px #ccc;
-    transition: top 0.2s, height 0.2s, padding 0.2s;
+    position: static;
+    flex-direction: row;
+    width: unset;
+    height: unset;
+    margin-left: auto;
+    background-color: transparent;
+    box-shadow: none;
   }
 
   .main-nav li {
-    width: 100%;
+    width: unset;
   }
 
   .main-nav a {
-    font-size: 1.125rem;
-    text-align: center;
+    font-size: 1rem;
+    text-align: unset;
   }
 
   .main-nav a:hover {
-    opacity: inherit;
-    background-color: #eee;
+    color: var(--gray);
+    background-color: transparent;
   }
-  /* End - Mobile Navbar */
+  /* End - Desktop Navbar */
 
-  .banner .row {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 248px;
-  }
-
-  .banner-text h2 {
-    margin-bottom: 0px;
-  }
-
-  .banner-text p {
-    margin-left: 0;
-  }
-
-  .banner-text::after {
-    display: none;
+  .banner.flex-column {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 348px;
   }
 
   .banner-text h2 {
-    animation: mobile-slide-down 0.8s ease-in-out;
+    margin-bottom: 20px;
+    animation: slide-right 0.8s ease-in-out;
   }
 
   .banner-text p {
-    animation: mobile-slide-down 0.8s ease-in-out forwards;
-    animation-delay: 0.6s;
-  }
-
-  @keyframes mobile-slide-down {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0px);
-    }
+    margin-left: 20px;
+    animation: slide-down 0.6s ease-in-out forwards;
+    animation-delay: 0.8s;
   }
 
   .banner-text::before {
-    content: '';
-    display: table;
-    margin: 20px auto 10px;
-    width: 0px;
-    height: 4px;
-    background-color: #ccc;
-    animation: mobile-expand-width 0.8s forwards ease-in-out;
-    animation-delay: 0.6s;
-  }
-
-  @keyframes mobile-expand-width {
-    from {
-      width: 0px;
-    }
-
-    to {
-      width: 80px;
-    }
-  }
-
-  .skills-grid-container {
-    grid-template-columns: 1fr;
-  }
-
-  .project-grid-container {
-    grid-template-columns: 1fr;
-  }
-
-  .span-2-cols {
-    grid-column: span 1;
-  }
-
-  footer > .container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-project input {
-    width: 80%;
-    margin-left: 10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .project-profile-img {
     display: none;
   }
 
-  .project-details {
-    position: relative;
+  .banner-text::after {
+    content: '';
+    display: table;
+    width: 4px;
+    height: 40px;
+    transform: translateY(-90px);
+    background-color: var(--lightgray);
+    animation: expand-height 0.8s ease-in-out forwards;
+    animation-delay: 0.6s;
   }
 
-  .transparent-cover {
-    background-color: rgba(0, 0, 0, 0.9);
+  .skills-grid-container {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .transparent-cover a {
-    font-size: 1rem;
+  footer .web-developer-name {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 335px) {
+  .footer-profile-details p {
+    align-self: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .skills-box img:not(.long-width) {
+    display: none;
   }
 
-  .project-box:hover > .project-details > .transparent-cover {
+  .skills-box .long-width {
     width: 100%;
   }
 }
 
-@media (max-width: 310px) {
-  footer .social-media {
-    flex-direction: column;
-    margin-left: unset;
-    align-self: flex-start;
-  }
-}
-
-@media (max-width: 250px) {
+@media (max-width: 200px) {
   body {
-    width: 250px;
+    width: 200px;
   }
 }

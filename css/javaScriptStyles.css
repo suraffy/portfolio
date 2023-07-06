@@ -1,0 +1,13 @@
+.filter-item.clicked-filter-item {
+  background-color: #e4e6e7;
+}
+
+.page-item.active {
+  border: 1px solid var(--blue);
+}
+
+.page-item.disabled {
+  color: #333;
+  opacity: 0.4;
+  cursor: default;
+}
