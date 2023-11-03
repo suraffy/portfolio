@@ -176,4 +176,4 @@ class ProjectUI {
   }
 }
 
-export { ProjectUI };
+export default ProjectUI;

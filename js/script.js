@@ -1,5 +1,5 @@
-import { skillUI } from './skillUI.js';
-import { ProjectUI } from './projectUI.js';
+import skillUI from './skillUI.js';
+import ProjectUI from './projectUI.js';
 
 const filterList = document.querySelector('.filter-list');
 const paginationList = document.querySelector('.pagination');

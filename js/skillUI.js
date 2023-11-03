@@ -41,4 +41,4 @@ class skillUI {
   }
 }
 
-export { skillUI };
+export default skillUI;
