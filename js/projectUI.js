@@ -1,67 +1,10 @@
+import projectsList from './ProjectsList.js';
+
 const projectsSection = document.querySelector('#projects');
 const projectsCont = document.querySelector('.projects-container');
 const filterItems = document.querySelectorAll('.filter-item');
 const filteredResultsInfo = document.querySelector('.filtered-results');
 const paginationList = document.querySelector('.pagination');
-
-const projectStorage = [
-  {
-    title: 'Volunter Web App',
-    type: 'full-stack',
-    desc: 'A Web App that allows the users to search, research and book a socially conscious travel adventure.',
-    img: 'bbc.png',
-    appLink: '',
-    sourceCodeLink: '',
-  },
-  {
-    title: 'Chemical Analysis',
-    type: 'front-end',
-    desc: 'A Web App that allows the users to search, research and book a socially conscious travel adventure.',
-    img: 'chemical.jpg',
-    appLink: '',
-    sourceCodeLink: '',
-  },
-  {
-    title: 'Electronic Record',
-    type: 'full-stack',
-    desc: 'A Web App that allows the users to search, research and book a socially conscious travel adventure.',
-    img: 'Electronic Records Management Systems.jpg',
-    appLink: '',
-    sourceCodeLink: '',
-  },
-  {
-    title: 'Machine Learning System',
-    type: 'full-stack',
-    desc: 'A Web App that allows the users to search, research and book a socially conscious travel adventure.',
-    img: 'machine learning.jpg',
-    appLink: '',
-    sourceCodeLink: '',
-  },
-  {
-    title: 'test project one',
-    type: 'front-end',
-    desc: 'A Web App that allows the users to search, research and book a socially conscious travel adventure.',
-    img: 'img_github_logo.png',
-    appLink: '',
-    sourceCodeLink: '',
-  },
-  {
-    title: 'test project two',
-    type: 'plain-javaScript',
-    desc: 'A Web App that allows the users to search, research and book a socially conscious travel adventure.',
-    img: 'img_github_logo.png',
-    appLink: '',
-    sourceCodeLink: '',
-  },
-  {
-    title: 'test project three',
-    type: 'full-stack',
-    desc: 'A Web App that allows the users to search, research and book a socially conscious travel adventure.',
-    img: 'img_github_logo.png',
-    appLink: '',
-    sourceCodeLink: '',
-  },
-];
 
 const projectImgPath = 'img/project_img';
 let currentPageNumber = 1;
@@ -69,9 +12,9 @@ let filteredProjects = [];
 
 class ProjectUI {
   static displayProjects() {
-    for (let i = 0; i < 3; i++) ProjectUI.addProjectToList(projectStorage[i]);
+    for (let i = 0; i < 3; i++) ProjectUI.addProjectToList(projectsList[i]);
 
-    if (projectStorage.length > 3) {
+    if (projectsList.length > 3) {
       ProjectUI.addPagination();
     }
   }
@@ -125,7 +68,7 @@ class ProjectUI {
     ProjectUI.removeProjects();
     ProjectUI.removePagination();
 
-    projectStorage.forEach((project) => {
+    projectsList.forEach((project) => {
       if (
         !filterValue ||
         filterValue.toLowerCase() === 'all' ||
@@ -155,7 +98,7 @@ class ProjectUI {
   static addPagination(filteredResults) {
     const projectCount = filteredResults
       ? filteredResults
-      : projectStorage.length;
+      : projectsList.length;
     const pages = Math.ceil(projectCount / 3);
 
     for (let i = 1; i <= pages; i++) {
@@ -187,7 +130,7 @@ class ProjectUI {
     if (!e.target.classList.contains('page-item')) return;
 
     if (filteredProjects.length === 0) {
-      filteredProjects = projectStorage;
+      filteredProjects = projectsList;
     }
 
     const pages = Math.ceil(filteredProjects.length / 3);
