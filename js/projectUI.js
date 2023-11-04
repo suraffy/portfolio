@@ -3,20 +3,59 @@ import projectsList from './ProjectsList.js';
 const projectsSection = document.querySelector('#projects');
 const projectsCont = document.querySelector('.projects-container');
 const filterItems = document.querySelectorAll('.filter-item');
-const filteredResultsInfo = document.querySelector('.filtered-results');
 const paginationList = document.querySelector('.pagination');
 
 const projectImgPath = 'img/project_img';
+let filteredProjects = projectsList;
+let paginatedProjects = [];
+const pageSize = 3;
+let pageNumberCount = 0;
 let currentPageNumber = 1;
-let filteredProjects = [];
 
 class ProjectUI {
   static displayProjects() {
-    for (let i = 0; i < 3; i++) ProjectUI.addProjectToList(projectsList[i]);
+    if (paginatedProjects.length) {
+      ProjectUI.removeProjects();
 
-    if (projectsList.length > 3) {
-      ProjectUI.addPagination();
+      for (let project of paginatedProjects)
+        ProjectUI.addProjectToList(project);
+
+      paginatedProjects.length = 0;
+      return;
     }
+
+    if (filteredProjects.length > 3) {
+      for (let i = 0; i < 3; i++) {
+        ProjectUI.addProjectToList(filteredProjects[i]);
+      }
+
+      ProjectUI.addPagination();
+      paginationList.children[0].classList.add('active');
+      return;
+    }
+
+    for (let project of filteredProjects) ProjectUI.addProjectToList(project);
+  }
+
+  static addPagination() {
+    paginationList.textContent = '';
+
+    const projectCount = filteredProjects.length;
+    const pages = Math.ceil(projectCount / 3);
+    pageNumberCount = pages;
+
+    for (let i = 1; i <= pages; i++) {
+      const pageItems = document.createElement('li');
+      pageItems.classList.add('page-item');
+      pageItems.setAttribute('data-page-number', i);
+      pageItems.textContent = i;
+
+      paginationList.append(pageItems);
+    }
+  }
+
+  static removePagination() {
+    paginationList.textContent = '';
   }
 
   static addProjectToList(project) {
@@ -46,133 +85,50 @@ class ProjectUI {
     projectsCont.textContent = '';
   }
 
-  static filter(e) {
+  static filterProjects(e) {
     if (!e.target.classList.contains('filter-item')) return;
 
     const filterEl = e.target;
-    filterEl.classList.toggle('clicked-filter-item');
 
-    let filterValue = filterEl.dataset.filterItem;
-    filteredProjects = [];
+    let filterValue = filterEl.dataset.filterItem.toLowerCase();
 
-    if (!filterEl.classList.contains('clicked-filter-item')) {
-      filterValue = undefined;
-      ProjectUI.hideFilteredResultsInfo();
-    }
+    filteredProjects = projectsList.filter((p) => p.type === filterValue);
+    if (filterValue === 'all') filteredProjects = projectsList;
+
+    filterEl.classList.add('clicked-filter-item');
 
     for (let filterItem of filterItems) {
       if (filterItem === filterEl) continue;
       filterItem.classList.remove('clicked-filter-item');
     }
 
-    ProjectUI.removeProjects();
     ProjectUI.removePagination();
-
-    projectsList.forEach((project) => {
-      if (
-        !filterValue ||
-        filterValue.toLowerCase() === 'all' ||
-        filterValue.toLowerCase() === project.type.toLowerCase()
-      ) {
-        if (filteredProjects.length < 3) ProjectUI.addProjectToList(project);
-        filteredProjects.push(project);
-      }
-    });
-
-    const filteredResults = filteredProjects.length;
-    if (filteredResults > 3) ProjectUI.addPagination(filteredResults);
-
-    if (filterValue)
-      ProjectUI.showFilteredResultsInfo(filterValue, filteredResults);
-  }
-
-  static showFilteredResultsInfo(filterValue, filteredResults) {
-    filteredResultsInfo.textContent = `${filterValue} Projects, ${filteredResults} results`;
-    filteredResultsInfo.style.display = 'block';
-  }
-
-  static hideFilteredResultsInfo() {
-    filteredResultsInfo.style.display = 'none';
-  }
-
-  static addPagination(filteredResults) {
-    const projectCount = filteredResults
-      ? filteredResults
-      : projectsList.length;
-    const pages = Math.ceil(projectCount / 3);
-
-    for (let i = 1; i <= pages; i++) {
-      const pageItems = document.createElement('li');
-      pageItems.classList.add('page-item');
-      pageItems.textContent = i;
-
-      paginationList.append(pageItems);
-    }
-
-    paginationList.insertAdjacentHTML(
-      'afterbegin',
-      `<li class="page-item">Prev</li>`
-    );
-    paginationList.insertAdjacentHTML(
-      'beforeend',
-      `<li class="page-item">Next</li>`
-    );
-
-    paginationList.children[1].classList.add('active');
-    paginationList.firstElementChild.classList.add('disabled');
-  }
-
-  static removePagination() {
-    paginationList.textContent = '';
+    ProjectUI.removeProjects();
+    ProjectUI.displayProjects();
   }
 
   static navigatePagination(e) {
     if (!e.target.classList.contains('page-item')) return;
 
-    if (filteredProjects.length === 0) {
-      filteredProjects = projectsList;
-    }
+    const paginateEl = e.target;
 
-    const pages = Math.ceil(filteredProjects.length / 3);
-    let pageNumber = +e.target.textContent
-      ? +e.target.textContent
-      : e.target.textContent;
+    currentPageNumber = Number(paginateEl.dataset.pageNumber);
 
-    if (pageNumber === 'Prev') {
-      if (currentPageNumber === 1) return;
-      pageNumber = currentPageNumber - 1;
-      currentPageNumber = pageNumber;
-    } else if (pageNumber === 'Next') {
-      if (currentPageNumber === pages) return;
-      pageNumber = currentPageNumber + 1;
-      currentPageNumber = pageNumber;
-    }
+    for (let i = 0; i < pageNumberCount; i++) {
+      if (currentPageNumber === i + 1) {
+        paginatedProjects = filteredProjects.slice(
+          i * pageSize,
+          i * pageSize + pageSize
+        );
 
-    currentPageNumber = pageNumber;
-    for (let page of paginationList.children) {
-      if (pageNumber === +page.textContent) {
-        page.classList.add('active');
+        ProjectUI.displayProjects();
+
+        paginateEl.classList.add('active');
         continue;
       }
-      page.classList.remove('active');
-      page.classList.remove('disabled');
+
+      paginationList.children[i].classList.remove('active');
     }
-
-    if (currentPageNumber === 1) {
-      paginationList.firstElementChild.classList.add('disabled');
-    }
-
-    if (currentPageNumber === pages) {
-      paginationList.lastElementChild.classList.add('disabled');
-    }
-
-    ProjectUI.removeProjects();
-
-    for (let i = pageNumber * 3 - 3; i < pageNumber * 3; i++) {
-      if (filteredProjects[i]) ProjectUI.addProjectToList(filteredProjects[i]);
-    }
-
-    projectsSection.scrollIntoView(true);
   }
 }
 

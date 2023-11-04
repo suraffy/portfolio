@@ -6,5 +6,6 @@ const paginationList = document.querySelector('.pagination');
 
 document.addEventListener('DOMContentLoaded', skillUI.displaySkills);
 document.addEventListener('DOMContentLoaded', ProjectUI.displayProjects);
+
 paginationList.addEventListener('click', ProjectUI.navigatePagination);
-filterList.addEventListener('click', ProjectUI.filter);
+filterList.addEventListener('click', ProjectUI.filterProjects);
