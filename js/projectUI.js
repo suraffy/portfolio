@@ -13,12 +13,11 @@ let pageNumberCount = 0;
 let currentPageNumber = 1;
 
 class ProjectUI {
-  static displayProjects() {
+  static displayProjects = () => {
     if (paginatedProjects.length) {
-      ProjectUI.removeProjects();
+      this.removeProjects();
 
-      for (let project of paginatedProjects)
-        ProjectUI.addProjectToList(project);
+      for (let project of paginatedProjects) this.addProjectToList(project);
 
       paginatedProjects.length = 0;
       return;
@@ -26,18 +25,18 @@ class ProjectUI {
 
     if (filteredProjects.length > 3) {
       for (let i = 0; i < 3; i++) {
-        ProjectUI.addProjectToList(filteredProjects[i]);
+        this.addProjectToList(filteredProjects[i]);
       }
 
-      ProjectUI.addPagination();
+      this.addPagination();
       paginationList.children[0].classList.add('active');
       return;
     }
 
-    for (let project of filteredProjects) ProjectUI.addProjectToList(project);
-  }
+    for (let project of filteredProjects) this.addProjectToList(project);
+  };
 
-  static addPagination() {
+  static addPagination = () => {
     paginationList.textContent = '';
 
     const projectCount = filteredProjects.length;
@@ -52,13 +51,13 @@ class ProjectUI {
 
       paginationList.append(pageItems);
     }
-  }
+  };
 
-  static removePagination() {
+  static removePagination = () => {
     paginationList.textContent = '';
-  }
+  };
 
-  static addProjectToList(project) {
+  static addProjectToList = (project) => {
     if (!project) return;
     projectsCont.insertAdjacentHTML(
       'beforeend',
@@ -79,13 +78,13 @@ class ProjectUI {
       </div>
     </div>`
     );
-  }
+  };
 
-  static removeProjects() {
+  static removeProjects = () => {
     projectsCont.textContent = '';
-  }
+  };
 
-  static filterProjects(e) {
+  static filterProjects = (e) => {
     if (!e.target.classList.contains('filter-item')) return;
 
     const filterEl = e.target;
@@ -102,12 +101,12 @@ class ProjectUI {
       filterItem.classList.remove('clicked-filter-item');
     }
 
-    ProjectUI.removePagination();
-    ProjectUI.removeProjects();
-    ProjectUI.displayProjects();
-  }
+    this.removePagination();
+    this.removeProjects();
+    this.displayProjects();
+  };
 
-  static navigatePagination(e) {
+  static navigatePagination = (e) => {
     if (!e.target.classList.contains('page-item')) return;
 
     const paginateEl = e.target;
@@ -121,7 +120,7 @@ class ProjectUI {
           i * pageSize + pageSize
         );
 
-        ProjectUI.displayProjects();
+        this.displayProjects();
 
         paginateEl.classList.add('active');
         continue;
@@ -129,7 +128,7 @@ class ProjectUI {
 
       paginationList.children[i].classList.remove('active');
     }
-  }
+  };
 }
 
 export default ProjectUI;
