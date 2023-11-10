@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import webLogo from "../img/web-dev-logo-colored.svg";
 import bannerImg from "../img/laptop.png";
 

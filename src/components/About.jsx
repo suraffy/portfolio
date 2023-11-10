@@ -5,14 +5,14 @@ const About = () => {
 
   return (
     <section id="about-me">
-      <div class="container">
-        <div class="flex-column">
-          <div class="about-me-overview">
+      <div className="container">
+        <div className="flex-column">
+          <div className="about-me-overview">
             <img src={imgUrlProfile} alt="Surafel Araya" />
-            <h2 class="h2-underline">Surafel Araya</h2>
+            <h2 className="h2-underline">Surafel Araya</h2>
           </div>
 
-          <div class="about-me-detail">
+          <div className="about-me-detail">
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
               excepturi consequatur. Doloribus illum.
@@ -33,31 +33,31 @@ const About = () => {
             </p>
           </div>
 
-          <ul class="about-me-accounts flex-row">
+          <ul className="about-me-accounts flex-row">
             <li>
-              <a href="" target="_blank" class="flex-column">
-                <i class="fa fa-github"></i>
+              <a href="" target="_blank" className="flex-column">
+                <i className="fa fa-github"></i>
                 <span>GitHub</span>
               </a>
             </li>
 
             <li>
-              <a href="" target="_blank" class="flex-column">
-                <i class="fa fa-linkedin"></i>
+              <a href="" target="_blank" className="flex-column">
+                <i className="fa fa-linkedin"></i>
                 <span>LinkedIn</span>
               </a>
             </li>
 
             <li>
-              <a href="" target="_blank" class="flex-column">
-                <i class="fa fa-twitter"></i>
+              <a href="" target="_blank" className="flex-column">
+                <i className="fa fa-twitter"></i>
                 <span>Twitter</span>
               </a>
             </li>
 
             <li>
-              <a href="" target="_blank" class="flex-column">
-                <i class="fa fa-codepen"></i>
+              <a href="" target="_blank" className="flex-column">
+                <i className="fa fa-codepen"></i>
                 <span>CodePen</span>
               </a>
             </li>
