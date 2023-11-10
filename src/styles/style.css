@@ -113,7 +113,7 @@ nav {
 }
 
 .banner-text::before {
-  content: '';
+  content: "";
   display: table;
   margin: 0px auto 10px;
   width: 0px;
@@ -173,7 +173,7 @@ nav {
   transition: color 0.2s;
 }
 
-.about-me-accounts i {
+.about-me-accounts svg {
   font-size: 1.8rem;
 }
 
@@ -218,7 +218,7 @@ nav {
 }
 
 .skills-details li::before {
-  content: '\2022';
+  content: "\2022";
   padding: 0 5px;
 }
 
@@ -322,7 +322,7 @@ nav {
 }
 
 .project-type::after {
-  content: '';
+  content: "";
   display: table;
   width: 40px;
   height: 4px;
@@ -385,7 +385,7 @@ nav {
   margin: 4px 0;
 }
 
-#contact input[type='submit'] {
+#contact input[type="submit"] {
   align-self: center;
   font-weight: 500;
 }
@@ -428,7 +428,7 @@ footer {
   border-radius: 100%;
 }
 
-.footer-profile i {
+.footer-profile svg {
   font-size: 1.2rem;
 }
 
@@ -439,7 +439,6 @@ div.footer-courses-codes {
   padding-right: 0;
   padding-left: 0;
 }
-
 
 .footer-courses-codes > div {
   padding: 0 15px;
@@ -463,10 +462,9 @@ div.footer-courses-codes {
   /* text-decoration: none; */
 }
 
-.footer-profile a i {
+.footer-profile a svg {
   padding-right: 8px;
 }
-
 
 .footer-profile .fa-youtube {
   color: rgb(173, 21, 21);
@@ -493,27 +491,21 @@ footer .web-developer-name {
   text-align: center;
 }
 
-
-
-
-.about-me-accounts i {
+.about-me-accounts svg {
   transition: transform 0.2s;
 }
 
-.about-me-accounts li:hover i {
+.about-me-accounts li:hover svg {
   transform: translateY(-4px);
 }
 
-
-.footer-profile i {
+.footer-profile svg {
   transition: transform 0.2s;
 }
 
-.footer-profile li:hover i {
+.footer-profile li:hover svg {
   transform: translateX(4px);
 }
-
-
 
 .web-developer-name {
   font-size: 14px;
