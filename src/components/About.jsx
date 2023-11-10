@@ -1,3 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+  faCodepen,
+} from "@fortawesome/free-brands-svg-icons";
+
 import profilePic from "../img/surafel.jpg";
 
 const About = () => {
@@ -36,28 +44,28 @@ const About = () => {
           <ul className="about-me-accounts flex-row">
             <li>
               <a href="" target="_blank" className="flex-column">
-                <i className="fa fa-github"></i>
+                <FontAwesomeIcon icon={faGithub} size="lg" />
                 <span>GitHub</span>
               </a>
             </li>
 
             <li>
               <a href="" target="_blank" className="flex-column">
-                <i className="fa fa-linkedin"></i>
+                <FontAwesomeIcon icon={faLinkedin} size="lg" />
                 <span>LinkedIn</span>
               </a>
             </li>
 
             <li>
               <a href="" target="_blank" className="flex-column">
-                <i className="fa fa-twitter"></i>
+                <FontAwesomeIcon icon={faTwitter} size="lg" />
                 <span>Twitter</span>
               </a>
             </li>
 
             <li>
               <a href="" target="_blank" className="flex-column">
-                <i className="fa fa-codepen"></i>
+                <FontAwesomeIcon icon={faCodepen} size="lg" />
                 <span>CodePen</span>
               </a>
             </li>

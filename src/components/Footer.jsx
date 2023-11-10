@@ -1,3 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+  faCodepen,
+  faYoutube,
+  faMedium,
+  faReddit,
+} from "@fortawesome/free-brands-svg-icons";
+
 import profilePic from "../img/surafel.jpg";
 
 const Footer = () => {
@@ -27,13 +38,15 @@ const Footer = () => {
               <ul className="footer-courses-list">
                 <li>
                   <a href="" target="_blank">
-                    <i className="fa fa-youtube"></i>YouTube
+                    <FontAwesomeIcon icon={faYoutube} size="lg" />
+                    YouTube
                   </a>
                 </li>
 
                 <li>
                   <a href="" target="_blank">
-                    <i className="fa fa-medium"></i>Blog
+                    <FontAwesomeIcon icon={faMedium} size="lg" />
+                    Blog
                   </a>
                 </li>
               </ul>
@@ -44,13 +57,15 @@ const Footer = () => {
               <ul className="footer-codes-list">
                 <li>
                   <a href="" target="_blank">
-                    <i className="fa fa-github"></i>GitHub
+                    <FontAwesomeIcon icon={faGithub} size="lg" />
+                    GitHub
                   </a>
                 </li>
 
                 <li>
                   <a href="" target="_blank">
-                    <i className="fa fa-codepen"></i>CodePen
+                    <FontAwesomeIcon icon={faCodepen} size="lg" />
+                    CodePen
                   </a>
                 </li>
               </ul>
@@ -62,19 +77,22 @@ const Footer = () => {
             <ul className="footer-active-on-list">
               <li>
                 <a href="" target="_blank">
-                  <i className="fa fa-linkedin"></i>LinkedIn
+                  <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                  LinkedIn
                 </a>
               </li>
 
               <li>
                 <a href="" target="_blank">
-                  <i className="fa fa-twitter"></i>Twitter
+                  <FontAwesomeIcon icon={faTwitter} size="lg" />
+                  Twitter
                 </a>
               </li>
 
               <li>
                 <a href="" target="_blank">
-                  <i className="fa fa-reddit"></i>Stackoverflow
+                  <FontAwesomeIcon icon={faReddit} size="lg" />
+                  Stackoverflow
                 </a>
               </li>
             </ul>
