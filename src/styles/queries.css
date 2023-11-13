@@ -50,11 +50,14 @@
   }
 
   .skills-grid-container {
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     grid-template-columns: auto auto auto auto;
   }
 
-  .long-width {
+  .skills-box.flex-row {
+    justify-content: center;
+  }
+
+  .skills-box.span-col-2 {
     grid-column: span 2;
     justify-content: flex-start;
   }
@@ -76,11 +79,11 @@
 }
 
 @media (max-width: 300px) {
-  .skills-box img:not(.long-width) {
+  .skills-box img:not(.span-col-2) {
     display: none;
   }
 
-  .skills-box .long-width {
+  .skills-box .span-col-2 {
     width: 100%;
   }
 }

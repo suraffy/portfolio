@@ -13,7 +13,7 @@ const Skills = () => {
               <div
                 key={skill.name}
                 className={`skills-box flex-row ${
-                  skill.details ? "long-width" : ""
+                  skill.details ? "span-col-2" : ""
                 }`}
               >
                 <img src={imgUrl + skill.img} alt={skill.name} />

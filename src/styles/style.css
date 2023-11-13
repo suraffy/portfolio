@@ -185,7 +185,11 @@ nav {
 .skills-grid-container {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto auto;
+}
+
+.skills-box.span-col-2 {
+  grid-column: span 2;
 }
 
 .skills-box.flex-row {
@@ -204,11 +208,7 @@ nav {
 }
 
 .skills-box img {
-  max-height: 60px;
-}
-
-.skills-box .long-width {
-  max-width: 240px;
+  max-height: 80px;
 }
 
 .skills-details {

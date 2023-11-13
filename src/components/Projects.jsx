@@ -1,4 +1,8 @@
+import projectsList from "../services/projectsList";
+
 const Projects = () => {
+  console.log(projectsList);
+
   return (
     <section id="projects">
       <div className="container">
