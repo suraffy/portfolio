@@ -1,7 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 import projectsList from "../services/projectsList";
 
 const Projects = () => {
-  console.log(projectsList);
+  // console.log(projectsList);
 
   const filterItems = [
     { keywork: "all", label: "All" },
@@ -38,24 +42,37 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="projects-container flex-column">
+          <div className="projects-container">
             {projectsList.map((project) => (
-              <div key={project.title} className="project-box flex-row">
+              <div key={project.title} className="project-box flex-column">
                 <div className="project-profile-img row">
                   <img src={"/img/web-tech.jpg"} alt="" />
                 </div>
                 <div className="project-details flex-column">
                   <h2 className="project-title">{project.title}</h2>
-                  {/* <span className="project-type">{project.type}</span> */}
+                  <div
+                    className="flex-row"
+                    style={{
+                      width: "100%",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <span className="tech-used">{project.techUsed}</span>
+                    <span className="project-links">
+                      <a href="#">
+                        Live <FontAwesomeIcon icon={faUpRightFromSquare} />
+                      </a>
+                      &nbsp;
+                      <a href="#">
+                        <FontAwesomeIcon
+                          className="source-code"
+                          icon={faGithub}
+                          size="lg"
+                        />
+                      </a>
+                    </span>
+                  </div>
                   <p className="project-description">{project.desc}</p>
-                  {/* <div className="project-links flex-row">
-                    <a href="" target="_blank" className="btn">
-                      Live Preview
-                    </a>
-                    <a href="" target="_blank">
-                      Source Code
-                    </a>
-                  </div> */}
                 </div>
               </div>
             ))}
