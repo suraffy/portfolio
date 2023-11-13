@@ -10,7 +10,12 @@ const Skills = () => {
           <h2 className="h2-underline">My Skills</h2>
           <div className="skills-grid-container">
             {skillsList.map((skill) => (
-              <div key={skill.name} className="skills-box flex-row">
+              <div
+                key={skill.name}
+                className={`skills-box flex-row ${
+                  skill.details ? "long-width" : ""
+                }`}
+              >
                 <img src={imgUrl + skill.img} alt={skill.name} />
                 {skill.details && (
                   <ul className="skills-details">

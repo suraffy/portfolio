@@ -1,5 +1,5 @@
 const skillsList = [
-  { name: "HTML5", img: "html-5.svg" },
+  // { name: "HTML5", img: "html-5.svg" },
   {
     name: "CSS3",
     img: "css-3.svg",
@@ -13,10 +13,10 @@ const skillsList = [
     name: "Bootstrap",
     img: "bootstrap.svg",
   },
-  {
-    name: "Taiwild",
-    img: "tailwind.svg",
-  },
+  // {
+  //   name: "Taiwild",
+  //   img: "tailwind.svg",
+  // },
   {
     name: "JavaScript",
     img: "javascript.svg",
@@ -24,12 +24,12 @@ const skillsList = [
   },
   {
     name: "Node.js",
-    img: "node-js.svg",
+    img: "node-js-1.svg",
     details: ["Express", "REST API", "Security"],
   },
   {
     name: "Reac.js",
-    img: "react.svg",
+    img: "react-1.svg",
     details: ["Reactrouter", "Redux"],
   },
   {
@@ -43,7 +43,7 @@ const skillsList = [
   },
   {
     name: "Mongodb",
-    img: "mongodb.svg",
+    img: "mongodb-logo.png",
   },
   {
     name: "Adobe Xd",
