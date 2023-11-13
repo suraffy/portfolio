@@ -1,38 +1,53 @@
 const skillsList = [
-  { name: "HTML5", img: "html5 logo.png", className: "long-width" },
+  { name: "HTML5", img: "html-5.svg" },
   {
     name: "CSS3",
-    img: "img_css.jpg",
+    img: "css-3.svg",
     details: ["Flexbox, CSS Grid", "Media Queries", "CSS Animation"],
   },
   {
-    name: "Bootstrap_Taiwild",
-    img: "bootstrap.png",
-    img2: "tailwind css.png",
+    name: "Sass",
+    img: "sass.svg",
+  },
+  {
+    name: "Bootstrap",
+    img: "bootstrap.svg",
+  },
+  {
+    name: "Taiwild",
+    img: "tailwind.svg",
   },
   {
     name: "JavaScript",
-    img: "JavaScript logo official.png",
+    img: "javascript.svg",
     details: ["ES6+", "OOP, Async JavaScript", "DOM Manipulation"],
   },
   {
     name: "Node.js",
-    img: "320px-Node.js_logo.svg.png",
+    img: "node-js.svg",
     details: ["Express", "REST API", "Security"],
   },
   {
+    name: "Reac.js",
+    img: "react.svg",
+    details: ["Reactrouter", "Redux"],
+  },
+  {
     name: "Vue.js",
-    img: "vue-logo.png",
+    img: "vue.svg",
     details: ["Vue Router", "Vuex"],
   },
   {
+    name: "MySql",
+    img: "mysql.svg",
+  },
+  {
     name: "Mongodb",
-    img: "mongodb-logo.png",
-    className: "long-width",
+    img: "mongodb.svg",
   },
   {
     name: "Adobe Xd",
-    img: "Adobe-Xd.png",
+    img: "Adobe-Xd.svg",
     details: ["Web Page Design", "Designing SVG Shapes"],
   },
 ];
