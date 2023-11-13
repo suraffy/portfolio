@@ -1,4 +1,4 @@
-import projectsList from './ProjectsList.js';
+import projectsList from './projectsList.js';
 
 const projectsSection = document.querySelector('#projects');
 const projectsCont = document.querySelector('.projects-container');
