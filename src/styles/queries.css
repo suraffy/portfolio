@@ -35,8 +35,6 @@
   }
   /* End - Desktop Navbar */
 
-
-
   .banner-img {
     margin-top: 20px;
     margin-top: 10px;
@@ -51,9 +49,14 @@
     margin-left: 20px;
   }
 
-
   .skills-grid-container {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .long-width {
+    grid-column: span 2;
+    justify-content: flex-start;
   }
 
   .footer-profile {
@@ -71,7 +74,6 @@
     flex-direction: row;
   }
 }
-
 
 @media (max-width: 300px) {
   .skills-box img:not(.long-width) {
