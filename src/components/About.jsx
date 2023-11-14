@@ -11,6 +11,11 @@ import profilePic from "../img/surafel.jpg";
 const About = () => {
   const imgUrlProfile = profilePic;
 
+  const twitterAccountUrl = "https://twitter.com/surafelaraya";
+  const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
+  const githubAccountUrl = "https://github.com/suraffy";
+  const codepenAccountUrl = "https://codepen.io/suraffy";
+
   return (
     <section id="about-me">
       <div className="container">
@@ -43,28 +48,44 @@ const About = () => {
 
           <ul className="about-me-accounts flex-row">
             <li>
-              <a href="" target="_blank" className="flex-column">
+              <a
+                href={githubAccountUrl}
+                target="_blank"
+                className="flex-column"
+              >
                 <FontAwesomeIcon icon={faGithub} size="lg" />
                 <span>GitHub</span>
               </a>
             </li>
 
             <li>
-              <a href="" target="_blank" className="flex-column">
+              <a
+                href={linkedinAccountUrl}
+                target="_blank"
+                className="flex-column"
+              >
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
                 <span>LinkedIn</span>
               </a>
             </li>
 
             <li>
-              <a href="" target="_blank" className="flex-column">
+              <a
+                href={twitterAccountUrl}
+                target="_blank"
+                className="flex-column"
+              >
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
                 <span>Twitter</span>
               </a>
             </li>
 
             <li>
-              <a href="" target="_blank" className="flex-column">
+              <a
+                href={codepenAccountUrl}
+                target="_blank"
+                className="flex-column"
+              >
                 <FontAwesomeIcon icon={faCodepen} size="lg" />
                 <span>CodePen</span>
               </a>

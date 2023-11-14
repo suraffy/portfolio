@@ -13,6 +13,16 @@ import profilePic from "../img/surafel.jpg";
 
 const Footer = () => {
   const imgUrlProfile = profilePic;
+
+  const twitterAccountUrl = "https://twitter.com/surafelaraya";
+  const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
+  const githubAccountUrl = "https://github.com/suraffy";
+  const codepenAccountUrl = "https://codepen.io/suraffy";
+  const youtubeAccountUrl = "https://www.youtube.com/@suraffy";
+  const mediumAccountUrl = "https://medium.com/@suraffy";
+  const stackoverflowAccountUrl =
+    "https://stackoverflow.com/users/12912584/sura";
+
   return (
     <footer>
       <div className="container">
@@ -37,14 +47,14 @@ const Footer = () => {
               <h4>Courses</h4>
               <ul className="footer-courses-list">
                 <li>
-                  <a href="" target="_blank">
+                  <a href={youtubeAccountUrl} target="_blank">
                     <FontAwesomeIcon icon={faYoutube} size="lg" />
                     YouTube
                   </a>
                 </li>
 
                 <li>
-                  <a href="" target="_blank">
+                  <a href={mediumAccountUrl} target="_blank">
                     <FontAwesomeIcon icon={faMedium} size="lg" />
                     Blog
                   </a>
@@ -56,14 +66,14 @@ const Footer = () => {
               <h4>Codes</h4>
               <ul className="footer-codes-list">
                 <li>
-                  <a href="" target="_blank">
+                  <a href={githubAccountUrl} target="_blank">
                     <FontAwesomeIcon icon={faGithub} size="lg" />
                     GitHub
                   </a>
                 </li>
 
                 <li>
-                  <a href="" target="_blank">
+                  <a href={codepenAccountUrl} target="_blank">
                     <FontAwesomeIcon icon={faCodepen} size="lg" />
                     CodePen
                   </a>
@@ -76,21 +86,21 @@ const Footer = () => {
             <h4>Active on</h4>
             <ul className="footer-active-on-list">
               <li>
-                <a href="" target="_blank">
+                <a href={linkedinAccountUrl} target="_blank">
                   <FontAwesomeIcon icon={faLinkedin} size="lg" />
                   LinkedIn
                 </a>
               </li>
 
               <li>
-                <a href="" target="_blank">
+                <a href={twitterAccountUrl} target="_blank">
                   <FontAwesomeIcon icon={faTwitter} size="lg" />
                   Twitter
                 </a>
               </li>
 
               <li>
-                <a href="" target="_blank">
+                <a href={stackoverflowAccountUrl} target="_blank">
                   <FontAwesomeIcon icon={faReddit} size="lg" />
                   Stackoverflow
                 </a>
