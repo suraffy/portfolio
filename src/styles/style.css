@@ -202,10 +202,11 @@ nav {
   border-radius: 2px;
   box-shadow: 2px 2px 4px var(--lightgray);
   transition: box-shadow 0.2s;
+  border-radius: 10px;
 }
 
 .skills-box:hover {
-  box-shadow: 2px 2px 8px var(--lightgray);
+  box-shadow: 2px 2px 8px var(--gray);
 }
 
 .skills-box img {
