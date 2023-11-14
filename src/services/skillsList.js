@@ -24,7 +24,7 @@ const skillsList = [
   },
   {
     name: "Node.js",
-    img: "node-js-1.svg",
+    img: "node-js.svg",
     details: ["Express", "REST API", "Security"],
   },
   {

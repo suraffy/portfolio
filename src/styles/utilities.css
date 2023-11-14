@@ -46,7 +46,7 @@ textarea::placeholder {
   color: var(--gray);
 }
 
-input[type='submit'],
+input[type="submit"],
 button,
 .btn {
   padding: 8px 12px;
@@ -56,7 +56,7 @@ button,
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
-input[type='submit']:hover,
+input[type="submit"]:hover,
 button:hover,
 .btn:hover {
   background-color: #e4e4e4;
@@ -88,7 +88,7 @@ h2 {
 }
 
 .h2-underline::after {
-  content: '';
+  content: "";
   display: table;
   width: 80px;
   height: 4px;

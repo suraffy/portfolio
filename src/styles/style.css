@@ -336,11 +336,13 @@ nav {
 }
 
 .project-box .project-links a {
-  transition: transform 0.2s ease-in-out;
+  text-decoration-color: transparent;
+  transition: transform 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
 }
 
 .project-box .project-links a:hover {
   transform: scale(1.1);
+  text-decoration-color: initial;
 }
 
 /* Pagination */
