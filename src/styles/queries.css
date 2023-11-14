@@ -50,6 +50,7 @@
   }
 
   .skills-grid-container {
+    max-width: 700px;
     grid-template-columns: auto auto auto auto;
   }
 
