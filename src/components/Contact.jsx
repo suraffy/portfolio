@@ -5,10 +5,10 @@ const Contact = () => {
         <div className="flex-column">
           <h2 className="h2-underline">Want to Contact Me?</h2>
           <p>
-            Please contact me by this email address
+            Please contact me by this email address{" "}
             <a href="mailto:surafelay@gmail.com" target="_blank">
               surafelay@gmail.com
-            </a>
+            </a>{" "}
             or through the contact form below.
           </p>
           <form action="" className="flex-column">
