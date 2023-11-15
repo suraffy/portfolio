@@ -15,6 +15,10 @@ const Home = () => {
   const imgUrlBanner = bannerImg;
   const imgUrlProfile = profilePic;
 
+  const githubAccountUrl = "https://github.com/suraffy";
+  const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
+  const twitterAccountUrl = "https://twitter.com/surafelaraya";
+
   return (
     <header id="main-header">
       <nav>
@@ -58,19 +62,6 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* <div className="container">
-        <div className="banner flex-column">
-          <div className="banner-img">
-            <img src={imgUrlBanner} alt="Banner Image" />
-          </div>
-
-          <div className="banner-text">
-            <h2>Surafel Araya</h2>
-            <p>Software Developer & Web Designer</p>
-          </div>
-        </div>
-      </div> */}
-
       <div className="container">
         <div className="hero-container flex-column">
           <div className="hero-image-container">
@@ -94,28 +85,25 @@ const Home = () => {
               </p>
               <div className="hero-contact flex-row">
                 <a
-                  href="githubAccountUrl"
+                  href={githubAccountUrl}
                   target="_blank"
                   className="flex-column"
                 >
                   <FontAwesomeIcon icon={faGithub} size="lg" />
-                  {/* <span>GitHub</span> */}
                 </a>
                 <a
-                  href="githubAccountUrl"
+                  href={linkedinAccountUrl}
                   target="_blank"
                   className="flex-column"
                 >
                   <FontAwesomeIcon icon={faLinkedin} size="lg" />
-                  {/* <span>LinkedIn</span> */}
                 </a>
                 <a
-                  href="githubAccountUrl"
+                  href={twitterAccountUrl}
                   target="_blank"
                   className="flex-column"
                 >
                   <FontAwesomeIcon icon={faTwitter} size="lg" />
-                  {/* <span>Twitter</span> */}
                 </a>
               </div>
             </div>
