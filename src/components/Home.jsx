@@ -41,18 +41,13 @@ const Home = () => {
 
             <ul className="main-nav flex-row">
               <li>
-                <a href="#about-me">About Me</a>
+                <a href="#">Home</a>
               </li>
               <li>
                 <a href="#my-skills">My Skills</a>
               </li>
               <li>
                 <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="" target="_blank">
-                  Blog
-                </a>
               </li>
               <li>
                 <a href="#contact">Contact</a>
