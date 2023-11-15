@@ -76,6 +76,11 @@ img {
 }
 
 /* Headings and Paragraphs */
+h1 {
+  margin: 10px 0 20px;
+  font-size: 2rem;
+}
+
 h2 {
   margin: 10px 0 20px;
   font-size: 1.6rem;

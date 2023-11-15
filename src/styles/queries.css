@@ -35,18 +35,27 @@
   }
   /* End - Desktop Navbar */
 
-  .banner-img {
-    margin-top: 20px;
-    margin-top: 10px;
+  .hero-container {
+    flex-direction: row-reverse;
+    margin-top: 200px;
+  }
+
+  .hero-image-container {
+    width: 280px;
+    /* margin: auto 2rem; */
+  }
+
+  .hero-content {
+    text-align: initial;
+  }
+
+  .hero-title {
+    font-size: 2rem;
   }
 
   .banner-text h2 {
     /* margin-bottom: 20px; */
     animation: slide-left 0.8s ease-in-out;
-  }
-
-  .banner-text p {
-    margin-left: 20px;
   }
 
   .skills-grid-container {

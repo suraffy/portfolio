@@ -58,10 +58,27 @@ const Home = () => {
         </div>
       </nav>
 
+      {/* <div className="container">
+        <div className="banner flex-column">
+          <div className="banner-img">
+            <img src={imgUrlBanner} alt="Banner Image" />
+          </div>
+
+          <div className="banner-text">
+            <h2>Surafel Araya</h2>
+            <p>Software Developer & Web Designer</p>
+          </div>
+        </div>
+      </div> */}
+
       <div className="container">
-        <div className="hero-container flex-row">
+        <div className="hero-container flex-column">
+          <div className="hero-image-container">
+            <img src={"/img/surafel-transparent.png"} alt="Surafel Araya" />
+          </div>
+
           <div className="hero-content">
-            <span className="small-text">Hello</span>
+            <span className="small-text">Hello,</span>
             <h1 className="hero-title">
               <span className="thin-text">I'm </span>
               <span>Surafel Araya </span> <br />
@@ -102,14 +119,6 @@ const Home = () => {
                 </a>
               </div>
             </div>
-          </div>
-
-          <div className="hero-image-container">
-            <img
-              src={"/img/surafel-transparent.png"}
-              width={"300px"}
-              alt="Surafel Araya"
-            />
           </div>
         </div>
       </div>
