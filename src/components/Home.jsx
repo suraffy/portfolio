@@ -58,19 +58,6 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* <div className="container">
-        <div className="banner flex-column">
-          <div className="banner-img">
-            <img src={imgUrlBanner} alt="Banner Image" />
-          </div>
-
-          <div className="banner-text">
-            <h2>Surafel Araya</h2>
-            <p>Software Developer & Web Designer</p>
-          </div>
-        </div>
-      </div> */}
-
       <div className="container">
         <div className="hero-container flex-row">
           <div className="hero-content">
