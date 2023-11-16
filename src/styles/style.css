@@ -31,8 +31,8 @@ section {
 
 /* Header */
 header {
-  background-color: #f6f6f6;
-  background: linear-gradient(to right bottom, #fff, #f4f4f4);
+  /* background-color: #f6f6f6;
+  background: linear-gradient(to right bottom, #fff, #f4f4f4); */
   min-height: 650px;
 }
 
@@ -340,7 +340,6 @@ nav {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: auto auto;
-  /* background-color: initial; */
 }
 
 .my-skills-content {
@@ -388,8 +387,8 @@ nav {
 
 /* Projects Section */
 #projects {
-  background-color: #f4f4f4;
-  background: linear-gradient(to right bottom, #fff, #f4f4f4);
+  /* background-color: #f4f4f4;
+  background: linear-gradient(to right bottom, #fff, #f4f4f4); */
 }
 
 /* Project header */
