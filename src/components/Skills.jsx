@@ -5,8 +5,8 @@ const Skills = () => {
 
   return (
     <section id="my-skills">
-      <div className="container">
-        <div className="flex-column">
+      <div className="container flex-row">
+        <div className="my-skills-content flex-column">
           <h2 className="h2-underline">My Skills</h2>
           <div className="skills-grid-container">
             {skillsList.map((skill) => (
