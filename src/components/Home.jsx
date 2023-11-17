@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -19,9 +20,43 @@ const Home = () => {
   const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
   const twitterAccountUrl = "https://twitter.com/surafelaraya";
 
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setScrolling(scrollTop > 80);
+      console.log("Scrolling", scrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      console.log("scrolling remove");
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navStyles = {};
+  const mainNavStyles = {};
+
+  if (scrolling) {
+    navStyles.padding = "4px 0px";
+    navStyles.backgroundColor = "#f8f8f8";
+    navStyles.boxShadow = "0 1px 2px #ccc";
+
+    mainNavStyles.top = "48px";
+  } else {
+    navStyles.padding = "25px 0px";
+    navStyles.backgroundColor = "transparent";
+    navStyles.boxShadow = "none";
+
+    mainNavStyles.top = "70px";
+  }
+
   return (
     <header id="main-header">
-      <nav>
+      <nav style={navStyles}>
         <div className="container">
           <div className="navbar flex-row">
             <div className="logo-container">
@@ -39,7 +74,7 @@ const Home = () => {
               <span className="toggler-bar"></span>
             </div>
 
-            <ul className="main-nav flex-row">
+            <ul className="main-nav flex-row" style={mainNavStyles}>
               <li>
                 <a href="#">Home</a>
               </li>
