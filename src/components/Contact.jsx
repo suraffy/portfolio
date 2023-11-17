@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
     <section id="contact">
-      <div className="container">
-        <div className="flex-column">
+      <div className="container flex-row">
+        <div className="contact-content flex-column">
           <h2 className="h2-underline">Want to Contact Me?</h2>
           <p>
             Please contact me by this email address{" "}

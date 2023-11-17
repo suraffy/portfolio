@@ -530,9 +530,22 @@ nav {
 }
 
 /* Contact section */
-#contact > .container > .flex-column {
+.contact-content {
+  width: 700px;
+  padding: 20px 15px;
+  margin: 0 -15px;
+  border-radius: 10px;
+  background: #f6f6f6;
+}
+
+.contact-content > * {
   max-width: 600px;
-  margin: 0 auto;
+}
+
+.contact-content form {
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 4px var(--lightgray);
 }
 
 #contact form.flex-column {
