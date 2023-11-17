@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedin,
   faTwitter,
-  faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 
-import profilePic from "../img/surafel.jpg";
-import webLogo from "../img/web-dev-logo-colored.svg";
-import bannerImg from "../img/laptop.png";
-
 const Home = () => {
-  const imgUrlLogo = webLogo;
-  const imgUrlBanner = bannerImg;
-  const imgUrlProfile = profilePic;
+  const imgUrlLogo = "/img/web-dev-logo-colored.svg";
+  const profilePic = "/img/surafel-transparent.png";
 
   const githubAccountUrl = "https://github.com/suraffy";
   const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
@@ -26,13 +20,11 @@ const Home = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setScrolling(scrollTop > 80);
-      console.log("Scrolling", scrollTop);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      console.log("scrolling remove");
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -95,7 +87,7 @@ const Home = () => {
       <div className="container">
         <div className="hero-container flex-column">
           <div className="hero-image-container">
-            <img src={"/img/surafel-transparent.png"} alt="Surafel Araya" />
+            <img src={profilePic} alt="Surafel Araya" />
           </div>
 
           <div className="hero-content">
