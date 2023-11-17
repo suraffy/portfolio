@@ -44,7 +44,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 99;
-  transition: padding 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: padding 0.1s, background-color 0.1s, box-shadow 0.1s;
 }
 
 .navbar {
