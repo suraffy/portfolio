@@ -104,22 +104,6 @@ const Home = () => {
 
       <div className="container">
         <div className="hero-container flex-column">
-          <div
-            className="particle-wrapper"
-            style={{
-              transform: `scale(${particle.scale})`,
-              opacity: particle.opacity,
-            }}
-          >
-            <div className="particle-1"></div>
-            <div className="particle-2"></div>
-            <div className="particle-3"></div>
-            <div className="particle-4"></div>
-            <div className="particle-5"></div>
-            <div className="particle-6"></div>
-            <div className="particle-7"></div>
-            <div className="particle-8"></div>
-          </div>
           <div className="hero-content">
             <span className="small-text">Hello,</span>
             <h1 className="hero-title">
@@ -158,6 +142,23 @@ const Home = () => {
                   <FontAwesomeIcon icon={faTwitter} size="lg" />
                 </a>
               </div>
+            </div>
+
+            <div
+              className="particle-wrapper"
+              style={{
+                transform: `scale3d(${particle.scale}, ${particle.scale}, 1)`,
+                opacity: particle.opacity,
+              }}
+            >
+              <div className="particle-1"></div>
+              <div className="particle-2"></div>
+              <div className="particle-3"></div>
+              <div className="particle-4"></div>
+              <div className="particle-5"></div>
+              <div className="particle-6"></div>
+              <div className="particle-7"></div>
+              <div className="particle-8"></div>
             </div>
           </div>
         </div>
