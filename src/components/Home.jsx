@@ -25,11 +25,9 @@ const Home = () => {
       setShowMainNav(false);
 
       if (currentScrollTop < 650) {
-        setparticle((prev) => {
-          return {
-            scale: 1 + currentScrollTop / 1000,
-            // opacity: prev.opacity - 0.01,
-          };
+        setparticle({
+          scale: 1 + currentScrollTop / 1000,
+          opacity: 1 - currentScrollTop / 1000,
         });
       }
     };
