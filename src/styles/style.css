@@ -106,7 +106,6 @@ nav {
   width: 700px;
   height: 310px;
   position: absolute;
-  overflow: hidden;
   /* border: 2px solid blue; */
   /* top: -108px; */
   /* margin-top: 280px; */
@@ -167,9 +166,10 @@ nav {
   background-color: #000;
   border-radius: 5px;
   position: absolute;
-  top: 64px;
+  top: 44px;
   right: 428px;
   transform: rotate(26deg);
+  background: red;
 }
 
 .particle-3 {
@@ -179,8 +179,8 @@ nav {
   background-color: #323235;
   border-radius: 2px;
   position: absolute;
-  top: 94px;
-  right: 624px;
+  top: 74px;
+  right: 650px;
   transform: rotate(-17deg);
 }
 
@@ -191,8 +191,8 @@ nav {
   background-color: #323235;
   border-radius: 6px;
   position: absolute;
-  top: 200px;
-  right: 600px;
+  top: 240px;
+  right: 680px;
   transform: rotate(20deg);
 }
 
@@ -212,6 +212,7 @@ nav {
 
 /* */
 .hero-container {
+  position: relative;
   margin-top: 120px;
 }
 

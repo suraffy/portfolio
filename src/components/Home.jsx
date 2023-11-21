@@ -19,12 +19,19 @@ const Home = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setScrolling(scrollTop > 80);
+      const currentScrollTop = window.scrollY;
+
+      setScrolling(currentScrollTop > 80);
       setShowMainNav(false);
-      setparticle((prev) => {
-        return { scale: prev.scale + 0.01, opacity: prev.opacity - 0.01 };
-      });
+
+      if (currentScrollTop < 650) {
+        setparticle((prev) => {
+          return {
+            scale: 1 + currentScrollTop / 1000,
+            // opacity: prev.opacity - 0.01,
+          };
+        });
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
