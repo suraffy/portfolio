@@ -107,10 +107,6 @@ const Home = () => {
 
       <div className="container">
         <div className="hero-container flex-column">
-          <div className="hero-image-container">
-            <img src={profilePic} alt="Surafel Araya" />
-          </div>
-
           <div className="hero-content">
             <span className="small-text">Hello,</span>
             <h1 className="hero-title">
