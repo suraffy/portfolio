@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
-  const imgUrlLogo = "/img/web-dev-logo-colored.svg";
+  const imgUrlLogo = "/img/surafel.jpg";
   const profilePic = "/img/surafel-transparent.png";
 
   const githubAccountUrl = "https://github.com/suraffy";
@@ -74,6 +74,7 @@ const Home = () => {
                 className="navbar-brand"
                 id="logo-img"
                 alt="web development"
+                style={{ borderRadius: "50%" }}
               />
             </div>
 
