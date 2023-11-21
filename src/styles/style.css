@@ -64,7 +64,8 @@ nav {
 
 .show-main-nav {
   display: flex;
-  height: 255px !important;
+  /* height: 255px !important; */
+  height: 208px !important;
   border-top: 1px solid var(--lightgray);
 }
 
@@ -111,8 +112,9 @@ nav {
 }
 
 .hero-title {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: 0rem;
+  line-height: 1.4;
 }
 
 .small-text {
@@ -120,17 +122,12 @@ nav {
   letter-spacing: 1px;
 }
 
-.hero-title {
-  margin-top: 0rem;
-  /* line-height: 1.4; */
-}
-
 .thin-text {
   font-weight: 300;
 }
 
 .hero-desc {
-  font-size: 15px;
+  /* font-size: 1.2rem; */
 }
 
 .hero-image-container {
@@ -345,7 +342,7 @@ nav {
 .my-skills-content {
   width: 760px;
   margin: 0 -15px;
-  padding: 20px 15px;
+  padding: 20px 15px 40px;
   background: #f6f6f6;
   border-radius: 10px;
 }
@@ -532,7 +529,7 @@ nav {
 /* Contact section */
 .contact-content {
   width: 700px;
-  padding: 20px 15px;
+  padding: 20px 15px 40px;
   margin: 0 -15px;
   border-radius: 10px;
   background: #f6f6f6;
@@ -543,8 +540,8 @@ nav {
 }
 
 .contact-content form {
-  padding: 15px;
-  border-radius: 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
   box-shadow: 1px 1px 4px var(--lightgray);
 }
 

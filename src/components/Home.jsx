@@ -15,11 +15,13 @@ const Home = () => {
   const twitterAccountUrl = "https://twitter.com/surafelaraya";
 
   const [scrolling, setScrolling] = useState(false);
+  const [showMainNav, setShowMainNav] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setScrolling(scrollTop > 80);
+      setShowMainNav(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -46,10 +48,25 @@ const Home = () => {
     mainNavStyles.top = "70px";
   }
 
+  const handleNavbarToggler = () => {
+    setShowMainNav((prev) => !prev);
+  };
+
   return (
     <header id="main-header">
       <nav style={navStyles}>
         <div className="container">
+          {/* <div className="particle-wrapper">
+            <div className="particle-1"></div>
+            <div className="particle-2"></div>
+            <div className="particle-3"></div>
+            <div className="particle-4"></div>
+            <div className="particle-5"></div>
+            <div className="particle-6"></div>
+            <div className="particle-7"></div>
+            <div className="particle-8"></div>
+          </div> */}
+
           <div className="navbar flex-row">
             <div className="logo-container">
               <img
@@ -60,13 +77,16 @@ const Home = () => {
               />
             </div>
 
-            <div className="navbar-toggler">
+            <div className="navbar-toggler" onClick={handleNavbarToggler}>
               <span className="toggler-bar"></span>
               <span className="toggler-bar"></span>
               <span className="toggler-bar"></span>
             </div>
 
-            <ul className="main-nav flex-row" style={mainNavStyles}>
+            <ul
+              className={`main-nav flex-row ${showMainNav && "show-main-nav"}`}
+              style={mainNavStyles}
+            >
               <li>
                 <a href="#">Home</a>
               </li>
