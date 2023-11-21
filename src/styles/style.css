@@ -99,6 +99,117 @@ nav {
   background-color: #eee;
 }
 
+/* Particles */
+
+.particle-wrapper {
+  z-index: -75;
+  width: 700px;
+  height: 310px;
+  position: absolute;
+  overflow: hidden;
+  /* border: 2px solid blue; */
+  /* top: -108px; */
+  /* margin-top: 280px; */
+}
+
+.particle-8 {
+  width: 11px;
+  height: 11px;
+  opacity: 0.15;
+  background-color: #323235;
+  border-radius: 3px;
+  position: absolute;
+  top: 111px;
+  right: 64px;
+  transform: rotate(17deg);
+}
+
+.particle-7 {
+  width: 9px;
+  height: 9px;
+  opacity: 0.2;
+  background-color: #323235;
+  border-radius: 2px;
+  position: absolute;
+  top: 213px;
+  right: 104px;
+  transform: rotate(-14deg);
+}
+
+.particle-6 {
+  width: 12px;
+  height: 12px;
+  opacity: 0.2;
+  background-color: #323235;
+  border-radius: 4px;
+  position: absolute;
+  top: 251px;
+  right: 262px;
+  transform: rotate(14deg);
+}
+
+.particle-5 {
+  width: 12px;
+  height: 12px;
+  opacity: 0.2;
+  background-color: #323235;
+  border-radius: 4px;
+  position: absolute;
+  top: 203px;
+  right: 448px;
+  transform: rotate(-11deg);
+}
+
+.particle-4 {
+  width: 15px;
+  height: 15px;
+  opacity: 0.2;
+  background-color: #000;
+  border-radius: 5px;
+  position: absolute;
+  top: 64px;
+  right: 428px;
+  transform: rotate(26deg);
+}
+
+.particle-3 {
+  width: 9px;
+  height: 9px;
+  opacity: 0.4;
+  background-color: #323235;
+  border-radius: 2px;
+  position: absolute;
+  top: 94px;
+  right: 624px;
+  transform: rotate(-17deg);
+}
+
+.particle-2 {
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  background-color: #323235;
+  border-radius: 6px;
+  position: absolute;
+  top: 200px;
+  right: 600px;
+  transform: rotate(20deg);
+}
+
+.particle-1 {
+  width: 20px;
+  height: 20px;
+  opacity: 0.4;
+  background-color: #323235;
+  border-radius: 6px;
+  position: absolute;
+  top: 90px;
+  right: 159px;
+  transform: rotate(51deg);
+}
+
+/* End of Particles */
+
 /* */
 .hero-container {
   margin-top: 120px;

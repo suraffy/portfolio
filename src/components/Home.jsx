@@ -8,7 +8,6 @@ import {
 
 const Home = () => {
   const imgUrlLogo = "/img/surafel.jpg";
-  const profilePic = "/img/surafel-transparent.png";
 
   const githubAccountUrl = "https://github.com/suraffy";
   const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
@@ -16,12 +15,16 @@ const Home = () => {
 
   const [scrolling, setScrolling] = useState(false);
   const [showMainNav, setShowMainNav] = useState(false);
+  const [particle, setparticle] = useState({ scale: 1, opacity: 1 });
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setScrolling(scrollTop > 80);
       setShowMainNav(false);
+      setparticle((prev) => {
+        return { scale: prev.scale + 0.01, opacity: prev.opacity - 0.01 };
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -56,17 +59,6 @@ const Home = () => {
     <header id="main-header">
       <nav style={navStyles}>
         <div className="container">
-          {/* <div className="particle-wrapper">
-            <div className="particle-1"></div>
-            <div className="particle-2"></div>
-            <div className="particle-3"></div>
-            <div className="particle-4"></div>
-            <div className="particle-5"></div>
-            <div className="particle-6"></div>
-            <div className="particle-7"></div>
-            <div className="particle-8"></div>
-          </div> */}
-
           <div className="navbar flex-row">
             <div className="logo-container">
               <img
@@ -107,6 +99,22 @@ const Home = () => {
 
       <div className="container">
         <div className="hero-container flex-column">
+          <div
+            className="particle-wrapper"
+            style={{
+              transform: `scale(${particle.scale})`,
+              opacity: particle.opacity,
+            }}
+          >
+            <div className="particle-1"></div>
+            <div className="particle-2"></div>
+            <div className="particle-3"></div>
+            <div className="particle-4"></div>
+            <div className="particle-5"></div>
+            <div className="particle-6"></div>
+            <div className="particle-7"></div>
+            <div className="particle-8"></div>
+          </div>
           <div className="hero-content">
             <span className="small-text">Hello,</span>
             <h1 className="hero-title">
