@@ -107,11 +107,11 @@ nav {
   height: 310px;
   position: absolute;
   top: -108px;
-  margin-top: 20px;
+  margin-top: 80px;
   /* margin-top: 280px; */
   will-change: opacity, transform;
   transform-style: preserve-3d;
-  transition: transform 0.2s, opacity 0.2s;
+  transition: transform 0.1s, opacity 0.1s;
 }
 
 .particle-8 {
@@ -214,12 +214,12 @@ nav {
 
 /* */
 .hero-container {
-  /* position: relative; */
+  position: relative;
   margin-top: 120px;
 }
 
 .hero-content {
-  position: relative;
+  /* position: relative; */
   max-width: 540px;
   text-align: center;
 }

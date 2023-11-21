@@ -15,7 +15,7 @@ const Home = () => {
 
   const [scrolling, setScrolling] = useState(false);
   const [showMainNav, setShowMainNav] = useState(false);
-  const [particle, setparticle] = useState({ scale: 1, opacity: 1 });
+  const [particle, setparticle] = useState({ scale: 1.5, opacity: 1 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,7 @@ const Home = () => {
 
       if (currentScrollTop < 650) {
         setparticle({
-          scale: 1 + currentScrollTop / 1000,
+          scale: 1.5 + currentScrollTop / 1000,
           opacity: 1 - currentScrollTop / 1000,
         });
       }
@@ -104,6 +104,22 @@ const Home = () => {
 
       <div className="container">
         <div className="hero-container flex-column">
+          <div
+            className="particle-wrapper"
+            style={{
+              transform: `scale3d(${particle.scale}, ${particle.scale}, 1)`,
+              opacity: particle.opacity,
+            }}
+          >
+            <div className="particle-1"></div>
+            <div className="particle-2"></div>
+            <div className="particle-3"></div>
+            <div className="particle-4"></div>
+            <div className="particle-5"></div>
+            <div className="particle-6"></div>
+            <div className="particle-7"></div>
+            <div className="particle-8"></div>
+          </div>
           <div className="hero-content">
             <span className="small-text">Hello,</span>
             <h1 className="hero-title">
@@ -142,23 +158,6 @@ const Home = () => {
                   <FontAwesomeIcon icon={faTwitter} size="lg" />
                 </a>
               </div>
-            </div>
-
-            <div
-              className="particle-wrapper"
-              style={{
-                transform: `scale3d(${particle.scale}, ${particle.scale}, 1)`,
-                opacity: particle.opacity,
-              }}
-            >
-              <div className="particle-1"></div>
-              <div className="particle-2"></div>
-              <div className="particle-3"></div>
-              <div className="particle-4"></div>
-              <div className="particle-5"></div>
-              <div className="particle-6"></div>
-              <div className="particle-7"></div>
-              <div className="particle-8"></div>
             </div>
           </div>
         </div>
