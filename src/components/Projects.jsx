@@ -4,18 +4,11 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 import projectsList from "../services/projectsList";
+import filterItems from "../services/filterItems";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
   const [filterKeywork, setFilterKeywork] = useState({});
-
-  const filterItems = [
-    { keywork: "all", label: "All" },
-    { keywork: "front-end", label: "Front-End" },
-    { keywork: "back-end", label: "Back-End" },
-    { keywork: "javascript", label: "Plain JavaScript" },
-    { keywork: "css-animation", label: "CSS-Animation" },
-  ];
 
   const handleFilter = (keyword) => {
     const filterItem = filterItems.find((item) => item.keywork === keyword);
