@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -5,15 +6,25 @@ import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import projectsList from "../services/projectsList";
 
 const Projects = () => {
-  // console.log(projectsList);
+  const [projects, setProjects] = useState(projectsList);
 
   const filterItems = [
     { keywork: "all", label: "All" },
     { keywork: "front-end", label: "Front-End" },
-    { keywork: "full-stack", label: "Back-End" },
+    { keywork: "back-end", label: "Back-End" },
     { keywork: "javascript", label: "Plain JavaScript" },
     { keywork: "css-animation", label: "CSS-Animation" },
   ];
+
+  const handleFilter = (keyword) => {
+    if (keyword === "all") {
+      setProjects(projectsList);
+      return;
+    }
+
+    const filteredProjects = projectsList.filter((p) => p.type === keyword);
+    setProjects(filteredProjects);
+  };
 
   return (
     <section id="projects">
@@ -27,6 +38,7 @@ const Projects = () => {
               <ul className="filter-list flex-row">
                 {filterItems.map((f) => (
                   <li
+                    onClick={() => handleFilter(f.keywork)}
                     key={f.keywork}
                     className="filter-item"
                     data-filter-item={f.keywork}
@@ -43,7 +55,7 @@ const Projects = () => {
           </div>
 
           <div className="projects-container">
-            {projectsList.map((project) => (
+            {projects.map((project) => (
               <div key={project.title} className="project-box flex-column">
                 <div className="project-profile-img row">
                   <img src={"/img/web-tech.jpg"} alt="" />

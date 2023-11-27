@@ -1,7 +1,7 @@
 const projectsList = [
   {
     title: "Volunter Web App",
-    type: "full-stack",
+    type: "back-end",
     techUsed: "html, css, js",
     desc: "A Web App that allows the users to search, research and book a socially conscious travel adventure.",
     img: "bbc.png",
@@ -19,7 +19,7 @@ const projectsList = [
   },
   {
     title: "Electronic Record",
-    type: "full-stack",
+    type: "back-end",
     techUsed: "html, css, js",
     desc: "A Web App that allows the users to search, research and book a socially conscious travel adventure.",
     img: "Electronic Records Management Systems.jpg",
@@ -28,7 +28,7 @@ const projectsList = [
   },
   {
     title: "Machine Learning System",
-    type: "full-stack",
+    type: "back-end",
     techUsed: "html, css, js",
     desc: "A Web App that allows the users to search, research and book a socially conscious travel adventure.",
     img: "machine learning.jpg",
@@ -55,7 +55,7 @@ const projectsList = [
   },
   {
     title: "test project three",
-    type: "full-stack",
+    type: "back-end",
     techUsed: "html, css, js",
     desc: "A Web App that allows the users to search, research and book a socially conscious travel adventure.",
     img: "img_github_logo.png",
