@@ -4,6 +4,8 @@ const Pagination = ({ itemsCount, pageSize, onPageChange }) => {
   const pagesCount = itemsCount / pageSize;
   const pages = _.range(1, pagesCount + 1);
 
+  if (pagesCount === 1) return;
+
   return (
     <ul className="pagination flex-row">
       {pages.map((page) => (
