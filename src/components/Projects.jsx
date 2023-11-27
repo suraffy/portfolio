@@ -7,6 +7,7 @@ import projectsList from "../services/projectsList";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
+  const [selectedKeyword, setSelectedKeyword] = useState(null);
 
   const filterItems = [
     { keywork: "all", label: "All" },
@@ -17,6 +18,10 @@ const Projects = () => {
   ];
 
   const handleFilter = (keyword) => {
+    const { label } = filterItems.find((item) => item.keywork === keyword);
+    setSelectedKeyword(label);
+    console.log(label);
+
     if (keyword === "all") {
       setProjects(projectsList);
       return;
@@ -48,9 +53,12 @@ const Projects = () => {
                 ))}
               </ul>
             </div>
-
             <div className="filter-info">
-              <p className="filtered-results">All projects, 7 results</p>
+              {selectedKeyword && (
+                <p className="filtered-results">
+                  {selectedKeyword} projects, {projects.length} results
+                </p>
+              )}
             </div>
           </div>
 
