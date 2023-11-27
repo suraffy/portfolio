@@ -2,6 +2,11 @@
   background-color: #e4e6e7;
 }
 
+.filter-item.active {
+  color: #fff;
+  background: var(--blue);
+}
+
 .page-item.active {
   border: 1px solid var(--blue);
 }
@@ -24,4 +29,3 @@ div h2.rmv-underline::after {
   transition: none;
   width: 0;
 }
-

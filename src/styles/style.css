@@ -351,6 +351,7 @@ nav {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
+  margin-bottom: 10px;
 }
 
 .filter-project h4 {
@@ -374,11 +375,7 @@ nav {
 
 .filter-info {
   margin-left: 10px;
-  margin-top: 30px;
-}
-
-.filtered-results {
-  display: none;
+  margin-bottom: 5px;
 }
 
 /* Projects Grid */
