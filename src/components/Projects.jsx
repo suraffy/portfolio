@@ -3,16 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
+import Filter from "./common/Filter";
+
 import projectsList from "../services/projectsList";
 import filterItems from "../services/filterItems";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
-  const [filterKeywork, setFilterKeywork] = useState({});
+  const [filterKeyword, setFilterKeyword] = useState(null);
 
   const handleFilter = (keyword) => {
-    const filterItem = filterItems.find((item) => item.keywork === keyword);
-    setFilterKeywork({ keyword: filterItem.keywork, label: filterItem.label });
+    const filterItem = filterItems.find((item) => item.keyword === keyword);
+    setFilterKeyword(filterItem);
 
     if (keyword === "all") {
       setProjects(projectsList);
@@ -32,24 +34,10 @@ const Projects = () => {
           <div className="project-header flex-column">
             <div className="filter-project flex-row">
               <h4>Filter</h4>
-              <ul className="filter-list flex-row">
-                {filterItems.map((f) => (
-                  <li
-                    onClick={() => handleFilter(f.keywork)}
-                    key={f.keywork}
-                    className={
-                      "filter-item " +
-                      (f.keywork === filterKeywork.keyword ? "active" : "")
-                    }
-                    data-filter-item={f.keywork}
-                  >
-                    {f.label}
-                  </li>
-                ))}
-              </ul>
+              <Filter filterKeyword={filterKeyword} onFilter={handleFilter} />
             </div>
 
-            {filterKeywork.keyword && (
+            {filterKeyword && (
               <p className="filter-info">{projects.length} results</p>
             )}
           </div>
