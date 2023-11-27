@@ -17,6 +17,7 @@ const Projects = () => {
   const handleFilter = (keyword) => {
     const filterItem = filterItems.find((item) => item.keyword === keyword);
     setFilterKeyword(filterItem);
+    setCurrentPage(1);
 
     if (keyword === "all") {
       setProjects(projectsList);
