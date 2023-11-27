@@ -121,8 +121,8 @@ nav {
   background-color: #323235;
   border-radius: 3px;
   position: absolute;
-  top: 111px;
-  right: 64px;
+  top: 130px;
+  right: 90px;
   transform: rotate(17deg);
 }
 
@@ -133,8 +133,8 @@ nav {
   background-color: #323235;
   border-radius: 2px;
   position: absolute;
-  top: 213px;
-  right: 104px;
+  top: 200px;
+  right: 120px;
   transform: rotate(-14deg);
 }
 
@@ -145,8 +145,8 @@ nav {
   background-color: #323235;
   border-radius: 4px;
   position: absolute;
-  top: 251px;
-  right: 262px;
+  top: 240px;
+  right: 240px;
   transform: rotate(14deg);
 }
 
@@ -155,6 +155,7 @@ nav {
   height: 12px;
   opacity: 0.2;
   background-color: #323235;
+  background-color: red;
   border-radius: 4px;
   position: absolute;
   top: 203px;
@@ -219,14 +220,25 @@ nav {
 }
 
 .hero-content {
-  /* position: relative; */
-  max-width: 540px;
-  text-align: center;
+  max-width: 640px;
 }
 
-.hero-title {
+.hero-header {
+  /* border: 2px solid blue; */
+}
+
+.hero-image {
+  width: 120px;
+  margin: 20px;
+}
+
+.hero-image img {
+  border-radius: 50%;
+}
+
+.hero-heading {
   font-size: 1.8rem;
-  margin-top: 0rem;
+  margin: 0;
   line-height: 1.4;
 }
 
@@ -239,8 +251,13 @@ nav {
   font-weight: 300;
 }
 
+.hero-details {
+  max-width: 80%;
+}
+
 .hero-desc {
   /* font-size: 1.2rem; */
+  text-align: center;
 }
 
 .hero-contact {

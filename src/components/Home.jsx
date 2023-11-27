@@ -19,20 +19,28 @@ const Home = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollTop = window.scrollY;
+      const scrollTop = window.scrollY;
 
-      setScrolling(currentScrollTop > 80);
+      setScrolling(scrollTop > 160);
       setShowMainNav(false);
 
-      if (currentScrollTop < 650) {
+      if (scrollTop < 650) {
         setparticle({
-          scale: 1.5 + currentScrollTop / 1000,
-          opacity: 1 - currentScrollTop / 1000,
+          scale: 1.5 + scrollTop / 1000,
+          opacity: 1 - scrollTop / 1000,
         });
       }
     };
 
+    const handleMouseOver = (e) => {
+      const mouseMove = e.clientX;
+      setparticle({
+        translateX: 1 + mouseMove / 100,
+      });
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", (e) => handleMouseOver(e));
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -120,20 +128,26 @@ const Home = () => {
             <div className="particle-7"></div>
             <div className="particle-8"></div>
           </div>
-          <div className="hero-content">
-            <span className="small-text">Hello,</span>
-            <h1 className="hero-title">
-              <span className="thin-text">I'm </span>
-              <span>Surafel Araya </span> <br />
-              <span>a </span>
-              <span className="thin-text">Full-stack Developer</span>
-            </h1>
+          <div className="hero-content flex-column">
+            <div className="hero-header flex-row">
+              <div className="hero-image">
+                <img src={imgUrlLogo} alt="Surafel" />
+              </div>
+              <div className="hero-title">
+                <span className="small-text">Hello</span>
+                <h1 className="hero-heading">
+                  <span className="thin-text">I'm </span>
+                  <span>Surafel Araya </span> <br />
+                  <span>a </span>
+                  <span className="thin-text">Full-stack Developer</span>
+                </h1>
+              </div>
+            </div>
 
-            <div className="hero-detail">
+            <div className="hero-details">
               <p className="hero-desc">
-                Expertise in developing single-page applications using React.js
-                and Vue.js, building back-end services with Node.js and
-                Express.js.
+                Expertise in developing single-page applications using React and
+                Vue, building back-end services with Node and Express.
               </p>
               <div className="hero-contact flex-row">
                 <a
