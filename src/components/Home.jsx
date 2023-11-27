@@ -15,7 +15,7 @@ const Home = () => {
 
   const [scrolling, setScrolling] = useState(false);
   const [showMainNav, setShowMainNav] = useState(false);
-  const [particle, setparticle] = useState({ scale: 1.5, opacity: 1 });
+  const [particle, setparticle] = useState({ scale: 1.6, opacity: 1 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,8 +26,8 @@ const Home = () => {
 
       if (scrollTop < 650) {
         setparticle({
-          scale: 1.5 + scrollTop / 1000,
-          opacity: 1 - scrollTop / 1000,
+          scale: 1.6 + scrollTop / 1000,
+          opacity: 1 - (scrollTop / 1000) * 2,
         });
       }
     };
@@ -112,24 +112,8 @@ const Home = () => {
 
       <div className="container">
         <div className="hero-container flex-column">
-          <div
-            className="particle-wrapper"
-            style={{
-              transform: `scale3d(${particle.scale}, ${particle.scale}, 1)`,
-              opacity: particle.opacity,
-            }}
-          >
-            <div className="particle-1"></div>
-            <div className="particle-2"></div>
-            <div className="particle-3"></div>
-            <div className="particle-4"></div>
-            <div className="particle-5"></div>
-            <div className="particle-6"></div>
-            <div className="particle-7"></div>
-            <div className="particle-8"></div>
-          </div>
           <div className="hero-content flex-column">
-            <div className="hero-header flex-row">
+            <div className="hero-header flex-column">
               <div className="hero-image">
                 <img src={imgUrlLogo} alt="Surafel" />
               </div>

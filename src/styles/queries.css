@@ -36,16 +36,18 @@
   /* End - Desktop Navbar */
 
   .hero-container {
-    /* flex-direction: row-reverse; */
     margin-top: 200px;
+  }
+
+  .hero-header {
+    flex-direction: row;
   }
 
   .hero-image {
     width: 150px;
-    /* margin: auto 2rem; */
   }
 
-  .hero-content {
+  .hero-title {
     text-align: initial;
   }
 

@@ -99,121 +99,7 @@ nav {
   background-color: #eee;
 }
 
-/* Particles */
-
-.particle-wrapper {
-  z-index: -75;
-  width: 700px;
-  height: 310px;
-  position: absolute;
-  top: -108px;
-  margin-top: 80px;
-  /* margin-top: 280px; */
-  will-change: opacity, transform;
-  transform-style: preserve-3d;
-  transition: transform 0.1s, opacity 0.1s;
-}
-
-.particle-8 {
-  width: 11px;
-  height: 11px;
-  opacity: 0.15;
-  background-color: #323235;
-  border-radius: 3px;
-  position: absolute;
-  top: 130px;
-  right: 90px;
-  transform: rotate(17deg);
-}
-
-.particle-7 {
-  width: 9px;
-  height: 9px;
-  opacity: 0.2;
-  background-color: #323235;
-  border-radius: 2px;
-  position: absolute;
-  top: 200px;
-  right: 120px;
-  transform: rotate(-14deg);
-}
-
-.particle-6 {
-  width: 12px;
-  height: 12px;
-  opacity: 0.2;
-  background-color: #323235;
-  border-radius: 4px;
-  position: absolute;
-  top: 240px;
-  right: 240px;
-  transform: rotate(14deg);
-}
-
-.particle-5 {
-  width: 12px;
-  height: 12px;
-  opacity: 0.2;
-  background-color: #323235;
-  background-color: red;
-  border-radius: 4px;
-  position: absolute;
-  top: 203px;
-  right: 448px;
-  transform: rotate(-11deg);
-}
-
-.particle-4 {
-  width: 15px;
-  height: 15px;
-  opacity: 0.2;
-  background-color: #000;
-  border-radius: 5px;
-  position: absolute;
-  top: 64px;
-  right: 428px;
-  transform: rotate(26deg);
-}
-
-.particle-3 {
-  width: 9px;
-  height: 9px;
-  opacity: 0.4;
-  background-color: #323235;
-  border-radius: 2px;
-  position: absolute;
-  top: 94px;
-  right: 624px;
-  transform: rotate(-17deg);
-}
-
-.particle-2 {
-  width: 24px;
-  height: 24px;
-  opacity: 0.3;
-  background-color: #323235;
-  border-radius: 6px;
-  position: absolute;
-  top: 200px;
-  right: 600px;
-  transform: rotate(20deg);
-}
-
-.particle-1 {
-  width: 20px;
-  height: 20px;
-  opacity: 0.4;
-  background-color: #323235;
-  border-radius: 6px;
-  position: absolute;
-  top: 90px;
-  right: 159px;
-  transform: rotate(51deg);
-}
-
-/* End of Particles */
-
-/* */
+/*  */
 .hero-container {
   position: relative;
   margin-top: 120px;
@@ -223,10 +109,6 @@ nav {
   max-width: 640px;
 }
 
-.hero-header {
-  /* border: 2px solid blue; */
-}
-
 .hero-image {
   width: 120px;
   margin: 20px;
@@ -234,6 +116,10 @@ nav {
 
 .hero-image img {
   border-radius: 50%;
+}
+
+.hero-title {
+  text-align: center;
 }
 
 .hero-heading {
@@ -253,16 +139,14 @@ nav {
 
 .hero-details {
   max-width: 80%;
+  margin-top: 20px;
 }
 
 .hero-desc {
-  /* font-size: 1.2rem; */
   text-align: center;
 }
 
 .hero-contact {
-  /* justify-content: flex-start; */
-  /* margin-left: -4rem; */
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -272,7 +156,7 @@ nav {
   line-height: 1;
   color: var(--darkgray);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease-in-out;
 }
 
 .hero-contact svg {
