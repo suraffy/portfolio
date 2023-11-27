@@ -3,6 +3,7 @@ import { useState } from "react";
 import Project from "./Project";
 import Filter from "./common/Filter";
 import Pagination from "./common/Pagination";
+import { paginate } from "../utils/paginate";
 
 import projectsList from "../services/projectsList";
 import filterItems from "../services/filterItems";
@@ -10,7 +11,8 @@ import filterItems from "../services/filterItems";
 const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
   const [filterKeyword, setFilterKeyword] = useState(null);
-  const pageSize = 4;
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 2;
 
   const handleFilter = (keyword) => {
     const filterItem = filterItems.find((item) => item.keyword === keyword);
@@ -26,8 +28,13 @@ const Projects = () => {
   };
 
   const handlePageChage = (page) => {
-    console.log(page);
+    if (currentPage === page) return;
+
+    setCurrentPage(page);
   };
+
+  const itemsCount = projects.length;
+  const projectsInPage = paginate(projects, currentPage, pageSize);
 
   return (
     <section id="projects">
@@ -47,15 +54,16 @@ const Projects = () => {
           </div>
 
           <div className="projects-container">
-            {projects.map((project) => (
+            {projectsInPage.map((project) => (
               <Project key={project.title} project={project} />
             ))}
           </div>
 
           <div className="project-footer">
             <Pagination
-              itemsCount={projects.length}
+              itemsCount={itemsCount}
               pageSize={pageSize}
+              currentPage={currentPage}
               onPageChange={handlePageChage}
             />
           </div>

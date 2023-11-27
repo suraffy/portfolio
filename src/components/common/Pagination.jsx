@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-const Pagination = ({ itemsCount, pageSize, onPageChange }) => {
+const Pagination = ({ itemsCount, pageSize, currentPage, onPageChange }) => {
   const pagesCount = Math.ceil(itemsCount / pageSize);
   const pages = _.range(1, pagesCount + 1);
 
@@ -9,7 +9,11 @@ const Pagination = ({ itemsCount, pageSize, onPageChange }) => {
   return (
     <ul className="pagination flex-row">
       {pages.map((page) => (
-        <li key={page} className="page-item">
+        <li
+          key={page}
+          className={"page-item " + (currentPage === page ? "active" : "")}
+          onClick={() => onPageChange(page)}
+        >
           {page}
         </li>
       ))}
