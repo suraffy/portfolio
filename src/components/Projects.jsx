@@ -7,7 +7,7 @@ import projectsList from "../services/projectsList";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
-  const [selectedKeyword, setSelectedKeyword] = useState(null);
+  const [filterKeywork, setFilterKeywork] = useState({});
 
   const filterItems = [
     { keywork: "all", label: "All" },
@@ -18,9 +18,8 @@ const Projects = () => {
   ];
 
   const handleFilter = (keyword) => {
-    const { label } = filterItems.find((item) => item.keywork === keyword);
-    setSelectedKeyword(label);
-    console.log(label);
+    const filterItem = filterItems.find((item) => item.keywork === keyword);
+    setFilterKeywork({ keyword: filterItem.keywork, label: filterItem.label });
 
     if (keyword === "all") {
       setProjects(projectsList);
@@ -45,7 +44,10 @@ const Projects = () => {
                   <li
                     onClick={() => handleFilter(f.keywork)}
                     key={f.keywork}
-                    className="filter-item"
+                    className={
+                      "filter-item " +
+                      (f.keywork === filterKeywork.keyword ? "active" : "")
+                    }
                     data-filter-item={f.keywork}
                   >
                     {f.label}
@@ -53,13 +55,10 @@ const Projects = () => {
                 ))}
               </ul>
             </div>
-            <div className="filter-info">
-              {selectedKeyword && (
-                <p className="filtered-results">
-                  {selectedKeyword} projects, {projects.length} results
-                </p>
-              )}
-            </div>
+
+            {filterKeywork.keyword && (
+              <p className="filter-info">{projects.length} results</p>
+            )}
           </div>
 
           <div className="projects-container">
