@@ -455,13 +455,24 @@ nav {
 /* Pagination */
 .pagination {
   color: var(--blue);
-  padding-bottom: 30px;
+  margin-top: 30px;
 }
 
 .page-item {
   padding: 4px 8px;
-  border: 1px solid transparent;
-  border-radius: 2px;
+  border: 1px solid var(--lightgray);
+  border-right: 0px;
+}
+
+.page-item:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.page-item:last-child {
+  border-right: 1px solid var(--lightgray);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .page-item:not(.disabled) {
@@ -469,7 +480,7 @@ nav {
 }
 
 .page-item:not(.disabled, .active):hover {
-  border-color: #e4e4e4;
+  background: rgb(241, 250, 255);
 }
 
 /* Contact section */

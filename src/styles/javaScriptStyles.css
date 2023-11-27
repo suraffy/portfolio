@@ -2,13 +2,10 @@
   background-color: #e4e6e7;
 }
 
-.filter-item.active {
+.filter-item.active,
+.page-item.active {
   color: #fff;
   background: var(--blue);
-}
-
-.page-item.active {
-  border: 1px solid var(--blue);
 }
 
 .page-item.disabled {
