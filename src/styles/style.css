@@ -379,14 +379,17 @@ nav {
 }
 
 /* Projects Grid */
+
 .projects-container {
-  display: grid;
-  grid-gap: 40px 20px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-box {
+  max-width: 320px;
   background-color: #fff;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -459,7 +462,7 @@ nav {
 }
 
 .page-item {
-  padding: 4px 8px;
+  padding: 5px 10px;
   border: 1px solid var(--lightgray);
   border-right: 0px;
 }
@@ -480,7 +483,7 @@ nav {
 }
 
 .page-item:not(.disabled, .active):hover {
-  background: rgb(241, 250, 255);
+  background: rgb(223, 243, 255);
 }
 
 /* Contact section */
