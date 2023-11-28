@@ -12,7 +12,7 @@ const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
   const [filterKeyword, setFilterKeyword] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 2;
+  const pageSize = 6;
 
   const handleFilter = (keyword) => {
     const filterItem = filterItems.find((item) => item.keyword === keyword);
