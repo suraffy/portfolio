@@ -6,6 +6,7 @@
 .page-item.active {
   color: #fff;
   background: var(--blue);
+  border-color: var(--blue);
 }
 
 .page-item.disabled {
