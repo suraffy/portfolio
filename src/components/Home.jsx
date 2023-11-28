@@ -6,6 +6,8 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
+import Navbar from "./common/Navbar";
+
 const Home = () => {
   const imgUrlLogo = "/img/surafel.jpg";
 
@@ -15,32 +17,16 @@ const Home = () => {
 
   const [scrolling, setScrolling] = useState(false);
   const [showMainNav, setShowMainNav] = useState(false);
-  const [particle, setparticle] = useState({ scale: 1.6, opacity: 1 });
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
-      setScrolling(scrollTop > 160);
+      setScrolling(scrollTop > 80);
       setShowMainNav(false);
-
-      if (scrollTop < 650) {
-        setparticle({
-          scale: 1.6 + scrollTop / 1000,
-          opacity: 1 - (scrollTop / 1000) * 2,
-        });
-      }
-    };
-
-    const handleMouseOver = (e) => {
-      const mouseMove = e.clientX;
-      setparticle({
-        translateX: 1 + mouseMove / 100,
-      });
     };
 
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousemove", (e) => handleMouseOver(e));
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -70,45 +56,12 @@ const Home = () => {
 
   return (
     <header id="main-header">
-      <nav style={navStyles}>
-        <div className="container">
-          <div className="navbar flex-row">
-            <div className="logo-container">
-              <img
-                src={imgUrlLogo}
-                className="navbar-brand"
-                id="logo-img"
-                alt="web development"
-                style={{ borderRadius: "50%" }}
-              />
-            </div>
-
-            <div className="navbar-toggler" onClick={handleNavbarToggler}>
-              <span className="toggler-bar"></span>
-              <span className="toggler-bar"></span>
-              <span className="toggler-bar"></span>
-            </div>
-
-            <ul
-              className={`main-nav flex-row ${showMainNav && "show-main-nav"}`}
-              style={mainNavStyles}
-            >
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#my-skills">My Skills</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar
+        navStyles={navStyles}
+        mainNavStyles={mainNavStyles}
+        showMainNav={showMainNav}
+        onNavbarToggle={handleNavbarToggler}
+      />
 
       <div className="container">
         <div className="hero-container flex-column">
