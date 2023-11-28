@@ -3,7 +3,12 @@ import { useForm } from "@formspree/react";
 const Form = () => {
   const [state, handleSubmit] = useForm("mrgwwkwv");
   if (state.succeeded) {
-    return <p>Thanks for Sending!</p>;
+    return (
+      <p className="successful-form">
+        <span className="icon"></span>
+        Thanks for your message — I'll be in touch soon!
+      </p>
+    );
   }
 
   return (
