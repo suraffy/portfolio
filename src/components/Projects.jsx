@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import Project from "./Project";
 import Filter from "./common/Filter";
@@ -12,7 +12,8 @@ const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
   const [filterKeyword, setFilterKeyword] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 6;
+  const pageSize = 3;
+  const ProjectsSectionRef = React.useRef();
 
   const handleFilter = (keyword) => {
     const filterItem = filterItems.find((item) => item.keyword === keyword);
@@ -32,13 +33,14 @@ const Projects = () => {
     if (currentPage === page) return;
 
     setCurrentPage(page);
+    ProjectsSectionRef.current.scrollIntoView();
   };
 
   const itemsCount = projects.length;
   const projectsInPage = paginate(projects, currentPage, pageSize);
 
   return (
-    <section id="projects">
+    <section id="projects" ref={ProjectsSectionRef}>
       <div className="container">
         <div className="flex-column">
           <h2 className="h2-underline">Let's See My Work</h2>
