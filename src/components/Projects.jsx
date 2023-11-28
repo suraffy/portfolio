@@ -12,7 +12,7 @@ const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
   const [filterKeyword, setFilterKeyword] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 3;
+  const pageSize = 6;
   const ProjectsSectionRef = React.useRef();
 
   const handleFilter = (keyword) => {
@@ -56,7 +56,7 @@ const Projects = () => {
             )}
           </div>
 
-          <div className="projects-container">
+          <div className="projects-container flex-row">
             {projectsInPage.map((project) => (
               <Project key={project.title} project={project} />
             ))}

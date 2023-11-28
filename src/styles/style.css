@@ -380,11 +380,9 @@ nav {
 
 /* Projects Grid */
 .projects-container {
-  display: flex;
   flex-wrap: wrap;
   gap: 40px 20px;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
 }
 
 .project-box {
