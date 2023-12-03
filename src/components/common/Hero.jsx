@@ -5,19 +5,19 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-import imgUrlLogo from "../../img/surafel.jpg";
-
-const githubAccountUrl = "https://github.com/suraffy";
-const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
-const twitterAccountUrl = "https://twitter.com/surafelaraya";
-
 const Hero = () => {
+  const profileImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
+
+  const githubAccountUrl = "https://github.com/suraffy";
+  const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
+  const twitterAccountUrl = "https://twitter.com/surafelaraya";
+
   return (
     <div className="hero-container flex-column">
       <div className="hero-content flex-column">
         <div className="hero-header flex-column">
           <div className="hero-image">
-            <img src={imgUrlLogo} alt="Surafel" />
+            <img src={profileImgUrl} alt="Surafel" />
           </div>
           <div className="hero-title">
             <span className="small-text">Hello</span>

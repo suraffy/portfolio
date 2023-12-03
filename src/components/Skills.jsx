@@ -17,7 +17,6 @@ const Skills = () => {
                 }`}
               >
                 <img src={imgUrl + skill.img} alt={skill.name} />
-                {console.log(imgUrl + skill.img)}
                 {skill.details && (
                   <ul className="skills-details">
                     {skill.details.map((li, index) => (
