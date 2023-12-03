@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
-  const profileImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
+  const profileImgUrl = `${process.env.PUBLIC_URL}/img/profile-compressed.png`;
 
   const githubAccountUrl = "https://github.com/suraffy";
   const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
