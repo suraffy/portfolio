@@ -1,12 +1,15 @@
 import { useForm } from "@formspree/react";
+import MessageSVG from "../../img/message-smile-jsx.svg";
 
 const Form = () => {
   const [state, handleSubmit] = useForm("mrgwwkwv");
   if (state.succeeded) {
     return (
       <p className="successful-form">
-        <span className="icon"></span>
-        Thanks for your message — I'll be in touch soon!
+        <span className="flex-row">
+          <img src={MessageSVG} alt="Message Smile" />
+        </span>
+        <span>Thanks for your message — I'll be in touch soon!</span>
       </p>
     );
   }
