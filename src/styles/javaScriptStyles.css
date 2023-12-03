@@ -1,0 +1,29 @@
+.filter-item.clicked-filter-item {
+  background-color: #e4e6e7;
+}
+
+.filter-item.active,
+.page-item.active {
+  color: #fff;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.page-item.disabled {
+  color: #333;
+  opacity: 0.4;
+  cursor: default;
+}
+
+div.banner-text-rmv-anim::before {
+  animation: none;
+}
+
+.banner-text .banner-text-p-rmv-anim {
+  animation: none;
+}
+
+div h2.rmv-underline::after {
+  transition: none;
+  width: 0;
+}
