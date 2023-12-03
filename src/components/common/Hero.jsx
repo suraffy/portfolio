@@ -5,7 +5,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-const imgUrlLogo = "/img/surafel.jpg";
+import imgUrlLogo from "../../img/surafel.jpg";
 
 const githubAccountUrl = "https://github.com/suraffy";
 const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
