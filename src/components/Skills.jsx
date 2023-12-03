@@ -1,7 +1,7 @@
 import skillsList from "../services/skillsList";
 
 const Skills = () => {
-  const imgUrl = "/img/tech logos/";
+  const imgUrl = `${process.env.PUBLIC_URL}/img/tech logos/`;
 
   return (
     <section id="my-skills">
@@ -17,6 +17,7 @@ const Skills = () => {
                 }`}
               >
                 <img src={imgUrl + skill.img} alt={skill.name} />
+                {console.log(imgUrl + skill.img)}
                 {skill.details && (
                   <ul className="skills-details">
                     {skill.details.map((li, index) => (

@@ -4,6 +4,8 @@ import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 const Project = ({ project }) => {
+  const imgUrl = `${process.env.PUBLIC_URL}/img/web-tech.jpg`;
+
   return (
     <motion.div
       layout
@@ -14,7 +16,7 @@ const Project = ({ project }) => {
       className="project-box flex-column"
     >
       <div className="project-profile-img row">
-        <img src={"/img/web-tech.jpg"} alt="" />
+        <img src={imgUrl} alt="" />
       </div>
       <div className="project-details flex-column">
         <h2 className="project-title">{project.title}</h2>

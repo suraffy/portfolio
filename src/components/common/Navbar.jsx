@@ -1,4 +1,4 @@
-const imgUrlLogo = "/img/surafel.jpg";
+import imgUrlLogo from "../../img/surafel.jpg";
 
 const Navbar = ({ navStyles, mainNavStyles, showMainNav, onNavbarToggle }) => {
   return (
