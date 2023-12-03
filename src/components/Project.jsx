@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Project = ({ project }) => {
   return (
-    <div key={project.title} className="project-box flex-column">
+    <motion.div layout key={project.title} className="project-box flex-column">
       <div className="project-profile-img row">
         <img src={"/img/web-tech.jpg"} alt="" />
       </div>
@@ -34,7 +35,7 @@ const Project = ({ project }) => {
         </div>
         <p className="project-description">{project.desc}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
