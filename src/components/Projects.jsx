@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Project from "./Project";
 import Filter from "./common/Filter";
@@ -58,9 +58,11 @@ const Projects = () => {
           </div>
 
           <motion.div layout className="projects-container flex-row">
-            {projectsInPage.map((project) => (
-              <Project key={project.title} project={project} />
-            ))}
+            <AnimatePresence>
+              {projectsInPage.map((project) => (
+                <Project key={project.title} project={project} />
+              ))}
+            </AnimatePresence>
           </motion.div>
 
           <div className="project-footer">

@@ -5,7 +5,14 @@ import { motion } from "framer-motion";
 
 const Project = ({ project }) => {
   return (
-    <motion.div layout key={project.title} className="project-box flex-column">
+    <motion.div
+      layout
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      key={project.title}
+      className="project-box flex-column"
+    >
       <div className="project-profile-img row">
         <img src={"/img/web-tech.jpg"} alt="" />
       </div>
