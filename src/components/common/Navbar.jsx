@@ -1,13 +1,13 @@
-import imgUrlLogo from "../../img/surafel.jpg";
-
 const Navbar = ({ navStyles, mainNavStyles, showMainNav, onNavbarToggle }) => {
+  const logoImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
+
   return (
     <nav style={navStyles}>
       <div className="container">
         <div className="navbar flex-row">
           <div className="logo-container">
             <img
-              src={imgUrlLogo}
+              src={logoImgUrl}
               className="navbar-brand"
               id="logo-img"
               alt="web development"

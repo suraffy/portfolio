@@ -1,13 +1,14 @@
 import { useForm } from "@formspree/react";
-import MessageSVG from "../../img/message-smile.svg";
 
 const Form = () => {
+  const MessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile.svg`;
+
   const [state, handleSubmit] = useForm("mrgwwkwv");
   if (state.succeeded) {
     return (
       <p className="successful-form">
         <span className="flex-row">
-          <img src={MessageSVG} alt="Message Smile" />
+          <img src={MessageSVGImgUrl} alt="Message Smile" />
         </span>
         <span>Thanks for your message — I'll be in touch soon!</span>
       </p>
