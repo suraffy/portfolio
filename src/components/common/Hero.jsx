@@ -36,17 +36,28 @@ const Hero = () => {
             Vue, building back-end services with Node and Express.
           </p>
           <div className="hero-contact flex-row">
-            <a href={githubAccountUrl} target="_blank" className="flex-column">
+            <a
+              href={githubAccountUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex-column"
+            >
               <FontAwesomeIcon icon={faGithub} size="lg" />
             </a>
             <a
               href={linkedinAccountUrl}
               target="_blank"
+              rel="noreferrer"
               className="flex-column"
             >
               <FontAwesomeIcon icon={faLinkedin} size="lg" />
             </a>
-            <a href={twitterAccountUrl} target="_blank" className="flex-column">
+            <a
+              href={twitterAccountUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex-column"
+            >
               <FontAwesomeIcon icon={faTwitter} size="lg" />
             </a>
           </div>

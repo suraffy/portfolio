@@ -47,14 +47,14 @@ const Footer = () => {
               <h4>Courses</h4>
               <ul className="footer-courses-list">
                 <li>
-                  <a href={youtubeAccountUrl} target="_blank">
+                  <a href={youtubeAccountUrl} target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faYoutube} size="lg" />
                     YouTube
                   </a>
                 </li>
 
                 <li>
-                  <a href={mediumAccountUrl} target="_blank">
+                  <a href={mediumAccountUrl} target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faMedium} size="lg" />
                     Blog
                   </a>
@@ -66,14 +66,14 @@ const Footer = () => {
               <h4>Codes</h4>
               <ul className="footer-codes-list">
                 <li>
-                  <a href={githubAccountUrl} target="_blank">
+                  <a href={githubAccountUrl} target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faGithub} size="lg" />
                     GitHub
                   </a>
                 </li>
 
                 <li>
-                  <a href={codepenAccountUrl} target="_blank">
+                  <a href={codepenAccountUrl} target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faCodepen} size="lg" />
                     CodePen
                   </a>
@@ -86,21 +86,25 @@ const Footer = () => {
             <h4>Active on</h4>
             <ul className="footer-active-on-list">
               <li>
-                <a href={linkedinAccountUrl} target="_blank">
+                <a href={linkedinAccountUrl} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} size="lg" />
                   LinkedIn
                 </a>
               </li>
 
               <li>
-                <a href={twitterAccountUrl} target="_blank">
+                <a href={twitterAccountUrl} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faTwitter} size="lg" />
                   Twitter
                 </a>
               </li>
 
               <li>
-                <a href={stackoverflowAccountUrl} target="_blank">
+                <a
+                  href={stackoverflowAccountUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={faReddit} size="lg" />
                   Stackoverflow
                 </a>

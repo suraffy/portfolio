@@ -51,6 +51,7 @@ const About = () => {
               <a
                 href={githubAccountUrl}
                 target="_blank"
+                rel="noreferrer"
                 className="flex-column"
               >
                 <FontAwesomeIcon icon={faGithub} size="lg" />
@@ -62,6 +63,7 @@ const About = () => {
               <a
                 href={linkedinAccountUrl}
                 target="_blank"
+                rel="noreferrer"
                 className="flex-column"
               >
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
@@ -73,6 +75,7 @@ const About = () => {
               <a
                 href={twitterAccountUrl}
                 target="_blank"
+                rel="noreferrer"
                 className="flex-column"
               >
                 <FontAwesomeIcon icon={faTwitter} size="lg" />
@@ -84,6 +87,7 @@ const About = () => {
               <a
                 href={codepenAccountUrl}
                 target="_blank"
+                rel="noreferrer"
                 className="flex-column"
               >
                 <FontAwesomeIcon icon={faCodepen} size="lg" />
