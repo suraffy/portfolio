@@ -1,5 +1,5 @@
 import { useForm } from "@formspree/react";
-import MessageSVG from "../../img/message-smile-jsx.svg";
+import MessageSVG from "../../img/message-smile.svg";
 
 const Form = () => {
   const [state, handleSubmit] = useForm("mrgwwkwv");
