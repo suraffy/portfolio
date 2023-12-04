@@ -16,9 +16,6 @@ const Hero = () => {
     <div className="hero-container flex-column">
       <div className="hero-content flex-column">
         <div className="hero-header flex-column">
-          <div className="hero-image">
-            <img src={profileImgUrl} alt="Surafel" />
-          </div>
           <div className="hero-title">
             <span className="small-text">Hello</span>
             <h1 className="hero-heading">
@@ -27,6 +24,10 @@ const Hero = () => {
               <span>a </span>
               <span className="thin-text">Full-stack Developer</span>
             </h1>
+          </div>
+
+          <div className="hero-image">
+            <img src={profileImgUrl} alt="Surafel" />
           </div>
         </div>
 

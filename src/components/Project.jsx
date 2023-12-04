@@ -4,7 +4,7 @@ import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 const Project = ({ project }) => {
-  const imgUrl = `${process.env.PUBLIC_URL}/img/web-tech.jpg`;
+  const imgUrl = `${process.env.PUBLIC_URL}/img/projects/`;
 
   return (
     <motion.div
@@ -16,7 +16,7 @@ const Project = ({ project }) => {
       className="project-box flex-column"
     >
       <div className="project-profile-img row">
-        <img src={imgUrl} alt="" />
+        <img src={imgUrl + project.img} alt="" />
       </div>
       <div className="project-details flex-column">
         <h2 className="project-title">{project.title}</h2>
@@ -25,15 +25,25 @@ const Project = ({ project }) => {
           style={{
             width: "100%",
             justifyContent: "space-between",
+            flexWrap: "wrap",
           }}
         >
           <span className="tech-used">{project.techUsed}</span>
-          <span className="project-links">
-            <a href="#">
-              Live <FontAwesomeIcon icon={faUpRightFromSquare} />
-            </a>
+          <span className="project-links flex-row">
+            {project.demoLink && (
+              <a
+                href={project.demoLink || "#projects"}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-row"
+                style={{ flexWrap: "nowrap" }}
+              >
+                <span>Live &nbsp;</span>{" "}
+                <FontAwesomeIcon icon={faUpRightFromSquare} />
+              </a>
+            )}
             &nbsp;
-            <a href="#">
+            <a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
               <FontAwesomeIcon
                 className="source-code"
                 icon={faGithub}
