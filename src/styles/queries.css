@@ -35,6 +35,10 @@
   }
   /* End - Desktop Navbar */
 
+  .animated-loading img {
+    width: 200px;
+  }
+
   .hero-container {
     margin-top: 200px;
   }

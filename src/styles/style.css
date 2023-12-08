@@ -100,6 +100,15 @@ nav {
 }
 
 /*  */
+.animated-loading {
+  margin: 200px auto;
+}
+.animated-loading img {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
 .hero-container {
   position: relative;
   margin-top: 120px;

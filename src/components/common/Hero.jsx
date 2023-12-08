@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -6,11 +7,35 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
+  const loadingImgUrl = `${process.env.PUBLIC_URL}/img/Spin-1s-200px.svg`;
   const profileImgUrl = `${process.env.PUBLIC_URL}/img/profile-compressed.png`;
 
   const githubAccountUrl = "https://github.com/suraffy";
   const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
   const twitterAccountUrl = "https://twitter.com/surafelaraya";
+
+  const [image, setImage] = useState(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = profileImgUrl;
+
+    img.onload = () => {
+      setImage(img);
+      setIsImageLoaded(true);
+    };
+
+    console.log(img);
+  }, []);
+
+  if (!isImageLoaded) {
+    return (
+      <div className="animated-loading">
+        <img src={loadingImgUrl} alt="Loading..." />
+      </div>
+    );
+  }
 
   return (
     <div className="hero-container flex-column">
