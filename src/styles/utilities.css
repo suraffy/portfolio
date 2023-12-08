@@ -11,14 +11,33 @@
 
   --background: #fff;
   --surface: #f8f8f8;
+  --navbar-bg: #f8f8f8;
   --box-bg: #f6f6f6;
   --menu-bg: #f6f6f6;
   --menu-bg-hover: #f0f0f0;
+  --btn-bg: #efefef;
+  --btn-bg-hover: #e4e4e4;
 
   --text-color: #242424;
   --text-color-secondary: #444;
   --text-color-bg: #222;
+  --error-text: rgb(199, 0, 0);
 
+  --border-soft: #ccc;
+  --border-medium: #888;
+  --border-hard: #666;
+
+  --background: #fff;
+  --surface: #f8f8f8;
+  --navbar-bg: #f8f8f8;
+  --box-bg: #f6f6f6;
+  --menu-bg: #f6f6f6;
+  --menu-bg-hover: #f0f0f0;
+  --btn-bg: #efefef;
+  --btn-bg-hover: #e4e4e4;
+  --text-color: #242424;
+  --text-color-secondary: #444;
+  --text-color-bg: #222;
   --border-soft: #ccc;
   --border-medium: #888;
   --border-hard: #666;
@@ -26,13 +45,17 @@
   /* --background: #292929;
   --surface: #121212;
   --box-bg: #1f1f1f;
-  --box-bg-focus: #1e1e1e;
   --menu-bg: #2d2d2d;
-  --menu-bg-focus: #353535;
-
+  --menu-bg-hover: #353535;
+f e d c b a 9 8 7 6 5 4 3 2 1 0
+0 1 2 3 4 5 6 7 8 9 a b c d e f
   --text-color: #e1e1e1;
   --text-color-secondary: #a5a5a5;
-  --text-color-bg: #e8e8e8; */
+  --text-color-bg: #e8e8e8; 
+  --border-soft: #333;
+  --border-medium: #777;
+  --border-hard: #999;
+  */
 }
 
 ul {
@@ -62,22 +85,22 @@ button,
   padding: 4px 10px;
   font: inherit;
   color: inherit;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background: var(--background);
+  border: 1px solid var(--border-soft);
   border-radius: 2px;
   outline: none;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--gray);
+  color: var(--border-medium);
 }
 
 input[type="submit"],
 button,
 .btn {
   padding: 8px 12px;
-  background-color: #efefef;
+  background-color: var(--btn-bg);
   border-radius: 4px;
   cursor: pointer;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
@@ -86,7 +109,7 @@ button,
 input[type="submit"]:hover,
 button:hover,
 .btn:hover {
-  background-color: #e4e4e4;
+  background-color: var(--btn-bg-hover);
   text-decoration: none;
 }
 
@@ -126,7 +149,7 @@ h2 {
   width: 80px;
   height: 4px;
   margin: 0 auto;
-  background-color: var(--lightgray);
+  background: var(--border-soft);
   transition: width 0.4s;
   transition-delay: 0.6s;
 }
@@ -138,8 +161,8 @@ p {
 
 .navbar-toggler {
   padding: 0.5rem 0.625rem;
-  background-color: #f8f8f8;
-  border: 1px solid var(--lightgray);
+  background-color: var(--surface);
+  border: 1px solid var(--border-soft);
   border-radius: 0.25rem;
   cursor: pointer;
 }
@@ -149,7 +172,7 @@ p {
   width: 1.375rem;
   height: 0.125rem;
   border-radius: 1px;
-  background-color: #333;
+  background-color: var(--text-color);
 }
 
 .toggler-bar + .toggler-bar {
@@ -159,5 +182,5 @@ p {
 hr {
   margin: 1rem 0;
   border: 0;
-  border-bottom: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--border-soft);
 }

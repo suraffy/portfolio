@@ -315,14 +315,14 @@ nav {
 .skills-box {
   padding: 5px 10px;
   border-radius: 2px;
-  box-shadow: 2px 2px 4px var(--lightgray);
+  box-shadow: 2px 2px 4px var(--border-soft);
   transition: box-shadow 0.2s;
   border-radius: 10px;
   background-color: var(--background);
 }
 
 .skills-box:hover {
-  box-shadow: 1px 1px 8px var(--gray);
+  box-shadow: 1px 1px 8px var(--border-medium);
 }
 
 .skills-box img {
@@ -402,7 +402,7 @@ nav {
   background-color: var(--background);
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  box-shadow: 2px 2px 6px var(--lightgray);
+  box-shadow: 2px 2px 6px var(--border-soft);
   overflow: hidden;
 }
 
@@ -517,7 +517,7 @@ nav {
 .contact-content form {
   padding: 10px 15px;
   border-radius: 10px;
-  box-shadow: 1px 1px 4px var(--lightgray);
+  box-shadow: 1px 1px 4px var(--border-soft);
 }
 
 #contact form.flex-column {
@@ -541,8 +541,9 @@ nav {
 }
 
 #contact .error-message {
-  color: rgb(199, 0, 0);
+  color: var(--error-text);
 }
+
 /* Footer */
 footer {
   padding: 60px 0 0;

@@ -4,28 +4,20 @@ const Navbar = ({ navStyles, mainNavStyles, showMainNav, onNavbarToggle }) => {
   const logoImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
   const [colorMode, setColorMode] = useState("dark");
 
-  const lightBodyBg = "#fff";
-  const lightBoxBg = "#000";
-  const lightTextColor = "#333";
-  const lightLightShadow = "#ccc";
-  const lightShadow = "#888";
-  const lightHardShasow = "#666";
-  const lightFooterBg = "#f4f4f4";
-
   const changeColor = () => {
-    // Get the root element
     var root = document.documentElement;
 
-    // Change the value of the CSS variable
     if (colorMode === "dark") {
+      setColorMode("light");
       root.style.cssText =
-        "--deafult-white: #000; --body-bg: #111;--box-bg: #333;--text-color: #f6f6f6;--light-shadow: #333;--shadow: #222;--hard-shadow: #111;--footer-bg: #333;";
+        "--background: #292929; --surface: #121212; --navbar-bg: #292929; --box-bg: #1f1f1f; --menu-bg: #2d2d2d; --menu-bg-hover: #353535; --btn-bg: #242424; --btn-bg-hover: #1c1c1c; --text-color: #e1e1e1; --text-color-secondary: #a5a5a5; --text-color-bg: #e8e8e8; --border-soft: #333; --border-medium: #777; --border-hard: #999; --error-text: rgb(199, 0, 0);";
 
       return;
     }
 
+    setColorMode("dark");
     root.style.cssText =
-      "--body-bg: #fff;--box-bg: #f6f6f6;--text-color: #333;--light-shadow: #ccc;--shadow: #888;--hard-shadow: #666;--footer-bg: #f4f4f4;";
+      "--background: #fff; --surface: #f8f8f8; --navbar-bg: #f8f8f8; --box-bg: #f6f6f6; --menu-bg: #f6f6f6; --menu-bg-hover: #f0f0f0; --btn-bg: #efefef; --btn-bg-hover: #e4e4e4; --text-color: #242424; --text-color-secondary: #444; --text-color-bg: #222; --border-soft: #ccc; --border-medium: #888; --border-hard: #666; --error-text: rgb(199, 0, 0);";
   };
 
   return (
@@ -68,7 +60,7 @@ const Navbar = ({ navStyles, mainNavStyles, showMainNav, onNavbarToggle }) => {
 
           <div className="light-dark-mode">
             <button className="btn" onClick={changeColor}>
-              DarkMode
+              {colorMode} Mode
             </button>
           </div>
         </div>
