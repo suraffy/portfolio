@@ -533,6 +533,13 @@ nav {
   font-weight: 500;
 }
 
+#contact .smile-message {
+  animation: shake 1s infinite alternate ease-in-out;
+}
+
+#contact .error-message {
+  color: rgb(199, 0, 0);
+}
 /* Footer */
 footer {
   padding: 60px 0 0;

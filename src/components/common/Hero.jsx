@@ -25,8 +25,6 @@ const Hero = () => {
       setImage(img);
       setIsImageLoaded(true);
     };
-
-    console.log(img);
   }, []);
 
   if (!isImageLoaded) {

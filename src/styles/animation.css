@@ -1,4 +1,3 @@
-
 @keyframes slide-right {
   from {
     transform: translateX(-100px);
@@ -9,7 +8,6 @@
     opacity: 1;
   }
 }
-
 
 @keyframes slide-left {
   from {
@@ -42,5 +40,13 @@
 
   to {
     width: 80px;
+  }
+}
+@keyframes shake {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
   }
 }

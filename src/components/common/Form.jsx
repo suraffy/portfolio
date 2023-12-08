@@ -1,13 +1,24 @@
+import { useEffect } from "react";
 import { useForm } from "@formspree/react";
 
 const Form = () => {
-  const MessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile.svg`;
+  const smileMessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile.svg`;
+  const sendingMessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/wired-flat-177-envelope-send.webp`;
 
   const [state, handleSubmit] = useForm("mrgwwkwv");
+
+  useEffect(() => {
+    const img = new Image();
+    const img2 = new Image();
+
+    img.src = smileMessageSVGImgUrl;
+    img.src = sendingMessageSVGImgUrl;
+  }, []);
 
   if (state.submitting) {
     return (
       <p>
+        <img src={sendingMessageSVGImgUrl} alt="Sending Message" />
         <span>Sending...</span>
       </p>
     );
@@ -17,7 +28,11 @@ const Form = () => {
     return (
       <p className="successful-form">
         <span className="flex-row">
-          <img src={MessageSVGImgUrl} alt="Message Smile" />
+          <img
+            src={smileMessageSVGImgUrl}
+            alt="Message Smile"
+            className="smile-message"
+          />
         </span>
         <span>Thanks for your message — I'll be in touch soon!</span>
       </p>
@@ -26,7 +41,8 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex-column">
-      <input type="text" name="name" placeholder="Your Name" />
+      {state.errors && <p className="error-message">Message not send!!</p>}
+      <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="text" name="subject" placeholder="Subject" />
       <textarea
