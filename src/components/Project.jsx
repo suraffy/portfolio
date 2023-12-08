@@ -37,13 +37,18 @@ const Project = ({ project }) => {
                 rel="noreferrer"
                 className="flex-row"
                 style={{ flexWrap: "nowrap" }}
+                title="Show Live Demo"
               >
-                <span>Live &nbsp;</span>{" "}
-                <FontAwesomeIcon icon={faUpRightFromSquare} />
+                <span>Live</span> <FontAwesomeIcon icon={faUpRightFromSquare} />
               </a>
             )}
             &nbsp;
-            <a href={project.sourceCodeLink} target="_blank" rel="noreferrer">
+            <a
+              href={project.sourceCodeLink}
+              target="_blank"
+              rel="noreferrer"
+              title="View Source Code"
+            >
               <FontAwesomeIcon
                 className="source-code"
                 icon={faGithub}
