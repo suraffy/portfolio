@@ -4,6 +4,15 @@ const Form = () => {
   const MessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile.svg`;
 
   const [state, handleSubmit] = useForm("mrgwwkwv");
+
+  if (state.submitting) {
+    return (
+      <p>
+        <span>Sending...</span>
+      </p>
+    );
+  }
+
   if (state.succeeded) {
     return (
       <p className="successful-form">
