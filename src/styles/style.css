@@ -20,8 +20,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
-  color: #333;
-  background-color: #fff;
+  color: var(--text-color);
+  background-color: var(--background);
 }
 
 /* Layout */
@@ -66,7 +66,7 @@ nav {
   display: flex;
   /* height: 255px !important; */
   height: 208px !important;
-  border-top: 1px solid var(--lightgray);
+  border-top: 1px solid var(--border-soft);
 }
 
 .main-nav {
@@ -77,8 +77,8 @@ nav {
   width: 100%;
   height: 0;
   overflow: hidden;
-  background-color: #f8f8f8;
-  box-shadow: 0px 1px 2px var(--lightgray);
+  background-color: var(--menu-bg);
+  box-shadow: 0px 1px 2px var(--border-soft);
   transition: top 0.2s, height 0.2s;
 }
 
@@ -96,7 +96,7 @@ nav {
 }
 
 .main-nav a:hover {
-  background-color: #eee;
+  background-color: var(--menu-bg-hover);
 }
 
 /*  */
@@ -164,9 +164,6 @@ nav {
 
 .hero-contact a {
   padding: 0 5px;
-  line-height: 1;
-  color: var(--darkgray);
-  text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
@@ -303,7 +300,7 @@ nav {
   width: 760px;
   margin: 0 -15px;
   padding: 20px 15px 40px;
-  background: #f6f6f6;
+  background: var(--box-bg);
   border-radius: 10px;
 }
 
@@ -321,7 +318,7 @@ nav {
   box-shadow: 2px 2px 4px var(--lightgray);
   transition: box-shadow 0.2s;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--background);
 }
 
 .skills-box:hover {
@@ -379,9 +376,13 @@ nav {
   padding: 3px 18px;
   margin: 0 8px 8px 0;
   font-size: 0.93rem;
-  border: 1px solid #e4e6e7;
+  border: 1px solid var(--border-soft);
   border-radius: 30px;
   cursor: pointer;
+}
+
+.filter-item:hover {
+  background: var(--menu-bg);
 }
 
 .filter-info {
@@ -398,7 +399,7 @@ nav {
 
 .project-box {
   max-width: 320px;
-  background-color: #fff;
+  background-color: var(--background);
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   box-shadow: 2px 2px 6px var(--lightgray);
@@ -440,7 +441,7 @@ nav {
 .project-description {
   margin-top: 10px;
   font-size: 0.93rem;
-  color: var(--darkgray);
+  color: var(--text-color-secondary);
 }
 
 .tech-used {
@@ -449,11 +450,11 @@ nav {
   text-transform: uppercase;
 }
 
-.project-type {
+/* .project-type {
   font-size: 0.93rem;
   color: var(--gray);
   text-transform: uppercase;
-}
+} */
 
 .project-links a {
   padding-left: 10px;
@@ -477,7 +478,7 @@ nav {
 
 .page-item {
   padding: 5px 10px;
-  border: 1px solid var(--lightgray);
+  border: 1px solid var(--border-soft);
   border-right: 0px;
 }
 
@@ -487,7 +488,7 @@ nav {
 }
 
 .page-item:last-child {
-  border-right: 1px solid var(--lightgray);
+  border-right: 1px solid var(--border-soft);
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -497,7 +498,7 @@ nav {
 }
 
 .page-item:not(.disabled, .active):hover {
-  background: rgb(223, 243, 255);
+  background: var(--menu-bg);
 }
 
 /* Contact section */
@@ -506,7 +507,7 @@ nav {
   padding: 20px 15px 40px;
   margin: 0 -15px;
   border-radius: 10px;
-  background: #f6f6f6;
+  background: var(--box-bg);
 }
 
 .contact-content > * {
@@ -545,9 +546,13 @@ nav {
 /* Footer */
 footer {
   padding: 60px 0 0;
-  color: var(--darkgray);
-  background-color: #f4f4f4;
-  background: linear-gradient(to right bottom, #f4f4f4, #fff);
+  color: var(--border-hard);
+  background-color: var(--box-bg);
+  background: linear-gradient(
+    to right bottom,
+    var(--box-bg),
+    var(--background)
+  );
 }
 
 .footer-profile {
@@ -567,7 +572,7 @@ footer {
   flex-wrap: wrap;
   max-width: 460px;
   text-align: center;
-  border: 1px solid var(--lightgray);
+  border: 1px solid var(--border-soft);
   border-radius: 4px;
 }
 

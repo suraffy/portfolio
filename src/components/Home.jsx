@@ -27,7 +27,7 @@ const Home = () => {
 
   if (scrolling) {
     navStyles.padding = "4px 0px";
-    navStyles.backgroundColor = "#f8f8f8";
+    navStyles.backgroundColor = "var(--surface)";
     navStyles.boxShadow = "0 1px 2px #ccc";
 
     mainNavStyles.top = "48px";

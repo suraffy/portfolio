@@ -8,6 +8,31 @@
   --gray: #888;
   --lightgray: #ccc;
   --darkgray: #666;
+
+  --background: #fff;
+  --surface: #f8f8f8;
+  --box-bg: #f6f6f6;
+  --menu-bg: #f6f6f6;
+  --menu-bg-hover: #f0f0f0;
+
+  --text-color: #242424;
+  --text-color-secondary: #444;
+  --text-color-bg: #222;
+
+  --border-soft: #ccc;
+  --border-medium: #888;
+  --border-hard: #666;
+
+  /* --background: #292929;
+  --surface: #121212;
+  --box-bg: #1f1f1f;
+  --box-bg-focus: #1e1e1e;
+  --menu-bg: #2d2d2d;
+  --menu-bg-focus: #353535;
+
+  --text-color: #e1e1e1;
+  --text-color-secondary: #a5a5a5;
+  --text-color-bg: #e8e8e8; */
 }
 
 ul {
