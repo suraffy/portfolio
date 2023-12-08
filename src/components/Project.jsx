@@ -39,7 +39,12 @@ const Project = ({ project }) => {
                 style={{ flexWrap: "nowrap" }}
                 title="Show Live Demo"
               >
-                <span>Live</span> <FontAwesomeIcon icon={faUpRightFromSquare} />
+                <span>Live</span>{" "}
+                <FontAwesomeIcon
+                  icon={faUpRightFromSquare}
+                  size="xs"
+                  style={{ paddingLeft: "2px" }}
+                />
               </a>
             )}
             &nbsp;

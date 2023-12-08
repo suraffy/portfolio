@@ -6,7 +6,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Hero = () => {
+const Hero = ({ colorMode }) => {
   const loadingImgUrl = `${process.env.PUBLIC_URL}/img/Spin-1s-200px.svg`;
   const profileImgUrl = `${process.env.PUBLIC_URL}/img/profile-compressed.png`;
 
@@ -66,7 +66,11 @@ const Hero = () => {
               rel="noreferrer"
               className="flex-column"
             >
-              <FontAwesomeIcon icon={faGithub} size="lg" />
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={colorMode === "light" ? { color: "#f4f4f4" } : {}}
+                size="lg"
+              />
             </a>
             <a
               href={linkedinAccountUrl}

@@ -9,7 +9,7 @@ import {
   faReddit,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = () => {
+const Footer = ({ colorMode }) => {
   const profileImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
 
   const twitterAccountUrl = "https://twitter.com/surafelaraya";
@@ -53,7 +53,11 @@ const Footer = () => {
 
                 <li>
                   <a href={mediumAccountUrl} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faMedium} size="lg" />
+                    <FontAwesomeIcon
+                      icon={faMedium}
+                      style={colorMode === "light" ? { color: "#f4f4f4" } : {}}
+                      size="lg"
+                    />
                     Blog
                   </a>
                 </li>
@@ -65,14 +69,22 @@ const Footer = () => {
               <ul className="footer-codes-list">
                 <li>
                   <a href={githubAccountUrl} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faGithub} size="lg" />
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      style={colorMode === "light" ? { color: "#f4f4f4" } : {}}
+                      size="lg"
+                    />
                     GitHub
                   </a>
                 </li>
 
                 <li>
                   <a href={codepenAccountUrl} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faCodepen} size="lg" />
+                    <FontAwesomeIcon
+                      icon={faCodepen}
+                      style={colorMode === "light" ? { color: "#f4f4f4" } : {}}
+                      size="lg"
+                    />
                     CodePen
                   </a>
                 </li>
@@ -103,7 +115,11 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FontAwesomeIcon icon={faReddit} size="lg" />
+                  <FontAwesomeIcon
+                    icon={faReddit}
+                    style={colorMode === "light" ? { color: "#f4f4f4" } : {}}
+                    size="lg"
+                  />
                   Stackoverflow
                 </a>
               </li>

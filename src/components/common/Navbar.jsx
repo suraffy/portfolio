@@ -4,6 +4,7 @@ const Navbar = ({
   showMainNav,
   onNavbarToggle,
   onChangeColor,
+  colorMode,
 }) => {
   const logoImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
 
@@ -47,7 +48,7 @@ const Navbar = ({
 
           <div className="light-dark-mode">
             <button className="btn" onClick={onChangeColor}>
-              {} Mode
+              {colorMode} Mode
             </button>
           </div>
         </div>
