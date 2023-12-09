@@ -51,14 +51,20 @@ nav {
   margin: 0 -15px;
 }
 
-.navbar-brand {
-  height: 40px;
+.logo-container {
   padding: 0 15px;
+}
+
+.navbar-brand {
+  display: block;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px solid var(--lightblue);
   cursor: pointer;
 }
 
 .navbar-toggler {
-  margin-right: 15px;
   margin-left: auto;
 }
 
@@ -97,6 +103,11 @@ nav {
 
 .main-nav a:hover {
   background-color: var(--menu-bg-hover);
+}
+
+.colorMode-toggler {
+  padding: 0 15px;
+  cursor: pointer;
 }
 
 /*  */

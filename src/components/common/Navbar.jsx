@@ -7,6 +7,8 @@ const Navbar = ({
   colorMode,
 }) => {
   const logoImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
+  const darkMode = `${process.env.PUBLIC_URL}/img/dark-mode.svg`;
+  const lightMode = `${process.env.PUBLIC_URL}/img/light-mode.svg`;
 
   return (
     <nav style={navStyles}>
@@ -18,7 +20,7 @@ const Navbar = ({
               className="navbar-brand"
               id="logo-img"
               alt="web development"
-              style={{ borderRadius: "50%" }}
+              onClick={() => window.scrollTo(0, 0)}
             />
           </div>
 
@@ -47,9 +49,12 @@ const Navbar = ({
           </ul>
 
           <div className="light-dark-mode">
-            <button className="btn" onClick={onChangeColor}>
-              {colorMode} Mode
-            </button>
+            <div className="colorMode-toggler" onClick={onChangeColor}>
+              <img
+                src={colorMode === "light" ? lightMode : darkMode}
+                width="28px"
+              />
+            </div>
           </div>
         </div>
       </div>

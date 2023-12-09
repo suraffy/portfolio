@@ -34,8 +34,8 @@ const Footer = ({ colorMode }) => {
             <div className="footer-about-me-text">
               <h4>Surafel Araya</h4>
               <p>
-                Software developer and web designer. Passionate about making
-                living easier through programming.
+                Software developer and web designer. Passionate about innovative
+                programming solutions.
               </p>
             </div>
           </div>
