@@ -7,7 +7,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = ({ colorMode }) => {
-  const loadingImgUrl = `${process.env.PUBLIC_URL}/img/Spin-1s-200px.svg`;
+  const loadingImgUrlLightMode = `${process.env.PUBLIC_URL}/img/Spin-1s-200px-light-mode.svg`;
+  const loadingImgUrlDarkMode = `${process.env.PUBLIC_URL}/img/Spin-1s-200px-dark-mode.svg`;
   const profileImgUrl = `${process.env.PUBLIC_URL}/img/profile-compressed.png`;
 
   const githubAccountUrl = "https://github.com/suraffy";
@@ -47,7 +48,14 @@ const Hero = ({ colorMode }) => {
             </div>
           ) : (
             <div className="animated-loading">
-              <img src={loadingImgUrl} alt="Loading..." />
+              <img
+                src={
+                  colorMode === "light"
+                    ? loadingImgUrlDarkMode
+                    : loadingImgUrlLightMode
+                }
+                alt="Loading..."
+              />
             </div>
           )}
         </div>
