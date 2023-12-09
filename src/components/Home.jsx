@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import Navbar from "./common/Navbar";
-import Hero from "./common/Hero";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
 
 const Home = ({ colorMode, onChangeColor }) => {
   const [scrolling, setScrolling] = useState(false);

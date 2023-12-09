@@ -111,14 +111,6 @@ nav {
 }
 
 /*  */
-.animated-loading {
-  margin: 200px auto;
-}
-.animated-loading img {
-  display: block;
-  width: 100px;
-  margin: 0 auto;
-}
 
 .hero-container {
   position: relative;
@@ -129,7 +121,8 @@ nav {
   max-width: 640px;
 }
 
-.hero-image {
+.hero-image,
+.animated-loading {
   width: 120px;
   margin: 20px;
 }
@@ -138,6 +131,12 @@ nav {
   border-radius: 20px;
   animation: popup 0.4s ease-in-out;
   transform-origin: center;
+}
+
+.animated-loading img {
+  display: block;
+  width: 80%;
+  margin: 20px auto 0;
 }
 
 .hero-title {
