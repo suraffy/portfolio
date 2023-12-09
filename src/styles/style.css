@@ -31,8 +31,6 @@ section {
 
 /* Header */
 header {
-  /* background-color: #f6f6f6;
-  background: linear-gradient(to right bottom, #fff, #f4f4f4); */
   min-height: 650px;
 }
 
@@ -205,99 +203,6 @@ nav {
   color: #333;
 }
 
-/* */
-
-.banner.flex-column {
-  margin-top: 248px;
-}
-
-.banner-img img {
-  height: 100px;
-  animation: slide-right 0.8s ease-in-out;
-}
-
-.banner-text {
-  padding: 0 20px;
-  /* margin-top: 20px; */
-}
-
-.banner-text::before {
-  content: "";
-  display: table;
-  margin: 0px auto 10px;
-  width: 0px;
-  height: 4px;
-  background-color: var(--lightgray);
-  animation: expand-width 0.8s forwards ease-in-out;
-  animation-delay: 0.6s;
-}
-
-.banner-text h2 {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 600;
-  text-align: center;
-  animation: slide-left 0.8s ease-in-out;
-}
-
-.banner-text p {
-  margin-bottom: 0;
-  margin-left: 0;
-  font-size: 1.125rem;
-  font-size: 1rem;
-  font-weight: 500;
-  font-weight: 400;
-  /* letter-spacing: 0.2rem; */
-  text-align: center;
-  opacity: 0;
-  animation: slide-down 0.8s ease-in-out forwards;
-  animation-delay: 0.8s;
-}
-
-/* About-me Section */
-.about-me-overview img {
-  display: block;
-  width: 120px;
-  padding: 2px;
-  margin: 0 auto;
-  border: 2px solid var(--lightblue);
-  border-radius: 50%;
-}
-
-.about-me-detail {
-  max-width: 640px;
-}
-
-.about-me-accounts {
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.about-me-accounts a {
-  padding: 0 10px;
-  line-height: 1;
-  font-size: 0.8rem;
-  color: var(--darkgray);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.about-me-accounts svg {
-  font-size: 1.8rem;
-}
-
-.about-me-accounts a:hover {
-  color: inherit;
-}
-
-.about-me-accounts svg {
-  transition: transform 0.2s;
-}
-
-.about-me-accounts li:hover svg {
-  transform: translateY(-4px);
-}
-
 /* My-Skills Section*/
 .skills-grid-container {
   max-width: 400px;
@@ -351,8 +256,6 @@ nav {
 
 /* Projects Section */
 #projects {
-  /* background-color: #f4f4f4;
-  background: linear-gradient(to right bottom, #fff, #f4f4f4); */
 }
 
 /* Project header */
@@ -459,12 +362,6 @@ nav {
   color: rgb(164, 182, 0);
   text-transform: uppercase;
 }
-
-/* .project-type {
-  font-size: 0.93rem;
-  color: var(--gray);
-  text-transform: uppercase;
-} */
 
 .project-links a {
   padding-left: 10px;
@@ -591,7 +488,6 @@ footer {
   display: block;
   height: 100px;
   padding: 2px;
-  /* margin-right: 1rem; */
   border: 2px solid var(--lightblue);
   border-radius: 100%;
 }
@@ -628,7 +524,6 @@ div.footer-courses-codes {
 .footer-codes-list a:hover,
 .footer-active-on-list a:hover {
   color: #444;
-  /* text-decoration: none; */
 }
 
 .footer-profile a svg {

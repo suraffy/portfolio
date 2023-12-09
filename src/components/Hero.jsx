@@ -27,14 +27,6 @@ const Hero = ({ colorMode }) => {
     };
   }, []);
 
-  // if (!isImageLoaded) {
-  //   return (
-  //     <div className="animated-loading">
-  //       <img src={loadingImgUrl} alt="Loading..." />
-  //     </div>
-  //   );
-  // }
-
   return (
     <div className="hero-container flex-column">
       <div className="hero-content flex-column">
