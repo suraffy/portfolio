@@ -53,9 +53,9 @@
 }
 @keyframes shake {
   from {
-    transform: rotate(-10deg);
+    transform: rotate(-2deg);
   }
   to {
-    transform: rotate(10deg);
+    transform: rotate(8deg);
   }
 }
