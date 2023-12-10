@@ -7,15 +7,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = ({ colorMode }) => {
-  const loadingImgUrlLightMode = `${process.env.PUBLIC_URL}/img/Spin-1s-200px-light-mode.svg`;
-  const loadingImgUrlDarkMode = `${process.env.PUBLIC_URL}/img/Spin-1s-200px-dark-mode.svg`;
   const profileImgUrl = `${process.env.PUBLIC_URL}/img/profile-compressed.png`;
+  const loadingImgUrl = `${process.env.PUBLIC_URL}/img/Spin-1s-200px.svg`;
 
   const githubAccountUrl = "https://github.com/suraffy";
   const linkedinAccountUrl = "https://www.linkedin.com/in/surafel-araya/";
   const twitterAccountUrl = "https://twitter.com/surafelaraya";
 
-  const [image, setImage] = useState(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -23,7 +21,6 @@ const Hero = ({ colorMode }) => {
     img.src = profileImgUrl;
 
     img.onload = () => {
-      setImage(img);
       setIsImageLoaded(true);
     };
   }, []);
@@ -48,14 +45,7 @@ const Hero = ({ colorMode }) => {
             </div>
           ) : (
             <div className="animated-loading">
-              <img
-                src={
-                  colorMode === "light"
-                    ? loadingImgUrlDarkMode
-                    : loadingImgUrlLightMode
-                }
-                alt="Loading..."
-              />
+              <img src={loadingImgUrl} alt="Loading..." />
             </div>
           )}
         </div>

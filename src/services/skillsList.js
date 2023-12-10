@@ -5,18 +5,18 @@ const skillsList = [
     img: "css-3.svg",
     details: ["Flexbox, CSS Grid", "Media Queries", "CSS Animation"],
   },
+  // {
+  //   name: "Sass",
+  //   img: "sass.svg",
+  // },
   {
-    name: "Sass",
-    img: "sass.svg",
+    name: "Taiwild",
+    img: "tailwind-css.svg",
   },
   {
     name: "Bootstrap",
     img: "bootstrap.svg",
   },
-  // {
-  //   name: "Taiwild",
-  //   img: "tailwind.svg",
-  // },
   {
     name: "JavaScript",
     img: "javascript.svg",
@@ -29,7 +29,7 @@ const skillsList = [
   },
   {
     name: "Reac.js",
-    img: "react-1.svg",
+    img: "react.svg",
     details: ["React Router", "Redux"],
   },
   {

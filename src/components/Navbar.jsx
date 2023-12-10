@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 const Navbar = ({
   navStyles,
   mainNavStyles,
@@ -10,18 +12,31 @@ const Navbar = ({
   const darkMode = `${process.env.PUBLIC_URL}/img/dark-mode.svg`;
   const lightMode = `${process.env.PUBLIC_URL}/img/light-mode.svg`;
 
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = logoImgUrl;
+
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+  }, []);
+
   return (
     <nav style={navStyles}>
       <div className="container">
         <div className="navbar flex-row">
           <div className="logo-container">
-            <img
-              src={logoImgUrl}
-              className="navbar-brand"
-              id="logo-img"
-              alt="web development"
-              onClick={() => window.scrollTo(0, 0)}
-            />
+            {isImageLoaded && (
+              <img
+                src={logoImgUrl}
+                className="navbar-brand"
+                id="logo-img"
+                alt="web development"
+                onClick={() => window.scrollTo(0, 0)}
+              />
+            )}
           </div>
 
           <div className="navbar-toggler" onClick={onNavbarToggle}>
@@ -52,7 +67,7 @@ const Navbar = ({
             <div className="colorMode-toggler" onClick={onChangeColor}>
               <img
                 src={colorMode === "light" ? lightMode : darkMode}
-                width="28px"
+                width="24px"
               />
             </div>
           </div>
