@@ -33,7 +33,7 @@ const projectsList = [
     title: "CSS Images",
     type: "css-animation",
     techUsed: "css3",
-    desc: "Images drawn using CSS. Only CSS!! nothing more, nothing less.",
+    desc: "Images drawn using CSS. Only CSS!! Nothing More, Nothing Less.",
     img: "css-images.png",
     demoLink: "https://css-images.netlify.app/",
     sourceCodeLink: "https://codepen.io/suraffy/pen/poGQOdj",
@@ -66,6 +66,36 @@ const projectsList = [
     img: "indecision-app.gif",
     demoLink: "https://suraffy-indecision-app.netlify.app/",
     sourceCodeLink: "https://github.com/suraffy/indecision-app",
+  },
+
+  {
+    title: "Todo App",
+    type: "javascript",
+    techUsed: "JavaScript, css3",
+    desc: "Uses browser storage API. And it offers task descriptions and prioritization.",
+    img: "todoapp-js.jpg",
+    demoLink: "https://suraffy.github.io/TodoApp-JS/",
+    sourceCodeLink: "https://github.com/suraffy/todoapp-js",
+  },
+
+  {
+    title: "Neo Blink Effect",
+    type: "css-animation",
+    techUsed: "css3",
+    desc: "A neo blink effect using CSS Transform Animation and Transitions. Only CSS!!",
+    img: "blink-effect.gif",
+    demoLink: "https://blink-effect.netlify.app",
+    sourceCodeLink: "https://codepen.io/suraffy/pen/RwvZbdL",
+  },
+
+  {
+    title: "Snow Fall",
+    type: "css-animation",
+    techUsed: "css3, javscript",
+    desc: "A snow fall animation using CSS3 and JavaScript to dynamically produce snow particles.",
+    img: "snow-fall.jpg",
+    demoLink: "https://snow-fall-suraffy.netlify.app",
+    sourceCodeLink: "https://codepen.io/suraffy/pen/VwgRqBp",
   },
 
   {

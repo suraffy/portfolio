@@ -237,7 +237,7 @@ nav {
 }
 
 .skills-box:hover {
-  box-shadow: 1px 1px 8px var(--border-medium);
+  box-shadow: 1px 1px 4px var(--border-medium);
 }
 
 .skills-box img {
