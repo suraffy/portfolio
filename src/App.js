@@ -11,6 +11,11 @@ import "./styles/queries.css";
 
 function App() {
   const root = document.documentElement;
+
+  const isOSDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
   const darkModeColors =
     "--background: #292929; --surface: #121212; --navbar-bg: #1f1f1f; --box-bg: #1f1f1f; --menu-bg: #2d2d2d; --menu-bg-hover: #353535; --btn-bg: #242424; --btn-bg-hover: #1c1c1c; --text-color: #e1e1e1; --text-color-secondary: #a5a5a5; --text-color-bg: #e8e8e8; --border-soft: #333; --border-medium: #777; --border-hard: #999; --error-text: rgb(199, 0, 0);";
   const lightModeColors =
@@ -22,6 +27,13 @@ function App() {
     const savedColorMode = localStorage.getItem("colorMode")
       ? localStorage.getItem("colorMode")
       : "light";
+
+    if (!savedColorMode && isOSDarkMode) {
+      setColorMode("light");
+      root.style.cssText = darkModeColors;
+
+      return;
+    }
 
     if (savedColorMode === "dark") {
       setColorMode("light");
