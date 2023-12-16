@@ -9,6 +9,7 @@ const Navbar = ({
   colorMode,
 }) => {
   const logoImgUrl = `${process.env.PUBLIC_URL}/img/surafel.jpg`;
+  const loadingImgUrl = `${process.env.PUBLIC_URL}/img/Rolling-1s-40px.svg`;
   const darkMode = `${process.env.PUBLIC_URL}/img/dark-mode.svg`;
   const lightMode = `${process.env.PUBLIC_URL}/img/light-mode.svg`;
 
@@ -28,14 +29,15 @@ const Navbar = ({
       <div className="container">
         <div className="navbar flex-row">
           <div className="logo-container">
-            {isImageLoaded && (
+            {isImageLoaded ? (
               <img
                 src={logoImgUrl}
                 className="navbar-brand"
                 id="logo-img"
-                alt="web development"
                 onClick={() => window.scrollTo(0, 0)}
               />
+            ) : (
+              <img src={loadingImgUrl} />
             )}
           </div>
 
