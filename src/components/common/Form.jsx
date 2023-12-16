@@ -1,25 +1,38 @@
 import { useEffect } from "react";
 import { useForm } from "@formspree/react";
 
-const Form = () => {
-  const smileMessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile.svg`;
-  const sendingMessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/wired-flat-177-envelope-send.webp`;
+const Form = ({ colorMode }) => {
+  const smileMessageLightSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile-light.svg`;
+  const smileMessageDarkSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile-dark.svg`;
+  const sendingMessageLightImgUrl = `${process.env.PUBLIC_URL}/img/wired-flat-177-envelope-send-light.webp`;
+  const sendingMessageDarkImgUrl = `${process.env.PUBLIC_URL}/img/wired-flat-177-envelope-send-dark.webp`;
 
   const [state, handleSubmit] = useForm("mrgwwkwv");
 
   useEffect(() => {
-    const img = new Image();
+    const img1 = new Image();
     const img2 = new Image();
+    const img3 = new Image();
+    const img4 = new Image();
 
-    img.src = smileMessageSVGImgUrl;
-    img.src = sendingMessageSVGImgUrl;
+    img1.src = smileMessageLightSVGImgUrl;
+    img2.src = smileMessageDarkSVGImgUrl;
+    img3.src = sendingMessageLightImgUrl;
+    img4.src = sendingMessageDarkImgUrl;
   }, []);
 
   if (state.submitting) {
     return (
       <p>
-        <img src={sendingMessageSVGImgUrl} alt="Sending Message" />
-        <span>Sending...</span>
+        <img
+          src={
+            colorMode == "dark"
+              ? sendingMessageLightImgUrl
+              : sendingMessageDarkImgUrl
+          }
+          alt="Sending Message"
+        />
+        <span style={{ marginLeft: "10px" }}>Sending...</span>
       </p>
     );
   }
@@ -29,7 +42,11 @@ const Form = () => {
       <p className="successful-form">
         <span className="flex-row">
           <img
-            src={smileMessageSVGImgUrl}
+            src={
+              colorMode == "dark"
+                ? smileMessageDarkSVGImgUrl
+                : smileMessageLightSVGImgUrl
+            }
             alt="Message Smile"
             className="smile-message"
           />

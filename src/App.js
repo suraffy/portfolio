@@ -55,7 +55,7 @@ function App() {
       <Home colorMode={colorMode} onChangeColor={handleChangeColor} />
       <Skills />
       <Projects />
-      <Contact />
+      <Contact colorMode={colorMode} />
       <Footer colorMode={colorMode} />
     </div>
   );

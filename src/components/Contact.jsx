@@ -1,6 +1,6 @@
 import Form from "./common/Form";
 
-const Contact = () => {
+const Contact = ({ colorMode }) => {
   return (
     <section id="contact">
       <div className="container flex-row">
@@ -18,7 +18,7 @@ const Contact = () => {
             or through the contact form below.
           </p>
 
-          <Form />
+          <Form colorMode={colorMode} />
         </div>
       </div>
     </section>
