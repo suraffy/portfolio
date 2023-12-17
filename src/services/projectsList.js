@@ -63,7 +63,7 @@ const projectsList = [
     type: "front-end",
     techUsed: "React, css3",
     desc: "A Web App that allows the users manage their taks online.",
-    img: "indecision-app.gif",
+    img: "indecision-app.jpg",
     demoLink: "https://suraffy-indecision-app.netlify.app/",
     sourceCodeLink: "https://github.com/suraffy/indecision-app",
   },

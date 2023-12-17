@@ -11,7 +11,7 @@ const skillsList = [
   // },
   {
     name: "Taiwild",
-    img: "tailwind-css.svg",
+    img: "tailwind.svg",
   },
   {
     name: "Bootstrap",
