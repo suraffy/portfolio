@@ -64,6 +64,7 @@ button,
 input::placeholder,
 textarea::placeholder {
   color: var(--border-medium);
+  font-size: 15px;
 }
 
 input[type="submit"],

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Project from "./Project";
 import Filter from "./common/Filter";
@@ -48,21 +48,14 @@ const Projects = () => {
 
           <div className="project-header flex-column">
             <div className="filter-project flex-row">
-              <h4>Filter</h4>
               <Filter filterKeyword={filterKeyword} onFilter={handleFilter} />
             </div>
-
-            {filterKeyword && (
-              <p className="filter-info">{projects.length} results</p>
-            )}
           </div>
 
           <motion.div layout className="projects-container flex-row">
-            <AnimatePresence>
-              {projectsInPage.map((project) => (
-                <Project key={project.title} project={project} />
-              ))}
-            </AnimatePresence>
+            {projectsInPage.map((project) => (
+              <Project key={project.title} project={project} />
+            ))}
           </motion.div>
 
           <div className="project-footer">

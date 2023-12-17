@@ -254,10 +254,6 @@ nav {
   padding: 0 5px;
 }
 
-/* Projects Section */
-#projects {
-}
-
 /* Project header */
 .project-header.flex-column {
   align-items: flex-start;
@@ -272,12 +268,7 @@ nav {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
-  margin-bottom: 10px;
-}
-
-.filter-project h4 {
-  margin: 0 8px 3px 0;
-  font-size: 1.0625rem;
+  margin-bottom: 15px;
 }
 
 .filter-list {

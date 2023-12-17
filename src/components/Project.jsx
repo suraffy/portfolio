@@ -7,14 +7,7 @@ const Project = ({ project }) => {
   const imgUrl = `${process.env.PUBLIC_URL}/img/projects/`;
 
   return (
-    <motion.div
-      layout
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      exit={{ opacity: 0 }}
-      key={project.title}
-      className="project-box flex-column"
-    >
+    <motion.div layout key={project.title} className="project-box flex-column">
       <div className="project-profile-img row">
         <img src={imgUrl + project.img} alt="" />
       </div>
