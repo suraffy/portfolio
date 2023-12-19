@@ -1,6 +1,6 @@
 # Surafel's Portfolio
 
-![Portfolio Screenshot](url/to/portfolio/screenshot.png)
+![Portfolio Screenshot](https://suraffy.netlify.app/img/projects/Portfolio-app.png)
 
 Welcome to my portfolio! I'm a passionate full-stack developer with a strong foundation in HTML, CSS, and JavaScript. I specialize in building interactive and scalable web applications using React, Vue, Node.js, Express, MongoDB, and SQL.
 
