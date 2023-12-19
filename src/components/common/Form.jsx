@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { useForm } from "@formspree/react";
-
-const Form = () => {
-  const MessageSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile.svg`;
-
-  const [state, handleSubmit] = useForm("mrgwwkwv");
-=======
 import { useEffect } from "react";
 import { useForm } from "@formspree/react";
 
@@ -50,14 +42,10 @@ const Form = ({ colorMode }) => {
     );
   }
 
->>>>>>> suraffy/main
   if (state.succeeded) {
     return (
       <p className="successful-form">
         <span className="flex-row">
-<<<<<<< HEAD
-          <img src={MessageSVGImgUrl} alt="Message Smile" />
-=======
           <img
             src={
               colorMode === "dark"
@@ -67,7 +55,6 @@ const Form = ({ colorMode }) => {
             alt="Message Smile"
             className="smile-message"
           />
->>>>>>> suraffy/main
         </span>
         <span>Thanks for your message — I'll be in touch soon!</span>
       </p>
@@ -76,12 +63,8 @@ const Form = ({ colorMode }) => {
 
   return (
     <form onSubmit={handleSubmit} className="flex-column">
-<<<<<<< HEAD
-      <input type="text" name="name" placeholder="Your Name" />
-=======
       {state.errors && <p className="error-message">Message not send!!</p>}
       <input type="text" name="name" placeholder="Your Name" required />
->>>>>>> suraffy/main
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="text" name="subject" placeholder="Subject" />
       <textarea

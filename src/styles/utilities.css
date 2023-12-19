@@ -8,8 +8,6 @@
   --gray: #888;
   --lightgray: #ccc;
   --darkgray: #666;
-<<<<<<< HEAD
-=======
 
   --background: #fff;
   --surface: #f8f8f8;
@@ -28,7 +26,6 @@
   --border-soft: #ccc;
   --border-medium: #888;
   --border-hard: #666;
->>>>>>> suraffy/main
 }
 
 ul {
@@ -58,36 +55,23 @@ button,
   padding: 4px 10px;
   font: inherit;
   color: inherit;
-<<<<<<< HEAD
-  background-color: #fff;
-  border: 1px solid #ddd;
-=======
   background: var(--background);
   border: 1px solid var(--border-soft);
->>>>>>> suraffy/main
   border-radius: 2px;
   outline: none;
 }
 
 input::placeholder,
 textarea::placeholder {
-<<<<<<< HEAD
-  color: var(--gray);
-=======
   color: var(--border-medium);
   font-size: 15px;
->>>>>>> suraffy/main
 }
 
 input[type="submit"],
 button,
 .btn {
   padding: 8px 12px;
-<<<<<<< HEAD
-  background-color: #efefef;
-=======
   background-color: var(--btn-bg);
->>>>>>> suraffy/main
   border-radius: 4px;
   cursor: pointer;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
@@ -96,11 +80,7 @@ button,
 input[type="submit"]:hover,
 button:hover,
 .btn:hover {
-<<<<<<< HEAD
-  background-color: #e4e4e4;
-=======
   background-color: var(--btn-bg-hover);
->>>>>>> suraffy/main
   text-decoration: none;
 }
 
@@ -140,11 +120,7 @@ h2 {
   width: 80px;
   height: 4px;
   margin: 0 auto;
-<<<<<<< HEAD
-  background-color: var(--lightgray);
-=======
   background: var(--border-soft);
->>>>>>> suraffy/main
   transition: width 0.4s;
   transition-delay: 0.6s;
 }
@@ -156,13 +132,8 @@ p {
 
 .navbar-toggler {
   padding: 0.5rem 0.625rem;
-<<<<<<< HEAD
-  background-color: #f8f8f8;
-  border: 1px solid var(--lightgray);
-=======
   background-color: var(--surface);
   border: 1px solid var(--border-soft);
->>>>>>> suraffy/main
   border-radius: 0.25rem;
   cursor: pointer;
 }
@@ -172,11 +143,7 @@ p {
   width: 1.375rem;
   height: 0.125rem;
   border-radius: 1px;
-<<<<<<< HEAD
-  background-color: #333;
-=======
   background-color: var(--text-color);
->>>>>>> suraffy/main
 }
 
 .toggler-bar + .toggler-bar {
@@ -186,9 +153,5 @@ p {
 hr {
   margin: 1rem 0;
   border: 0;
-<<<<<<< HEAD
-  border-bottom: 1px solid var(--lightgray);
-=======
   border-bottom: 1px solid var(--border-soft);
->>>>>>> suraffy/main
 }

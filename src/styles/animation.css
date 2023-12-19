@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @keyframes popup {
   from {
     opacity: 0.4;
@@ -8,7 +6,6 @@
     opacity: 1;
   }
 }
->>>>>>> suraffy/main
 
 @keyframes slide-right {
   from {
@@ -21,10 +18,6 @@
   }
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> suraffy/main
 @keyframes slide-left {
   from {
     opacity: 0;
@@ -58,8 +51,6 @@
     width: 80px;
   }
 }
-<<<<<<< HEAD
-=======
 @keyframes shake {
   from {
     transform: rotate(-2deg);
@@ -68,4 +59,3 @@
     transform: rotate(8deg);
   }
 }
->>>>>>> suraffy/main

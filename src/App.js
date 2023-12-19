@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from "react";
 
->>>>>>> suraffy/main
 import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -13,15 +10,6 @@ import "./styles/style.css";
 import "./styles/queries.css";
 
 function App() {
-<<<<<<< HEAD
-  return (
-    <div>
-      <Home />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-=======
   const root = document.documentElement;
 
   const isOSDarkMode = window.matchMedia(
@@ -81,7 +69,6 @@ function App() {
       <Projects />
       <Contact colorMode={colorMode} />
       <Footer colorMode={colorMode} />
->>>>>>> suraffy/main
     </div>
   );
 }

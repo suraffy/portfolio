@@ -53,7 +53,7 @@ const Navbar = ({
             style={mainNavStyles}
           >
             <li>
-              <a href="/">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
               <a href="#my-skills">My Skills</a>
