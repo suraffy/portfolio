@@ -1,11 +1,8 @@
 {
-<<<<<<< HEAD
   "homepage": "https://suraffy.github.io/portfolio",
-=======
->>>>>>> suraffy/main
   "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -26,14 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-<<<<<<< HEAD
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-=======
-    "eject": "react-scripts eject"
->>>>>>> suraffy/main
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
@@ -52,12 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-<<<<<<< HEAD
-    "gh-pages": "^6.1.0"
-=======
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
->>>>>>> suraffy/main
   }
 }
