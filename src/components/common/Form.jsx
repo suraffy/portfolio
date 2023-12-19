@@ -19,14 +19,19 @@ const Form = ({ colorMode }) => {
     img2.src = smileMessageDarkSVGImgUrl;
     img3.src = sendingMessageLightImgUrl;
     img4.src = sendingMessageDarkImgUrl;
-  }, []);
+  }, [
+    smileMessageLightSVGImgUrl,
+    smileMessageDarkSVGImgUrl,
+    sendingMessageLightImgUrl,
+    sendingMessageDarkImgUrl,
+  ]);
 
   if (state.submitting) {
     return (
       <p>
         <img
           src={
-            colorMode == "dark"
+            colorMode === "dark"
               ? sendingMessageLightImgUrl
               : sendingMessageDarkImgUrl
           }
@@ -43,7 +48,7 @@ const Form = ({ colorMode }) => {
         <span className="flex-row">
           <img
             src={
-              colorMode == "dark"
+              colorMode === "dark"
                 ? smileMessageDarkSVGImgUrl
                 : smileMessageLightSVGImgUrl
             }

@@ -44,7 +44,7 @@ function App() {
 
     setColorMode("dark");
     root.style.cssText = lightModeColors;
-  }, []);
+  }, [isOSDarkMode, root.style]);
 
   const handleChangeColor = () => {
     if (colorMode === "dark") {

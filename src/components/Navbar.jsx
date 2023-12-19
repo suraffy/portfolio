@@ -22,7 +22,7 @@ const Navbar = ({
     img.onload = () => {
       setIsImageLoaded(true);
     };
-  }, []);
+  }, [logoImgUrl]);
 
   return (
     <nav style={navStyles}>
@@ -32,12 +32,13 @@ const Navbar = ({
             {isImageLoaded ? (
               <img
                 src={logoImgUrl}
+                alt=""
                 className="navbar-brand"
                 id="logo-img"
                 onClick={() => window.scrollTo(0, 0)}
               />
             ) : (
-              <img src={loadingImgUrl} />
+              <img src={loadingImgUrl} alt="" />
             )}
           </div>
 
@@ -52,7 +53,7 @@ const Navbar = ({
             style={mainNavStyles}
           >
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="#my-skills">My Skills</a>
@@ -69,6 +70,7 @@ const Navbar = ({
             <div className="colorMode-toggler" onClick={onChangeColor}>
               <img
                 src={colorMode === "light" ? lightMode : darkMode}
+                alt=""
                 width="24px"
               />
             </div>

@@ -23,7 +23,7 @@ const Hero = ({ colorMode }) => {
     img.onload = () => {
       setIsImageLoaded(true);
     };
-  }, []);
+  }, [profileImgUrl]);
 
   return (
     <div className="hero-container flex-column">

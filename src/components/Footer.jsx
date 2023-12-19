@@ -129,7 +129,8 @@ const Footer = ({ colorMode }) => {
 
         <hr />
         <p className="web-developer-name flex-column">
-          Designed and Developed by&nbsp;<a href="#">Surafel Araya</a>
+          Designed and Developed by&nbsp;
+          <a href="/">Surafel Araya</a>
         </p>
       </div>
     </footer>
