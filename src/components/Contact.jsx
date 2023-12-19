@@ -1,6 +1,10 @@
 import Form from "./common/Form";
 
+<<<<<<< HEAD
 const Contact = () => {
+=======
+const Contact = ({ colorMode }) => {
+>>>>>>> suraffy/main
   return (
     <section id="contact">
       <div className="container flex-row">
@@ -18,7 +22,11 @@ const Contact = () => {
             or through the contact form below.
           </p>
 
+<<<<<<< HEAD
           <Form />
+=======
+          <Form colorMode={colorMode} />
+>>>>>>> suraffy/main
         </div>
       </div>
     </section>

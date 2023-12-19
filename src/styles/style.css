@@ -20,8 +20,13 @@ body {
   line-height: 1.5;
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
+<<<<<<< HEAD
   color: #333;
   background-color: #fff;
+=======
+  color: var(--text-color);
+  background-color: var(--background);
+>>>>>>> suraffy/main
 }
 
 /* Layout */
@@ -31,8 +36,11 @@ section {
 
 /* Header */
 header {
+<<<<<<< HEAD
   /* background-color: #f6f6f6;
   background: linear-gradient(to right bottom, #fff, #f4f4f4); */
+=======
+>>>>>>> suraffy/main
   min-height: 650px;
 }
 
@@ -51,14 +59,30 @@ nav {
   margin: 0 -15px;
 }
 
+<<<<<<< HEAD
 .navbar-brand {
   height: 40px;
   padding: 0 15px;
+=======
+.logo-container {
+  padding: 0 15px;
+}
+
+.navbar-brand {
+  display: block;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px solid var(--lightblue);
+>>>>>>> suraffy/main
   cursor: pointer;
 }
 
 .navbar-toggler {
+<<<<<<< HEAD
   margin-right: 15px;
+=======
+>>>>>>> suraffy/main
   margin-left: auto;
 }
 
@@ -66,7 +90,11 @@ nav {
   display: flex;
   /* height: 255px !important; */
   height: 208px !important;
+<<<<<<< HEAD
   border-top: 1px solid var(--lightgray);
+=======
+  border-top: 1px solid var(--border-soft);
+>>>>>>> suraffy/main
 }
 
 .main-nav {
@@ -77,8 +105,13 @@ nav {
   width: 100%;
   height: 0;
   overflow: hidden;
+<<<<<<< HEAD
   background-color: #f8f8f8;
   box-shadow: 0px 1px 2px var(--lightgray);
+=======
+  background-color: var(--menu-bg);
+  box-shadow: 0px 1px 2px var(--border-soft);
+>>>>>>> suraffy/main
   transition: top 0.2s, height 0.2s;
 }
 
@@ -96,10 +129,23 @@ nav {
 }
 
 .main-nav a:hover {
+<<<<<<< HEAD
   background-color: #eee;
 }
 
 /*  */
+=======
+  background-color: var(--menu-bg-hover);
+}
+
+.colorMode-toggler {
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+/*  */
+
+>>>>>>> suraffy/main
 .hero-container {
   position: relative;
   margin-top: 120px;
@@ -109,13 +155,30 @@ nav {
   max-width: 640px;
 }
 
+<<<<<<< HEAD
 .hero-image {
+=======
+.hero-image,
+.animated-loading {
+>>>>>>> suraffy/main
   width: 120px;
   margin: 20px;
 }
 
 .hero-image img {
+<<<<<<< HEAD
   border-radius: 50%;
+=======
+  border-radius: 30%;
+  animation: popup 0.4s ease-in-out;
+  transform-origin: center;
+}
+
+.animated-loading img {
+  display: block;
+  width: 80%;
+  margin: 20px auto 0;
+>>>>>>> suraffy/main
 }
 
 .hero-title {
@@ -153,9 +216,12 @@ nav {
 
 .hero-contact a {
   padding: 0 5px;
+<<<<<<< HEAD
   line-height: 1;
   color: var(--darkgray);
   text-decoration: none;
+=======
+>>>>>>> suraffy/main
   transition: color 0.2s ease-in-out;
 }
 
@@ -187,6 +253,7 @@ nav {
   color: #333;
 }
 
+<<<<<<< HEAD
 /* */
 
 .banner.flex-column {
@@ -280,6 +347,8 @@ nav {
   transform: translateY(-4px);
 }
 
+=======
+>>>>>>> suraffy/main
 /* My-Skills Section*/
 .skills-grid-container {
   max-width: 400px;
@@ -292,7 +361,11 @@ nav {
   width: 760px;
   margin: 0 -15px;
   padding: 20px 15px 40px;
+<<<<<<< HEAD
   background: #f6f6f6;
+=======
+  background: var(--box-bg);
+>>>>>>> suraffy/main
   border-radius: 10px;
 }
 
@@ -307,6 +380,7 @@ nav {
 .skills-box {
   padding: 5px 10px;
   border-radius: 2px;
+<<<<<<< HEAD
   box-shadow: 2px 2px 4px var(--lightgray);
   transition: box-shadow 0.2s;
   border-radius: 10px;
@@ -315,6 +389,16 @@ nav {
 
 .skills-box:hover {
   box-shadow: 1px 1px 8px var(--gray);
+=======
+  box-shadow: 2px 2px 4px var(--border-soft);
+  transition: box-shadow 0.2s;
+  border-radius: 10px;
+  background-color: var(--background);
+}
+
+.skills-box:hover {
+  box-shadow: 1px 1px 4px var(--border-medium);
+>>>>>>> suraffy/main
 }
 
 .skills-box img {
@@ -331,12 +415,15 @@ nav {
   padding: 0 5px;
 }
 
+<<<<<<< HEAD
 /* Projects Section */
 #projects {
   /* background-color: #f4f4f4;
   background: linear-gradient(to right bottom, #fff, #f4f4f4); */
 }
 
+=======
+>>>>>>> suraffy/main
 /* Project header */
 .project-header.flex-column {
   align-items: flex-start;
@@ -351,12 +438,16 @@ nav {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
+<<<<<<< HEAD
   margin-bottom: 10px;
 }
 
 .filter-project h4 {
   margin: 0 8px 3px 0;
   font-size: 1.0625rem;
+=======
+  margin-bottom: 15px;
+>>>>>>> suraffy/main
 }
 
 .filter-list {
@@ -368,11 +459,22 @@ nav {
   padding: 3px 18px;
   margin: 0 8px 8px 0;
   font-size: 0.93rem;
+<<<<<<< HEAD
   border: 1px solid #e4e6e7;
+=======
+  border: 1px solid var(--border-soft);
+>>>>>>> suraffy/main
   border-radius: 30px;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+.filter-item:hover:not(.active) {
+  background: var(--menu-bg);
+}
+
+>>>>>>> suraffy/main
 .filter-info {
   margin-left: 10px;
   margin-bottom: 5px;
@@ -387,16 +489,32 @@ nav {
 
 .project-box {
   max-width: 320px;
+<<<<<<< HEAD
   background-color: #fff;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   box-shadow: 2px 2px 6px var(--lightgray);
+=======
+  background-color: var(--background);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 2px 2px 6px var(--border-soft);
+  overflow: hidden;
+}
+
+.project-box:hover > .project-profile-img {
+  transform: scale(1.1);
+>>>>>>> suraffy/main
 }
 
 .project-profile-img {
   flex: 1;
   padding: 5px;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+  transition: transform 0.2s ease-in-out;
+>>>>>>> suraffy/main
 }
 
 .project-profile-img img {
@@ -423,7 +541,11 @@ nav {
 .project-description {
   margin-top: 10px;
   font-size: 0.93rem;
+<<<<<<< HEAD
   color: var(--darkgray);
+=======
+  color: var(--text-color-secondary);
+>>>>>>> suraffy/main
 }
 
 .tech-used {
@@ -432,12 +554,15 @@ nav {
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 .project-type {
   font-size: 0.93rem;
   color: var(--gray);
   text-transform: uppercase;
 }
 
+=======
+>>>>>>> suraffy/main
 .project-links a {
   padding-left: 10px;
 }
@@ -460,7 +585,11 @@ nav {
 
 .page-item {
   padding: 5px 10px;
+<<<<<<< HEAD
   border: 1px solid var(--lightgray);
+=======
+  border: 1px solid var(--border-soft);
+>>>>>>> suraffy/main
   border-right: 0px;
 }
 
@@ -470,7 +599,11 @@ nav {
 }
 
 .page-item:last-child {
+<<<<<<< HEAD
   border-right: 1px solid var(--lightgray);
+=======
+  border-right: 1px solid var(--border-soft);
+>>>>>>> suraffy/main
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -480,7 +613,11 @@ nav {
 }
 
 .page-item:not(.disabled, .active):hover {
+<<<<<<< HEAD
   background: rgb(223, 243, 255);
+=======
+  background: var(--menu-bg);
+>>>>>>> suraffy/main
 }
 
 /* Contact section */
@@ -489,7 +626,11 @@ nav {
   padding: 20px 15px 40px;
   margin: 0 -15px;
   border-radius: 10px;
+<<<<<<< HEAD
   background: #f6f6f6;
+=======
+  background: var(--box-bg);
+>>>>>>> suraffy/main
 }
 
 .contact-content > * {
@@ -499,7 +640,11 @@ nav {
 .contact-content form {
   padding: 10px 15px;
   border-radius: 10px;
+<<<<<<< HEAD
   box-shadow: 1px 1px 4px var(--lightgray);
+=======
+  box-shadow: 1px 1px 4px var(--border-soft);
+>>>>>>> suraffy/main
 }
 
 #contact form.flex-column {
@@ -518,12 +663,33 @@ nav {
   font-weight: 500;
 }
 
+<<<<<<< HEAD
 /* Footer */
 footer {
   padding: 60px 0 0;
   color: var(--darkgray);
   background-color: #f4f4f4;
   background: linear-gradient(to right bottom, #f4f4f4, #fff);
+=======
+#contact .smile-message {
+  animation: shake 1s infinite alternate ease-in-out;
+}
+
+#contact .error-message {
+  color: var(--error-text);
+}
+
+/* Footer */
+footer {
+  padding: 60px 0 0;
+  color: var(--border-hard);
+  background-color: var(--box-bg);
+  background: linear-gradient(
+    to right bottom,
+    var(--box-bg),
+    var(--background)
+  );
+>>>>>>> suraffy/main
 }
 
 .footer-profile {
@@ -543,7 +709,11 @@ footer {
   flex-wrap: wrap;
   max-width: 460px;
   text-align: center;
+<<<<<<< HEAD
   border: 1px solid var(--lightgray);
+=======
+  border: 1px solid var(--border-soft);
+>>>>>>> suraffy/main
   border-radius: 4px;
 }
 
@@ -551,7 +721,10 @@ footer {
   display: block;
   height: 100px;
   padding: 2px;
+<<<<<<< HEAD
   /* margin-right: 1rem; */
+=======
+>>>>>>> suraffy/main
   border: 2px solid var(--lightblue);
   border-radius: 100%;
 }
@@ -588,7 +761,10 @@ div.footer-courses-codes {
 .footer-codes-list a:hover,
 .footer-active-on-list a:hover {
   color: #444;
+<<<<<<< HEAD
   /* text-decoration: none; */
+=======
+>>>>>>> suraffy/main
 }
 
 .footer-profile a svg {
