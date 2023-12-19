@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { motion, AnimatePresence } from "framer-motion";
+=======
+import { motion } from "framer-motion";
+>>>>>>> suraffy/main
 
 import Project from "./Project";
 import Filter from "./common/Filter";
@@ -48,6 +52,7 @@ const Projects = () => {
 
           <div className="project-header flex-column">
             <div className="filter-project flex-row">
+<<<<<<< HEAD
               <h4>Filter</h4>
               <Filter filterKeyword={filterKeyword} onFilter={handleFilter} />
             </div>
@@ -63,6 +68,16 @@ const Projects = () => {
                 <Project key={project.title} project={project} />
               ))}
             </AnimatePresence>
+=======
+              <Filter filterKeyword={filterKeyword} onFilter={handleFilter} />
+            </div>
+          </div>
+
+          <motion.div layout className="projects-container flex-row">
+            {projectsInPage.map((project) => (
+              <Project key={project.title} project={project} />
+            ))}
+>>>>>>> suraffy/main
           </motion.div>
 
           <div className="project-footer">

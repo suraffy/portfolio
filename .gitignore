@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules
+=======
+>>>>>>> suraffy/main
 =======
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -23,5 +26,9 @@ node_modules
 
 npm-debug.log*
 yarn-debug.log*
+<<<<<<< HEAD
 yarn-error.log*
 >>>>>>> react-js
+=======
+yarn-error.log*
+>>>>>>> suraffy/main
