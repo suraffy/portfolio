@@ -26,7 +26,7 @@ I love turning ideas into reality through code. With a keen eye for design and a
 
 ### Project 1: Budget App
 
-[Live Demo](https://suraffy.github.io.budget-app) | [GitHub Repository](https://github.com/suraffy/budget-app)
+[Live Demo](https://suraffy.github.io/budget-app) | [GitHub Repository](https://github.com/suraffy/budget-app)
 
 ### Project 2: Supervised Project Management System
 
@@ -57,7 +57,6 @@ I love turning ideas into reality through code. With a keen eye for design and a
 
 Feel free to reach out if you're interested in collaborating, have a project idea, or just want to connect.
 
-- Email: surafelay@gmail.com(mailto:surafelay@gmail.com)
 - LinkedIn: surafel-araya(https://www.linkedin.com/in/surafel-araya)
 
 Let's build something amazing together!
