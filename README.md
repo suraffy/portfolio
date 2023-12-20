@@ -26,9 +26,11 @@ I love turning ideas into reality through code. With a keen eye for design and a
 
 ### Project 1: Budget App
 
-[Live Demo](#) | [GitHub Repository](#)
+[Live Demo](https://suraffy.github.io/budget-app) | [GitHub Repository](https://github.com/suraffy/budget-app)
 
 ### Project 2: Supervised Project Management System
+
+[GitHub Repository](https://github.com/suraffy/supervised-project-management-app)
 
 ...
 
@@ -42,8 +44,8 @@ I love turning ideas into reality through code. With a keen eye for design and a
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/suraffy/suraffy-portfolio.git`
-2. Navigate to the project directory: `cd suraffy-portfolio`
+1. Clone the repository: `git clone https://github.com/suraffy/portfolio.git`
+2. Navigate to the project directory: `cd portfolio`
 3. Install dependencies: `npm install`
 
 ## Usage
@@ -55,8 +57,6 @@ I love turning ideas into reality through code. With a keen eye for design and a
 
 Feel free to reach out if you're interested in collaborating, have a project idea, or just want to connect.
 
-- Email: surafelay@gmail.com(mailto:your.email@example.com)
 - LinkedIn: surafel-araya(https://www.linkedin.com/in/surafel-araya)
-- GitHub: suraffy(https://github.com/suraffy)
 
 Let's build something amazing together!
