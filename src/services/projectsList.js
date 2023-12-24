@@ -46,7 +46,7 @@ const projectsList = [
     desc: "A snow fall animation using CSS3 and JavaScript to dynamically produce snow particles.",
     img: "snow-fall.jpg",
     demoLink: "https://snow-fall-suraffy.netlify.app",
-    sourceCodeLink: "https://codepen.io/suraffy/pen/VwgRqBp",
+    sourceCodeLink: "https://codepen.io/suraffy/pen/poGMQLo",
   },
 
   {
