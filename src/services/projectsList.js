@@ -38,6 +38,17 @@ const projectsList = [
     demoLink: "https://css-images.netlify.app/",
     sourceCodeLink: "https://codepen.io/suraffy/pen/poGQOdj",
   },
+
+  {
+    title: "Snow Fall",
+    type: "css-animation",
+    techUsed: "css3, javscript",
+    desc: "A snow fall animation using CSS3 and JavaScript to dynamically produce snow particles.",
+    img: "snow-fall.jpg",
+    demoLink: "https://snow-fall-suraffy.netlify.app",
+    sourceCodeLink: "https://codepen.io/suraffy/pen/VwgRqBp",
+  },
+
   {
     title: "Ecommerce App",
     type: "javascript",
@@ -86,16 +97,6 @@ const projectsList = [
     img: "blink-effect.gif",
     demoLink: "https://blink-effect.netlify.app",
     sourceCodeLink: "https://codepen.io/suraffy/pen/RwvZbdL",
-  },
-
-  {
-    title: "Snow Fall",
-    type: "css-animation",
-    techUsed: "css3, javscript",
-    desc: "A snow fall animation using CSS3 and JavaScript to dynamically produce snow particles.",
-    img: "snow-fall.jpg",
-    demoLink: "https://snow-fall-suraffy.netlify.app",
-    sourceCodeLink: "https://codepen.io/suraffy/pen/VwgRqBp",
   },
 
   {
