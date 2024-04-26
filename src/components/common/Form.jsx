@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useForm } from "@formspree/react";
 
 const Form = ({ colorMode }) => {
@@ -8,23 +7,6 @@ const Form = ({ colorMode }) => {
   const sendingMessageDarkImgUrl = `${process.env.PUBLIC_URL}/img/wired-flat-177-envelope-send-dark.webp`;
 
   const [state, handleSubmit] = useForm("mrgwwkwv");
-
-  useEffect(() => {
-    const img1 = new Image();
-    const img2 = new Image();
-    const img3 = new Image();
-    const img4 = new Image();
-
-    img1.src = smileMessageLightSVGImgUrl;
-    img2.src = smileMessageDarkSVGImgUrl;
-    img3.src = sendingMessageLightImgUrl;
-    img4.src = sendingMessageDarkImgUrl;
-  }, [
-    smileMessageLightSVGImgUrl,
-    smileMessageDarkSVGImgUrl,
-    sendingMessageLightImgUrl,
-    sendingMessageDarkImgUrl,
-  ]);
 
   if (state.submitting) {
     return (
@@ -56,25 +38,35 @@ const Form = ({ colorMode }) => {
             className="smile-message"
           />
         </span>
-        <span>Thanks for your message — I'll be in touch soon!</span>
+        <span>Thank you for your message — I'll be in touch soon!</span>
       </p>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex-column">
-      {state.errors && <p className="error-message">Message not send!!</p>}
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="subject" placeholder="Subject" />
-      <textarea
-        rows="4"
-        name="message"
-        placeholder="Your Message"
-        required
-      ></textarea>
-      <input type="submit" value="Send Message" />
-    </form>
+    <div>
+      <p>
+        Please contact me by this email address{" "}
+        <a href="mailto:surafelay@gmail.com" target="_blank" rel="noreferrer">
+          surafelay@gmail.com
+        </a>{" "}
+        or through the contact form below.
+      </p>
+
+      <form onSubmit={handleSubmit} className="flex-column">
+        {state.errors && <p className="error-message">Message not sent!!</p>}
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea
+          rows="4"
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <input type="submit" value="Send Message" />
+      </form>
+    </div>
   );
 };
 
