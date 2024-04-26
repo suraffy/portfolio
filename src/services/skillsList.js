@@ -18,9 +18,13 @@ const skillsList = [
     img: "bootstrap.svg",
   },
   {
+    name: "Java",
+    img: "java-horizontal.svg",
+  },
+  {
     name: "JavaScript",
     img: "javascript.svg",
-    details: ["ES6+", "OOP, Async JavaScript", "DOM Manipulation"],
+    // details: ["ES6+", "OOP, Async JavaScript", "DOM Manipulation"],
   },
   {
     name: "Node.js",
@@ -30,7 +34,7 @@ const skillsList = [
   {
     name: "Reac.js",
     img: "react.svg",
-    details: ["React Router", "Redux"],
+    details: ["React Router", "Redux Toolkit"],
   },
   {
     name: "Vue.js",
@@ -48,7 +52,7 @@ const skillsList = [
   {
     name: "Adobe Xd",
     img: "Adobe-Xd.svg",
-    details: ["Web Page Design", "Designing SVG Shapes"],
+    details: ["Web Page Design", "SVG Shapes"],
   },
 ];
 
