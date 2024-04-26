@@ -14,12 +14,12 @@ Welcome to my portfolio! I'm a passionate full-stack developer with a strong fou
 
 ## About Me
 
-I love turning ideas into reality through code. With a keen eye for design and a knack for problem-solving, I strive to create seamless and engaging user experiences. Whether it's crafting pixel-perfect UIs or optimizing server performance, I'm always up for a coding challenge.
+I love turning ideas into reality through code and design. With a keen eye for design and a knack for problem-solving, I strive to create seamless and engaging user experiences. Whether it's crafting pixel-perfect UIs or optimizing server performance, I'm always up for a coding challenge.
 
 ## Tech Stack
 
 - Frontend: React, Vue, Tailwind, CSS3, JavaScript
-- Backend: Node.js, Express
+- Backend: Java, Node.js, Express
 - Databases: MongoDB, SQL
 
 ## Projects
@@ -37,7 +37,7 @@ I love turning ideas into reality through code. With a keen eye for design and a
 ## Skills
 
 - **Frontend:** React, Vue, Tailwind, CSS3, JavaScript
-- **Backend:** Node.js, Express
+- **Backend:** Java, Node.js, Express
 - **Databases:** MongoDB, SQL
 - **Version Control:** Git
 - **Other:** RESTful APIs, Responsive Design, UI/UX Design
