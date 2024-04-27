@@ -52,7 +52,8 @@ const Form = ({ colorMode }) => {
         </a>{" "}
         or through the contact form below.
       </p>
-      <div /> {/* prevents margin collapse */}
+      <div style={{ height: "0px" }}>&nbsp;</div>{" "}
+      {/* prevents margin collapse */}
       <form onSubmit={handleSubmit} className="flex-column">
         {state.errors && <p className="error-message">Message not sent!!</p>}
         <input type="text" name="name" placeholder="Your Name" required />
