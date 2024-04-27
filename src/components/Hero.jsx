@@ -52,8 +52,11 @@ const Hero = ({ colorMode }) => {
 
         <div className="hero-details">
           <p className="hero-desc">
-            Expertise in developing single-page applications using React and
-            Vue, building back-end services with Node and Express.
+            Expertise in developing single-page applications using{" "}
+            <span style={{ fontWeight: 500 }}>React</span>, building back-end
+            services with <span style={{ fontWeight: 500 }}>Java</span> |{" "}
+            <span style={{ fontWeight: 500 }}>Node</span> &{" "}
+            <span style={{ fontWeight: 500 }}>Express</span>.
           </p>
           <div className="hero-contact flex-row">
             <a
