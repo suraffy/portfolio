@@ -126,7 +126,7 @@ nav {
 }
 
 .hero-image img {
-  border-radius: 30%;
+  border-radius: 25%;
   animation: popup 0.4s ease-in-out;
   transform-origin: center;
 }
