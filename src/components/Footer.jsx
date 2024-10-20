@@ -34,7 +34,7 @@ const Footer = ({ colorMode }) => {
             <div className="footer-about-me-text">
               <h4>Surafel Araya</h4>
               <p>
-                Full-stack software developer and web designer. Passionate about
+                Full-stack Software Engineer and web designer. Passionate about
                 innovative solutions.
               </p>
             </div>

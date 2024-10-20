@@ -35,7 +35,7 @@ const Hero = ({ colorMode }) => {
               <span className="thin-text">I'm </span>
               <span>Surafel Araya </span> <br />
               <span>a </span>
-              <span className="thin-text">Full-stack Developer</span>
+              <span className="thin-text">Full-stack Engineer</span>
             </h1>
           </div>
 
@@ -52,10 +52,10 @@ const Hero = ({ colorMode }) => {
 
         <div className="hero-details">
           <p className="hero-desc">
-            Expertise in developing single-page applications using{" "}
-            <span style={{ fontWeight: 500 }}>React</span>, building back-end
-            services with <span style={{ fontWeight: 500 }}>Java</span> |{" "}
-            <span style={{ fontWeight: 500 }}>Node</span> &{" "}
+            Expertise in developing web applications using{" "}
+            <span style={{ fontWeight: 500 }}>React, Next.js</span>, building
+            back-end services with <span style={{ fontWeight: 500 }}>Java</span>{" "}
+            | <span style={{ fontWeight: 500 }}>Node</span> &{" "}
             <span style={{ fontWeight: 500 }}>Express</span>.
           </p>
           <div className="hero-contact flex-row">

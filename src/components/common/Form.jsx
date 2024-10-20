@@ -1,32 +1,52 @@
 import { useForm } from "@formspree/react";
+import sendingMessageLightImgUrl from "../../assets/images/wired-flat-177-envelope-send-light.webp";
+import sendingMessageDarkImgUrl from "../../assets/images/wired-flat-177-envelope-send-dark.webp";
+import smileMessageLightSVGImgUrl from "../../assets/images/message-smile-light.svg";
+import smileMessageDarkSVGImgUrl from "../../assets/images/message-smile-dark.svg";
 
 const Form = ({ colorMode }) => {
-  const smileMessageLightSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile-light.svg`;
-  const smileMessageDarkSVGImgUrl = `${process.env.PUBLIC_URL}/img/message-smile-dark.svg`;
-  const sendingMessageLightImgUrl = `${process.env.PUBLIC_URL}/img/wired-flat-177-envelope-send-light.webp`;
-  const sendingMessageDarkImgUrl = `${process.env.PUBLIC_URL}/img/wired-flat-177-envelope-send-dark.webp`;
-
   const [state, handleSubmit] = useForm("mrgwwkwv");
 
-  if (state.submitting) {
-    return (
-      <p>
-        <img
-          src={
-            colorMode === "dark"
-              ? sendingMessageLightImgUrl
-              : sendingMessageDarkImgUrl
-          }
-          alt="Sending Message"
-        />
-        <span style={{ marginLeft: "10px" }}>Sending...</span>
-      </p>
-    );
-  }
+  return (
+    <>
+      <div
+        style={{
+          display: `${
+            !state.succeeded && !state.submitting ? "block" : "none"
+          }`,
+        }}
+      >
+        <p>
+          Please contact me by this email address{" "}
+          <a href="mailto:surafelay@gmail.com" target="_blank" rel="noreferrer">
+            surafelay@gmail.com
+          </a>{" "}
+          or through the contact form below.
+        </p>
+        <div style={{ height: "0px" }}>&nbsp;</div>{" "}
+        {/* prevents margin collapse */}
+        <form onSubmit={handleSubmit} className="flex-column">
+          {state.errors && <p className="error-message">Message not sent!!</p>}
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea
+            rows="4"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+      </div>
 
-  if (state.succeeded) {
-    return (
-      <p className="successful-form">
+      <p
+        className="successful-form"
+        style={{
+          height: "100px",
+          display: `${state.succeeded ? "block" : "none"}`,
+        }}
+      >
         <span className="flex-row">
           <img
             src={
@@ -40,34 +60,24 @@ const Form = ({ colorMode }) => {
         </span>
         <span>Thank you for your message — I'll be in touch soon!</span>
       </p>
-    );
-  }
 
-  return (
-    <div>
-      <p>
-        Please contact me by this email address{" "}
-        <a href="mailto:surafelay@gmail.com" target="_blank" rel="noreferrer">
-          surafelay@gmail.com
-        </a>{" "}
-        or through the contact form below.
+      <p
+        style={{
+          height: "100px",
+          display: `${state.submitting ? "block" : "none"}`,
+        }}
+      >
+        <img
+          src={
+            colorMode === "dark"
+              ? sendingMessageLightImgUrl
+              : sendingMessageDarkImgUrl
+          }
+          alt="Sending Message"
+        />
+        <span style={{ marginLeft: "10px" }}>Sending...</span>
       </p>
-      <div style={{ height: "0px" }}>&nbsp;</div>{" "}
-      {/* prevents margin collapse */}
-      <form onSubmit={handleSubmit} className="flex-column">
-        {state.errors && <p className="error-message">Message not sent!!</p>}
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="text" name="subject" placeholder="Subject" />
-        <textarea
-          rows="4"
-          name="message"
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <input type="submit" value="Send Message" />
-      </form>
-    </div>
+    </>
   );
 };
 

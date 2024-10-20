@@ -34,7 +34,7 @@ const skillsList = [
   {
     name: "Reac.js",
     img: "react.svg",
-    details: ["React Router", "Redux Toolkit"],
+    details: ["React Router", "Redux Toolkit", "Next.js"],
   },
   {
     name: "Vue.js",
