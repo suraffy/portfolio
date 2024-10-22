@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Form from "./common/Form";
 
 const Contact = ({ colorMode }) => {
