@@ -5,7 +5,7 @@ import smileMessageLightSVGImgUrl from "../../assets/images/message-smile-light.
 import smileMessageDarkSVGImgUrl from "../../assets/images/message-smile-dark.svg";
 import { motion } from "framer-motion";
 
-const Form = ({ colorMode }) => {
+const Form = ({ colorMode, onSendMessage }) => {
   const [state, handleSubmit] = useForm("mrgwwkwv");
 
   return (
@@ -32,12 +32,24 @@ const Form = ({ colorMode }) => {
         </p>
         <div style={{ height: "0px" }}>&nbsp;</div>{" "}
         {/* prevents margin collapse */}
-        <form onSubmit={handleSubmit} className="flex-column">
+        <form
+          onSubmit={(e) => {
+            handleSubmit(e);
+            onSendMessage();
+          }}
+          className="flex-column"
+        >
           {state?.errors && (
             <p className="error-message">Message not sent, Please try again.</p>
           )}
           <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            pattern="[^\s@]+@[^\s@]+\.[^\s@]+$"
+          />
           <input type="text" name="subject" placeholder="Subject" />
           <textarea
             rows="4"
