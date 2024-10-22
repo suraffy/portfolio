@@ -28,7 +28,9 @@ const Footer = ({ colorMode }) => {
           <div className="footer-about-me flex-row">
             <img
               src={profileImgUrl}
-              alt="Surafel Araya"
+              alt=""
+              width={100}
+              height={100}
               className="footer-about-me-img"
             />
             <div className="footer-about-me-text">

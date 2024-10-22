@@ -440,6 +440,7 @@ nav {
 
 #contact .error-message {
   color: var(--error-text);
+  font-weight: 500;
 }
 
 /* Footer */
