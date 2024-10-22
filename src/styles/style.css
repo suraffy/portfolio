@@ -121,12 +121,12 @@ nav {
 
 .hero-image,
 .animated-loading {
-  width: 120px;
+  width: 160px;
   margin: 20px;
 }
 
 .hero-image img {
-  border-radius: 25%;
+  border-radius: 40%;
   animation: popup 0.4s ease-in-out;
   transform-origin: center;
 }

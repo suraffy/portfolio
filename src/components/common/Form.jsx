@@ -99,7 +99,9 @@ const Form = ({ colorMode, onSendMessage }) => {
               className="smile-message"
             />
           </span>
-          <span>Thank you for your message — I'll be in touch soon!</span>
+          <span style={{ textAlign: "center", display: "inline-block" }}>
+            Thank you for your message — I'll be in touch soon!
+          </span>
         </p>
       </motion.div>
     </motion.div>
