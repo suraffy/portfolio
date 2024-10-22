@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 import Project from "./Project";
@@ -14,7 +14,7 @@ const Projects = () => {
   const [filterKeyword, setFilterKeyword] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 6;
-  const ProjectsSectionRef = React.useRef();
+  const ProjectsSectionRef = useRef();
 
   const handleFilter = (keyword) => {
     const filterItem = filterItems.find((item) => item.keyword === keyword);

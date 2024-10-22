@@ -3,16 +3,23 @@ import sendingMessageLightImgUrl from "../../assets/images/wired-flat-177-envelo
 import sendingMessageDarkImgUrl from "../../assets/images/wired-flat-177-envelope-send-dark.webp";
 import smileMessageLightSVGImgUrl from "../../assets/images/message-smile-light.svg";
 import smileMessageDarkSVGImgUrl from "../../assets/images/message-smile-dark.svg";
+import { motion } from "framer-motion";
 
-const Form = ({ colorMode }) => {
+const Form = ({ colorMode, onSendMessage }) => {
   const [state, handleSubmit] = useForm("mrgwwkwv");
 
   return (
-    <>
+    <motion.div
+      layout
+      transition={{
+        opacity: { ease: "linear" },
+        layout: { duration: 0.5 },
+      }}
+    >
       <div
         style={{
           display: `${
-            !state.succeeded && !state.submitting ? "block" : "none"
+            !state?.succeeded && !state?.submitting ? "block" : "none"
           }`,
         }}
       >
@@ -25,10 +32,24 @@ const Form = ({ colorMode }) => {
         </p>
         <div style={{ height: "0px" }}>&nbsp;</div>{" "}
         {/* prevents margin collapse */}
-        <form onSubmit={handleSubmit} className="flex-column">
-          {state.errors && <p className="error-message">Message not sent!!</p>}
+        <form
+          onSubmit={(e) => {
+            handleSubmit(e);
+            onSendMessage();
+          }}
+          className="flex-column"
+        >
+          {state?.errors && (
+            <p className="error-message">Message not sent, Please try again.</p>
+          )}
           <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            pattern="[^\s@]+@[^\s@]+\.[^\s@]+$"
+          />
           <input type="text" name="subject" placeholder="Subject" />
           <textarea
             rows="4"
@@ -40,44 +61,48 @@ const Form = ({ colorMode }) => {
         </form>
       </div>
 
-      <p
-        className="successful-form"
-        style={{
-          height: "100px",
-          display: `${state.succeeded ? "block" : "none"}`,
-        }}
-      >
-        <span className="flex-row">
+      <motion.div layout>
+        <p
+          style={{
+            height: "100px",
+            display: `${state?.submitting ? "block" : "none"}`,
+          }}
+        >
           <img
             src={
               colorMode === "dark"
-                ? smileMessageDarkSVGImgUrl
-                : smileMessageLightSVGImgUrl
+                ? sendingMessageLightImgUrl
+                : sendingMessageDarkImgUrl
             }
-            alt="Message Smile"
-            className="smile-message"
+            alt=""
           />
-        </span>
-        <span>Thank you for your message — I'll be in touch soon!</span>
-      </p>
+          <span style={{ marginLeft: "10px" }}>Sending...</span>
+        </p>
+      </motion.div>
 
-      <p
-        style={{
-          height: "100px",
-          display: `${state.submitting ? "block" : "none"}`,
-        }}
-      >
-        <img
-          src={
-            colorMode === "dark"
-              ? sendingMessageLightImgUrl
-              : sendingMessageDarkImgUrl
-          }
-          alt="Sending Message"
-        />
-        <span style={{ marginLeft: "10px" }}>Sending...</span>
-      </p>
-    </>
+      <motion.div layout>
+        <p
+          className="successful-form"
+          style={{
+            height: "100px",
+            display: `${state?.succeeded ? "block" : "none"}`,
+          }}
+        >
+          <span className="flex-row">
+            <img
+              src={
+                colorMode === "dark"
+                  ? smileMessageDarkSVGImgUrl
+                  : smileMessageLightSVGImgUrl
+              }
+              alt=""
+              className="smile-message"
+            />
+          </span>
+          <span>Thank you for your message — I'll be in touch soon!</span>
+        </p>
+      </motion.div>
+    </motion.div>
   );
 };
 
