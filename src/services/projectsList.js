@@ -1,14 +1,5 @@
 const projectsList = [
   {
-    title: "Budget App",
-    type: "front-end",
-    techUsed: "React, Tailwind, chartJS",
-    desc: "Tracks income, expenses, and visualizes insights through dynamic charts and graphs.",
-    img: "budget-app.svg",
-    demoLink: "https://suraffy.github.io/budget-app/",
-    sourceCodeLink: "https://github.com/suraffy/budget-app",
-  },
-  {
     title: "Supervised Project Management App",
     type: "back-end",
     techUsed: "Node, Express, Mongodb, JWT",
